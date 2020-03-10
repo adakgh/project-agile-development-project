@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registreren</title>
     <!-- Load our stylesheets -->
-    <link href="assets/css/default.css" rel="stylesheet"/>
 
     <!-- Load jQuery 3.4.1 -->
     <script src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>
@@ -25,6 +24,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+
 </head>
 <body>
 <!-- Temporary navbar-->
@@ -57,66 +59,57 @@
 <br>
 
 <!-- Image -->
-<div class="img-fluid" style=" float: right; position: relative; right: 8.5%;">
+<div class="img-fluid">
     <div class="row no-gutters">
         <div class="col-md-8">
             <img src="https://www.sholom.com/dynamic-media/assets/images/photos/philips/memory-care-photo.jpg?gravity=northwest&k=jI4BbxQ%2BxWop8dL580WcaA&v=carousel-stage-image"
-                 class="card-img" alt="..." style="border: 4px solid#1DA2CA; border-radius: 35px; height: 87.1%;">
+                 class="card-img" alt="...">
         </div>
     </div>
 </div>
 
 <!-- Register form -->
-<form class="text-center p-4" action="#!"
-      style="width: 35.5%; left: 20%; position: relative; float: left; border: 4px solid #1DA2CA;
-      border-radius: 35px;
-      border-bottom-right-radius: 0px;
-      border-top-right-radius: 0px;
-      border-right-color: transparent; font-size: 20px;">
+<form class="text-center p-4" action="#!">
 
     <p class="h2 mb-4">Registreren</p>
 
-    <div class="form-row mb-4" style="width: 95%;">
+    <div class="form-row mb-4">
         <!-- Username -->
         <div class="col">
             <input type="text" id="defaultRegisterFormUserName" class="form-control"
-                   placeholder="Kies een gebruikersnaam" style="font-size:20px;">
+                   placeholder="Kies een gebruikersnaam">
         </div>
     </div>
 
     <!-- Full name -->
-    <div class="form-row mb-4" style="width: 95%;">
+    <div class="form-row mb-4">
         <div class="col">
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Voer uw voornaam in"
-                   style="font-size:20px;">
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Voer uw voornaam in">
         </div>
         <div class="col">
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Voer uw achternaam in"
-                   style="font-size:20px;">
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Voer uw achternaam in">
         </div>
     </div>
 
 
     <!-- E-mail -->
-    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Voer uw e-mailadres in"
-           style="font-size:20px; width: 94%;">
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Voer uw e-mailadres in">
 
     <!-- Password -->
     <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4"
            placeholder="Kies een wachtwoord met minimaal 1 getal"
-           aria-describedby="defaultRegisterFormPasswordHelpBlock" style="font-size:20px; width: 94%;">
+           aria-describedby="defaultRegisterFormPasswordHelpBlock">
     <input type="password" id="defaultRegisterFormPassword1" class="form-control mb-4"
-           placeholder="Voer uw wachtwoord nogmaals in" aria-describedby="defaultRegisterFormPasswordInfo"
-           style="font-size: 20px; width: 94%;">
+           placeholder="Voer uw wachtwoord nogmaals in" aria-describedby="defaultRegisterFormPasswordInfo">
 
     <!-- Gender -->
     <div class="form-row mb-4">
-        <span style="left: 3%;position:relative; font-size: 22px; color: dimgrey;">Kies uw geslacht</span>
-        <div class="custom-control custom-radio" style="left: 10%; font-size: 22px;">
+        <span>Kies uw geslacht</span>
+        <div class="custom-control custom-radio" id="gender1">
             <input type="radio" class="custom-control-input" id="defaultGender" name="groupGenders">
             <label class="custom-control-label" for="defaultGender">Vrouw</label>
         </div>
-        <div class="custom-control custom-radio" style="left: 30%; font-size: 22px;">
+        <div class="custom-control custom-radio" id="gender2">
             <input type="radio" class="custom-control-input" id="defaultGender2" name="groupGenders">
             <label class="custom-control-label" for="defaultGender2">Man</label>
         </div>
@@ -129,7 +122,7 @@
     <!--        </div>-->
 
     <!-- Sign up button -->
-    <button class="btn btn-info my-4 btn-block" type="submit" style="font-size: 22px; width: 94%;">Registratie
+    <button class="btn btn-info my-4 btn-block" type="submit">Registratie
         voltooien
     </button>
 
