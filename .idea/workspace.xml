@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/avatars/meneer.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/profiel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/profiel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAD-framework/assets/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAD-framework/assets/css/default.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,6 +78,7 @@
       <workItem from="1583229430033" duration="181000" />
       <workItem from="1583829302420" duration="8743000" />
       <workItem from="1583847635473" duration="977000" />
+      <workItem from="1583867910648" duration="4099000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -114,10 +112,11 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="432" y="29" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1583855421171" />
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1583159624063">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state x="870" y="307" key="FileChooserDialogImpl" timestamp="1583870089667">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
+    <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1583847635661">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
