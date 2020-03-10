@@ -2,17 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mijn profiel</title>
-    <link rel="stylesheet" href="../src/assets/css/profiel.css" type="text/css">
+    <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+
 </head>
 <body>
-<div id="profiel" class="container">
 
-   <div class="profieltekst">Profiel</div>
+<div class="profieltekst">Profiel</div>
+
+<div class="container"><form>
 
 
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label><strong>Naam</strong></label>
+            <input type="password" class="form-control" id="name" placeholder="Voer uw naam in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Achternaam</strong></label>
+            <input type="achternaam" class="form-control" id="lastname" placeholder="Voer uw achternaam in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Email</strong></label>
+            <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Leeftijd</strong></label>
+            <input type="leeftijd" class="form-control" id="age" placeholder="Voer uw leeftijd in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Woonplaats</strong></label>
+            <input type="woonplaats" class="form-control" id="city" placeholder="Voer uw woonplaats in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Postcode</strong></label>
+            <input type="postcode" class="form-control" id="postalcode" placeholder="Voer uw postcode in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Wachtwoord</strong></label>
+            <input type="wachtwoord" class="form-control" id="password1" placeholder="Voer uw wachtwoord in" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label><strong>Wachtwoord</strong></label>
+            <input type="woonplaats" class="form-control" id="password2" placeholder="Herhaal uw wachtwoord" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-row">
+            <div class="col-md-3 offset-lg-0">
+                <div class="form-group">
+                    <label for="geslachtOpties">
+                        <strong>Geslacht</strong>
+                    </label>
+                    <select
+                            class="custom-select mr-sm-2"
+                            id="geslachtOpties"
+                            required
+                    >
+                        <option value="">Kies uw...</option>
+                        <option value="Man">Man</option>
+                        <option value="Vrouw">Vrouw</option>
+                        <option value="Anders">Anders</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="opslaan" class="btn btn-primary btn-block">Opslaan</button>
+</form>
 </div>
-
 </body>
 </html>
