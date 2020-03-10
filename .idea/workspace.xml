@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/avatars/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/loguit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
