@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/avatars/meneer.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/profiel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/profiel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,10 +101,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="register css" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="556" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582813257914">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state x="369" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583858934984">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="556" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1582813257914" />
+    <state x="369" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1583858934984" />
     <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583848294647">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
