@@ -1,14 +1,14 @@
-.img-fluid{
-    float: right;
-    position: relative;
-    right: 2%;
-}
+/*.img-fluid{*/
+/*    float: right;*/
+/*    position: relative;*/
+/*    right: 2%;*/
+/*}*/
 
-.card-img{
-    border: 4px solid#1DA2CA;
-    border-radius: 35px;
-    height: 84.6%;
-}
+/*.card-img{*/
+/*    border: 4px solid#1DA2CA;*/
+/*    border-radius: 35px;*/
+/*    height: 84.6%;*/
+/*}*/
 
 
 .text-center{
@@ -18,9 +18,6 @@
     float: left;
     border: 4px solid #1DA2CA;
     border-radius: 35px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-    border-right-color: transparent;
     font-size: 20px;
 }
 
