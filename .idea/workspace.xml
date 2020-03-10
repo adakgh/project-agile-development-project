@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdata.sql" beforeDir="false" afterPath="$PROJECT_DIR$/testdata.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/avatars/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/loguit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +33,15 @@
     <expand />
     <select />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -34,16 +52,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/img/avatars" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,6 +83,9 @@
       <updated>1582811094973</updated>
       <workItem from="1582811097431" duration="3651000" />
       <workItem from="1583224781429" duration="637000" />
+      <workItem from="1583229430033" duration="181000" />
+      <workItem from="1583829302420" duration="8743000" />
+      <workItem from="1583847635473" duration="977000" />
     </task>
     <servers />
   </component>
@@ -68,9 +97,17 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="556" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1582813257914" />
+    <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583848294647">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.823@0.23.1440.823" timestamp="1583848294647" />
     <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1583159624063">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1583847635661">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1583847635661" />
   </component>
 </project>
