@@ -63,6 +63,21 @@ app.post("/room_example", (req, res) => {
     );
 
 });
+
+app.post("/post", (req, res) => {
+    res.send({person_amount: req.body.person_amount, date: req.body.date });
+
+    db.handleQuery(connectionPool, {
+       query:"INSERT INTO post(person_amount, date) VALUE (?,?)",
+        values: [req.body.person_amount, req.body.date]
+    }, (data) => {
+        res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+
+
 //------- END ROUTES -------
 
 module.exports = app;
