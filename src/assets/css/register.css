@@ -1,52 +1,32 @@
-/*.img-fluid{*/
-/*    float: right;*/
-/*    position: relative;*/
-/*    right: 2%;*/
-/*}*/
-
-/*.card-img{*/
-/*    border: 4px solid#1DA2CA;*/
-/*    border-radius: 35px;*/
-/*    height: 84.6%;*/
-/*}*/
-
-
-#form {
-    width: 53%;
-    left: 24%;
-    position: relative;
-    float: left;
-    border: 4px solid #428bca;
-    border-radius: 35px;
-    font-size: 20px;
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#defaultRegisterFormUserName,
-#defaultRegisterFormFirstName,
-#defaultRegisterFormLastName,
-#defaultRegisterFormPassword,
-#defaultRegisterFormPassword1,
-#defaultRegisterFormEmail {
+h2 {
+    font-weight: 700;
+}
+
+.showcase .showcase-text {
+    text-align: center;
     font-size: 18px;
+    padding: 6rem;
+    left: 25.5%;
+    /*left: 9%;*/
 }
 
-#gender1 {
-    left: 10%;
-    font-size: 20px;
+/*.showcase .showcase-img {*/
+/*    left: 7%;*/
+/*    margin-top: 5%;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 22rem 31rem;*/
+/*}*/
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-#gender2 {
-    left: 25%;
-    font-size: 20px;
+.form-control, .custom-select, .btn{
+    font-size: 19px;
 }
 
-span {
-    left: 3%;
-    position: relative;
-    font-size: 20px;
-    color: dimgrey;
-}
-
-.btn {
-    font-size: 20px;
-}

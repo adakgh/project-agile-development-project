@@ -28,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
 </head>
 <header>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
-
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
@@ -47,24 +47,23 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="home" href="#">Home</a>
+                        <a class="nav-link" data-controller="home" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="nieuws" href="#">Nieuws</a>
+                        <a class="nav-link" data-controller="nieuws" href="nieuws.html">Nieuws</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="agenda" href="#">Agenda</a>
+                        <a class="nav-link" data-controller="agenda" href="agenda.html">Agenda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="forum" href="#">Forum</a>
+                        <a class="nav-link" data-controller="forum" href="forum.html">Forum</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="login" href="#">Login</a>
+                        <a class="nav-link" data-controller="login" href="login.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="logout" href="#">Logout</a>
+                        <a class="nav-link" data-controller="logout" href="loguit.html">Logout</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -72,84 +71,127 @@
 </header>
 <body>
 
-<br>
-<br>
-<br>
-
-<!-- Image -->
-<!--<div class="img-fluid">-->
-<!--    <div class="row no-gutters">-->
-<!--        <div class="col-md-8">-->
-<!--            <img src="https://www.sholom.com/dynamic-media/assets/images/photos/philips/memory-care-photo.jpg?gravity=northwest&k=jI4BbxQ%2BxWop8dL580WcaA&v=carousel-stage-image"-->
-<!--                 class="card-img" alt="...">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 <!-- Register form -->
-<form class="text-center p-4" action="#!" id="form">
+<section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Registreren</h2>
+                <p>U kunt zich hier registreren</p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <!-- Username -->
+                            <input type="text" id="defaultRegisterFormUserName" class="form-control"
+                                   placeholder="Kies een gebruikersnaam" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <!-- Full name -->
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" id="defaultRegisterFormFirstName" class="form-control"
+                                           placeholder="Voer uw voornaam in" required>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="defaultRegisterFormLastName" class="form-control"
+                                           placeholder="Voer uw achternaam in" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <p class="h2 mb-4 align-content-center">Registreren</p>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <!-- E-mail -->
+                            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-3"
+                                   placeholder="Voer uw e-mailadres in" required>
+                            <!-- Password -->
+                            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-3"
+                                   placeholder="Kies een wachtwoord met minimaal 1 getal"
+                                   aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+                            <input type="password" id="defaultRegisterFormPassword1" class="form-control"
+                                   placeholder="Voer uw wachtwoord nogmaals in"
+                                   aria-describedby="defaultRegisterFormPasswordInfo" required>
+                        </div>
+                    </div>
 
-    <div class="form-row mb-4">
-        <!-- Username -->
-        <div class="col">
-            <input type="text" id="defaultRegisterFormUserName" class="form-control"
-                   placeholder="Kies een gebruikersnaam">
+                    <div class="form-group">
+                        <select class="custom-select" required>
+                            <option value="">Kies uw geslacht</option>
+                            <option value="1">Vrouw</option>
+                            <option value="2">Man</option>
+                            <option value="3">Anders</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Newsletter -->
+                    <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+                                <label class="custom-control-label" for="defaultRegisterFormNewsletter">Aanmelden voor onze nieuwsbrief</label>
+                            </div>
+                    </div>
+
+                    <!-- Terms of service -->
+                    <!--        <p>Als u op-->
+                    <!--            <em>Registratie voltooien</em> klikt gaat u akkoord met onze-->
+                    <!--            <a href="" target="_blank">gebruiksvoorwaarden</a>-->
+
+                    <button type="submit" class="btn btn-primary w-75">Registratie voltooien</button>
+                </form>
+            </div>
+            <!-- Image -->
+            <!--            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://www.sholom.com/dynamic-media/assets/images/photos/philips/memory-care-photo.jpg?gravity=northwest&k=jI4BbxQ%2BxWop8dL580WcaA&v=carousel-stage-image');"></div>-->
         </div>
     </div>
+</section>
 
-    <!-- Full name -->
-    <div class="form-row mb-4">
-        <div class="col">
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Voer uw voornaam in">
-        </div>
-        <div class="col">
-            <input type="text" id="defaultRegisterFormLastName" class="form-control"
-                   placeholder="Voer uw achternaam in">
+<!-- Footer -->
+<footer class="page-footer font-small text-white bg-dark pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <br>
+            <div class="col-md-2 mx-auto">
+                <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="nieuws.html">Nieuws</a>
+                    </li>
+                    <li>
+                        <a href="agenda.html">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="forum.html">Forum</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="col-md-2 mx-auto">
+                <h5 class="text-uppercase mt-3 mb-4">Account</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li>
+                        <a href="register.html">Registreer</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-
-
-    <!-- E-mail -->
-    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Voer uw e-mailadres in">
-
-    <!-- Password -->
-    <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4"
-           placeholder="Kies een wachtwoord met minimaal 1 getal"
-           aria-describedby="defaultRegisterFormPasswordHelpBlock">
-    <input type="password" id="defaultRegisterFormPassword1" class="form-control mb-4"
-           placeholder="Voer uw wachtwoord nogmaals in" aria-describedby="defaultRegisterFormPasswordInfo">
-
-    <!-- Gender -->
-    <div class="form-row mb-4">
-        <span>Kies uw geslacht</span>
-        <div class="custom-control custom-radio" id="gender1">
-            <input type="radio" class="custom-control-input" id="defaultGender" name="groupGenders">
-            <label class="custom-control-label" for="defaultGender">Vrouw</label>
-        </div>
-        <div class="custom-control custom-radio" id="gender2">
-            <input type="radio" class="custom-control-input" id="defaultGender2" name="groupGenders">
-            <label class="custom-control-label" for="defaultGender2">Man</label>
-        </div>
+    <br>
+    <br>
+    <br>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> The Agile Elderly</a>
+        <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">
     </div>
-
-    <!-- Newsletter -->
-    <!--        <div class="custom-control custom-checkbox">-->
-    <!--            <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">-->
-    <!--            <label class="custom-control-label" for="defaultRegisterFormNewsletter">Aanmelden voor onze nieuwsbrief</label>-->
-    <!--        </div>-->
-
-    <!-- Sign up button -->
-    <button class="btn btn-info my-4 btn-block bg-primary" type="submit">Registratie
-        voltooien
-    </button>
-
-    <!-- Terms of service -->
-    <!--        <p>Als u op-->
-    <!--            <em>Registratie voltooien</em> klikt gaat u akkoord met onze-->
-    <!--            <a href="" target="_blank">gebruiksvoorwaarden</a>-->
-
-</form>
+</footer>
 </body>
 </html>
