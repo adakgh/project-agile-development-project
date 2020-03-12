@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+}
+
+.text-sm-center  {
+    font-size: 2em;
+    color: #747d8c;
+}
+
+.text-sm-right {
+    font-size: 2em;
+    color: black;
+}
