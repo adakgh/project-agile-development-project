@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="footer in register">
-      <change afterPath="$PROJECT_DIR$/src/assets/css/overons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/overons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/activiteiten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/loguit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/loguit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/nieuws.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/overons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/overons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +41,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YOQKHXbAQuSMLFiNsMZHZ3PBp8" />
   <component name="ProjectViewState">
@@ -103,6 +105,7 @@
       <workItem from="1585213439370" duration="3059000" />
       <workItem from="1585216938004" duration="968000" />
       <workItem from="1585235633077" duration="259000" />
+      <workItem from="1585236453569" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -160,5 +163,9 @@
     </state>
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585235639464" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1584627857487" />
+    <state x="621" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585236505189">
+      <screen x="0" y="23" width="1280" height="720" />
+    </state>
+    <state x="621" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.720@0.23.1280.720" timestamp="1585236505189" />
   </component>
 </project>
