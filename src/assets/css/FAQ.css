@@ -1,9 +1,11 @@
 h2 {
     font-family: Arial, Verdana;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
     font-weight: 800;
     font-size: 4rem;
-    color: #091f2f;
+    color: #1f7de2;
     text-transform: uppercase;
 }
 .accordion-section .panel-default > .panel-heading {
@@ -13,7 +15,6 @@ h2 {
 }
 .accordion-section .panel-default .panel-title a {
     display: block;
-    font-style: italic;
     font-size: 1.5rem;
 }
 .accordion-section .panel-default .panel-title a:after {
