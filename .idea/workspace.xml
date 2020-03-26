@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="footer in register">
-      <change beforePath="$PROJECT_DIR$/src/assets/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/overons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/overons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/loguit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/loguit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nieuws.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +32,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="team-11" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,6 +99,10 @@
       <workItem from="1584005416487" duration="67000" />
       <workItem from="1584005497652" duration="995000" />
       <workItem from="1584006792803" duration="611000" />
+      <workItem from="1584627857889" duration="3726000" />
+      <workItem from="1585213439370" duration="3059000" />
+      <workItem from="1585216938004" duration="968000" />
+      <workItem from="1585235633077" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -139,9 +155,10 @@
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
-    <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1583847635661">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1583847635661" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585235639464" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1584627857487" />
   </component>
 </project>

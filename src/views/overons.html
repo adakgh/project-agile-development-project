@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Index - The Agile Elderly</title>
+    <title>Over ons - The Agile Elderly</title>
     <!-- Load our stylesheets -->
 
     <!-- Load jQuery 3.4.1 -->
@@ -26,24 +26,22 @@
             crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
-
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
 
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
                 <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
                 The Agile Elderly</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" >
-                        <a class="nav-link text-white"  data-controller="home" href="index.html"><b>Home</b></a>
+                        <a class="nav-link"  data-controller="home" href="index.html">Home</a>
                     </li>
                     <li class="nav-item" >
                         <a class="nav-link"  data-controller="nieuws" href="nieuws.html">Nieuws</a>
@@ -55,7 +53,7 @@
                         <a class="nav-link"  data-controller="forum" href="forum.html">Forum</a>
                     </li>
                     <li class="nav-item" >
-                        <a class="nav-link"  data-controller="overons" href="overons.html">Over ons
+                        <a class="nav-link text-white"  data-controller="overons" href="overons.html"><b>Over ons</b>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -64,13 +62,78 @@
                     <li class="nav-item">
                         <a class="nav-link" data-controller="logout" href="loguit.html">Log uit</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
+
 <body>
+<main class="main_padding">
+    <div class="container">
+        <h2 class="py-5">Over ons</h2>
+
+        <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/img/avatars/male-6.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Voorbeeld1</h5>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/avatars/female-2.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Voorbeeld2</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/avatars/male-3.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Voorbeeld3</h5>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Vorige</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Volgende</span>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <div class="card mt-5 mb-5">
+            <div class="card-body">
+                <h4 class="card-title">The Agile Elderly</h4>
+                <h6 class="text-muted card-subtitle">Waar staan wij voor?</h6>
+                <p class="pt-2">The Agile Elderly is dé website speciaal gebouwd voor ouderen en jongeren die graag
+                    samen activiteiten uit willen voeren. Wij begrijpen dat het niet makkelijk is om een duo te vinden.
+                    Hieraan kan je vervolgens deelnemen of zelf een activiteit plaatsen waar andere personen aan kunnen
+                    deelnemen. The Agile Elderly maakt dit mogelijk voor jullie om een glimlach op jullie gezicht te
+                    bezorgen! </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+</form>
+</div>
 <footer class="page-footer font-small text-white bg-dark pt-4">
     <div class="container text-center text-md-left">
         <div class="row">
