@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="footer in register">
-      <change afterPath="$PROJECT_DIR$/src/views/activiteiten.html" afterDir="false" />
+    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfiel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/nieuws.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/overons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/overons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +97,7 @@
       <workItem from="1585213439370" duration="3059000" />
       <workItem from="1585216938004" duration="968000" />
       <workItem from="1585235633077" duration="259000" />
-      <workItem from="1585236453569" duration="1462000" />
+      <workItem from="1585236453569" duration="1942000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -114,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583853127698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="navbar aanpassen">
+      <created>1585237974760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585237974760</updated>
+    </task>
+    <task id="LOCAL-00003" summary="navbar aanpassen">
+      <created>1585238105464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585238105464</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +143,8 @@
     <MESSAGE value="registreren" />
     <MESSAGE value="register css" />
     <MESSAGE value="footer in register" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer in register" />
+    <MESSAGE value="navbar aanpassen" />
+    <option name="LAST_COMMIT_MESSAGE" value="navbar aanpassen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="369" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583858934984">
@@ -149,10 +156,11 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.823@0.23.1440.823" timestamp="1583848294647" />
-    <state x="384" y="5" key="CommitChangelistDialog2" timestamp="1585237974315">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="384" y="23" key="CommitChangelistDialog2" timestamp="1585238105137">
+      <screen x="0" y="23" width="1280" height="720" />
     </state>
     <state x="384" y="5" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585237974315" />
+    <state x="384" y="23" key="CommitChangelistDialog2/0.23.1280.720@0.23.1280.720" timestamp="1585238105137" />
     <state x="432" y="29" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1583855421171" />
     <state x="870" y="307" key="FileChooserDialogImpl" timestamp="1583870089667">
       <screen x="0" y="0" width="2560" height="1400" />
