@@ -22,11 +22,29 @@ h2 {
 /*}*/
 
 footer.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    clear: both;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
-.form-control, .custom-select, .btn{
+.form-control, .custom-select, .btn {
     font-size: 19px;
 }
 
+.info {
+    position: relative;
+    float: left;
+    left: 30%;
+}
+
+.image {
+    background-image: url(https://www.sholom.com/dynamic-media/assets/images/photos/philips/memory-care-photo.jpg?gravity=northwest&k=jI4BbxQ%2BxWop8dL580WcaA&v=carousel-stage-image);
+    background-size: cover;
+}
+
+.invalid-feedback{
+    font-size: 16px;
+}

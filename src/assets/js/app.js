@@ -11,6 +11,8 @@ const CONTROLLER_SIDEBAR = "sidebar";
 const CONTROLLER_LOGIN = "login";
 const CONTROLLER_LOGOUT = "logout";
 const CONTROLLER_WELCOME = "welcome";
+const CONTROLLER_REGISTER = "register";
+const CONTROLLER_FORUM = "forum";
 
 const sessionManager = new SessionManager();
 const networkManager = new NetworkManager();
@@ -43,6 +45,16 @@ class App {
         switch (name) {
             case CONTROLLER_SIDEBAR:
                 new NavbarController();
+                break;
+
+            case CONTROLLER_FORUM:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new ForumController(), () => new ForumController());
+                break;
+
+            case CONTROLLER_REGISTER:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new RegisterController(), () => new RegisterController());
                 break;
 
             case CONTROLLER_LOGIN:

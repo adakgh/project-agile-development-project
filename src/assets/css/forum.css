@@ -1,0 +1,99 @@
+.text {
+    position: relative;
+    float: left;
+    left: 100px;
+}
+
+.btn {
+    position: relative;
+    float: right;
+    right: 100px;
+    cursor: pointer;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.panel {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.panel .panel-element {
+    position: relative;
+}
+
+.panel .panel-element .element-content {
+    padding: 15px;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    position: relative;
+    right: 0;
+    z-index: 2;
+}
+
+.panel .panel-element .element-content .btn-more {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.panel .panel-element .element-content > i {
+    font-size: 16px;
+    color: #929292;
+    vertical-align: middle;
+}
+
+.post-avatar {
+    background-image: url(https://www.w3schools.com/howto/img_avatar.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 50%;
+}
+
+.panel .panel-element .element-content .content-post .post-content {
+    margin-left: 100px;
+}
+
+.panel .panel-element .element-content .content-post .post-content .post-title {
+    font-size: 26px;
+}
+
+.panel .panel-element .element-content .content-post .post-content .post-body {
+    margin-top: 5px;
+    font-size: 18px;
+    color: black;
+}
+
+.panel-element:hover {
+    border-radius: 12px;
+    transition: 0.14s;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.panel .panel-element .element-actions {
+    width: 100px;
+    height: 45px;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.panel .panel-element:not(:first-child) {
+    margin-top: 15px;
+}

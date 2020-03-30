@@ -1,156 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Registreren - The Agile Elderly</title>
-    <!-- Load our stylesheets -->
-
-    <!-- Load jQuery 3.4.1 -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-
-    <!-- Load Bootstrap stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- Load Bootstrap script -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
-</head>
-<header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
-                The Agile Elderly</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" data-controller="welcome">Welcome
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="home" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="nieuws" href="nieuws.html">Nieuws</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="agenda" href="agenda.html">Agenda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="activiteiten" href="activiteiten.html">Activiteiten</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="forum" href="forum.html">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="login" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="logout" href="loguit.html">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<body>
+<link href="../assets/css/register.css" rel="stylesheet" type="text/css"/>
 
 <!-- Register form -->
-<section class="showcase">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                <h2>Registreren</h2>
-                <p>U kunt zich hier registreren</p>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="image col-lg-5">
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-4">
+                        <div class="text-center">
+                            <h1 class="h2 text-gray-900 mb-1">Registreren</h1>
+                            <p>U kunt zich hier registreren</p>
+                        </div>
+
+                        <form>
                             <!-- Username -->
-                            <input type="text" id="defaultRegisterFormUserName" class="form-control"
-                                   placeholder="Kies een gebruikersnaam" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="exampleUserName"
+                                       placeholder="Kies een gebruikersnaam" required>
+                            </div>
+
                             <!-- Full name -->
-                            <div class="form-row">
-                                <div class="col">
-                                    <input type="text" id="defaultRegisterFormFirstName" class="form-control"
-                                           placeholder="Voer uw voornaam in" required>
-                                </div>
-                                <div class="col">
-                                    <input type="text" id="defaultRegisterFormLastName" class="form-control"
-                                           placeholder="Voer uw achternaam in" required>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" id="exampleFullName"
+                                       placeholder="Vul hier uw volledige naam in" required>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <!-- E-mail -->
-                            <input type="email" id="defaultRegisterFormEmail" class="form-control mb-3"
-                                   placeholder="Voer uw e-mailadres in" required>
+                            <!-- Email address -->
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                       placeholder="Vul hier uw emailadres in" required>
+                            </div>
+
                             <!-- Password -->
-                            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-3"
-                                   placeholder="Kies een wachtwoord met minimaal 1 getal"
-                                   aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
-                            <input type="password" id="defaultRegisterFormPassword1" class="form-control"
-                                   placeholder="Voer uw wachtwoord nogmaals in"
-                                   aria-describedby="defaultRegisterFormPasswordInfo" required>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user"
+                                           id="exampleInputPassword" placeholder="Kies een wachtwoord" required name=password>
+                                    <div class="showcase-text text-danger font-weight-bold">Minimaal 1 hoofdletter en cijfer!</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user"
+                                           id="exampleRepeatPassword" placeholder="Herhaal uw wachtwoord" required name=password2>
+                                </div>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="form-group">
+                                <select class="custom-select" id="exampleGender" required>
+                                    <option value="">Kies uw geslacht</option>
+                                    <option value="Vrouw">Vrouw</option>
+                                    <option value="Man">Man</option>
+                                    <option value="Anders">Anders</option>
+                                </select>
+                            </div>
+
+                            <!-- Age -->
+                            <div class="form-group">
+                                <select multiple class="form-control" id="exampleAge" required>
+                                    <option disabled>Kies uw leeftijd</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                    <option>27</option>
+                                    <option>28</option>
+                                    <option>29</option>
+                                    <option>30</option>
+                                    <option>31</option>
+                                    <option>32</option>
+                                    <option>33</option>
+                                    <option>34</option>
+                                    <option>35</option>
+                                    <option>36</option>
+                                    <option>37</option>
+                                    <option>38</option>
+                                    <option>39</option>
+                                    <option>40</option>
+                                    <option>41</option>
+                                    <option>42</option>
+                                    <option>43</option>
+                                    <option>44</option>
+                                    <option>45</option>
+                                    <option>46</option>
+                                    <option>47</option>
+                                    <option>48</option>
+                                    <option>49</option>
+                                    <option>50</option>
+                                    <option>51</option>
+                                    <option>52</option>
+                                    <option>53</option>
+                                    <option>54</option>
+                                    <option>55</option>
+                                    <option>56</option>
+                                    <option>57</option>
+                                    <option>58</option>
+                                    <option>59</option>
+                                    <option>60</option>
+                                    <option>61</option>
+                                    <option>62</option>
+                                    <option>63</option>
+                                    <option>64</option>
+                                    <option>65</option>
+                                    <option>66</option>
+                                    <option>67</option>
+                                    <option>68</option>
+                                    <option>69</option>
+                                    <option>70</option>
+                                    <option>71</option>
+                                    <option>72</option>
+                                    <option>73</option>
+                                    <option>74</option>
+                                    <option>75</option>
+                                    <option>76</option>
+                                    <option>77</option>
+                                    <option>78</option>
+                                    <option>79</option>
+                                    <option>80</option>
+                                    <option>81</option>
+                                    <option>82</option>
+                                    <option>83</option>
+                                    <option>84</option>
+                                    <option>85</option>
+                                    <option>86</option>
+                                    <option>87</option>
+                                    <option>88</option>
+                                    <option>89</option>
+                                    <option>90</option>
+                                    <option>91</option>
+                                    <option>92</option>
+                                    <option>93</option>
+                                    <option>94</option>
+                                    <option>95</option>
+                                    <option>96</option>
+                                    <option>97</option>
+                                    <option>98</option>
+                                    <option>99</option>
+                                    <option>100</option>
+                                </select>
+                            </div>
+                            <br>
+                            <!-- Newsletter -->
+                            <div class="form-group text-center">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"
+                                           id="defaultRegisterFormNewsletter">
+                                    <label class="custom-control-label" for="defaultRegisterFormNewsletter">Aanmelden
+                                        voor de nieuwsbrief</label>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary w-75">Registratie voltooien</button>
+                            </div>
+                            <hr>
+                        </form>
+
+                        <div class="text-center">
+                            <a href="forgot-password.html">Wachtwoord vergeten?</a>
+                        </div>
+                        <div class="text-center">
+                            <a href="login.html">Ik heb al een account!</a>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <select class="custom-select" required>
-                            <option value="">Kies uw geslacht</option>
-                            <option value="1">Vrouw</option>
-                            <option value="2">Man</option>
-                            <option value="3">Anders</option>
-                        </select>
-                    </div>
-
-
-                    <!-- Newsletter -->
-                    <div class="form-group">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-                                <label class="custom-control-label" for="defaultRegisterFormNewsletter">Aanmelden voor onze nieuwsbrief</label>
-                            </div>
-                    </div>
-
-                    <!-- Terms of service -->
-                    <!--        <p>Als u op-->
-                    <!--            <em>Registratie voltooien</em> klikt gaat u akkoord met onze-->
-                    <!--            <a href="" target="_blank">gebruiksvoorwaarden</a>-->
-
-                    <button type="submit" class="btn btn-primary w-75">Registratie voltooien</button>
-                </form>
+                </div>
             </div>
-            <!-- Image -->
-            <!--            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('https://www.sholom.com/dynamic-media/assets/images/photos/philips/memory-care-photo.jpg?gravity=northwest&k=jI4BbxQ%2BxWop8dL580WcaA&v=carousel-stage-image');"></div>-->
         </div>
     </div>
-</section>
+</div>
+
 
 <!-- Footer -->
 <footer class="page-footer font-small text-white bg-dark pt-4">
@@ -199,5 +222,3 @@
         <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">
     </div>
 </footer>
-</body>
-</html>
