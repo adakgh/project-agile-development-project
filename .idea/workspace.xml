@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
+    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="profiel controller en repository aangemaakt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/profielController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/profielAanpassenController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/profielRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/profielAanpassenRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -167,7 +172,8 @@
     <MESSAGE value="titel aangepast als test" />
     <MESSAGE value="vraag en antwoord toegevoegd. Nog niet helemaal goed," />
     <MESSAGE value="antwoord toegevoegd aangepast. Nog niet helemaal goed." />
-    <option name="LAST_COMMIT_MESSAGE" value="antwoord toegevoegd aangepast. Nog niet helemaal goed." />
+    <MESSAGE value="profiel controller en repository aangemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="profiel controller en repository aangemaakt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="74" key="#Project_Structure" timestamp="1585317898421">
@@ -183,43 +189,43 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.823@0.23.1440.823" timestamp="1583848294647" />
-    <state x="432" y="23" key="CommitChangelistDialog2" timestamp="1585326272892">
+    <state x="432" y="23" key="CommitChangelistDialog2" timestamp="1585678671115">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="384" y="5" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585237974315" />
     <state x="384" y="23" key="CommitChangelistDialog2/0.23.1280.720@0.23.1280.720" timestamp="1585238442028" />
     <state x="432" y="29" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1583855421171" />
-    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1585326272892" />
+    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1585678671115" />
     <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1585264002752" />
     <state x="870" y="307" key="FileChooserDialogImpl" timestamp="1583870089667">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
-    <state width="1234" height="83" key="GridCell.Tab.0.bottom" timestamp="1585652216550">
+    <state width="1234" height="82" key="GridCell.Tab.0.bottom" timestamp="1585663214576">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1065" height="371" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585630777322" />
     <state width="1065" height="374" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585619186992" />
-    <state width="1234" height="83" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585652216550" />
-    <state width="1234" height="83" key="GridCell.Tab.0.center" timestamp="1585652216548">
+    <state width="1234" height="82" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
+    <state width="1234" height="82" key="GridCell.Tab.0.center" timestamp="1585663214575">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1065" height="371" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
     <state width="1065" height="374" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
-    <state width="1234" height="83" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585652216548" />
-    <state width="1234" height="83" key="GridCell.Tab.0.left" timestamp="1585652216548">
+    <state width="1234" height="82" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585663214575" />
+    <state width="1234" height="82" key="GridCell.Tab.0.left" timestamp="1585663214574">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1065" height="371" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1585630777314" />
     <state width="1065" height="374" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1585619186990" />
-    <state width="1234" height="83" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585652216548" />
-    <state width="1234" height="83" key="GridCell.Tab.0.right" timestamp="1585652216549">
+    <state width="1234" height="82" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585663214574" />
+    <state width="1234" height="82" key="GridCell.Tab.0.right" timestamp="1585663214576">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state width="1065" height="371" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
     <state width="1065" height="374" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
-    <state width="1234" height="83" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585652216549" />
+    <state width="1234" height="82" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -229,11 +235,11 @@
       <screen x="0" y="23" width="1440" height="803" />
     </state>
     <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.803@0.23.1440.803" timestamp="1585645642450" />
-    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585653282872">
+    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585678635763">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="621" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.720@0.23.1280.720" timestamp="1585236505189" />
-    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1585653282872" />
+    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1585678635763" />
     <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1585253057093" />
   </component>
 </project>

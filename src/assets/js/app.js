@@ -13,6 +13,7 @@ const CONTROLLER_LOGOUT = "logout";
 const CONTROLLER_WELCOME = "welcome";
 const CONTROLLER_REGISTER = "register";
 const CONTROLLER_FORUM = "forum";
+const CONTROLLER_PROFIEL = "profiel";
 
 const sessionManager = new SessionManager();
 const networkManager = new NetworkManager();
@@ -68,6 +69,11 @@ class App {
                 break;
 
             case CONTROLLER_WELCOME:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new WelcomeController, () => new LoginController());
+                break;
+
+            case CONTROLLER_PROFIEL:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new WelcomeController, () => new LoginController());
                 break;
