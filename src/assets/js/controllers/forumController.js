@@ -8,7 +8,7 @@ class ForumController {
     constructor() {
         this.forumRepository = new ForumRepository();
 
-        jQuery.noConflict();
+        // jQuery.noConflict();
 
         $.get("views/forum.html")
             .done((htmlData) => this.setup(htmlData))

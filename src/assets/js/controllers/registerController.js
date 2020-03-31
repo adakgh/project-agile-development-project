@@ -50,8 +50,7 @@ class RegisterController {
                 console.log(eventId);
 
                 //TODO: session
-                const user = await this.registerRepository.login(username, password);
-
+                const user = await this.registerRepository.register(username, password);
                 sessionManager.set("username", user.username);
 
                 //doorsturen naar welcome.html
