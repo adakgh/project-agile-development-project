@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="" />
+    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/registerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/registerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +76,23 @@
       <recent name="$PROJECT_DIR$/src/assets/img/avatars" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -96,6 +121,9 @@
       <workItem from="1585216938004" duration="968000" />
       <workItem from="1585235633077" duration="259000" />
       <workItem from="1585236453569" duration="1942000" />
+      <workItem from="1585618739342" duration="10036000" />
+      <workItem from="1585640100429" duration="7147000" />
+      <workItem from="1585648354980" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -174,11 +202,35 @@
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
+    <state width="1065" height="371" key="GridCell.Tab.0.bottom" timestamp="1585630777322">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="371" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585630777322" />
+    <state width="1065" height="374" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585619186992" />
+    <state width="1065" height="371" key="GridCell.Tab.0.center" timestamp="1585630777315">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="371" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
+    <state width="1065" height="374" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
+    <state width="1065" height="371" key="GridCell.Tab.0.left" timestamp="1585630777314">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="371" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1585630777314" />
+    <state width="1065" height="374" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1585619186990" />
+    <state width="1065" height="371" key="GridCell.Tab.0.right" timestamp="1585630777315">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="371" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
+    <state width="1065" height="374" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585235639464" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1584627857487" />
+    <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585645642450">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.803@0.23.1440.803" timestamp="1585645642450" />
     <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585326249416">
       <screen x="0" y="23" width="1440" height="811" />
     </state>

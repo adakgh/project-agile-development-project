@@ -14,4 +14,9 @@ class RegisterRepository {
                 geslacht: gender
             })
     }
+
+    async register(username, password) {
+        return await networkManager
+            .doRequest(`${this.route}/login`, {"username": username, "password": password});
+    }
 }

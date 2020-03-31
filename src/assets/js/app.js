@@ -54,7 +54,7 @@ class App {
 
             case CONTROLLER_REGISTER:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new RegisterController(), () => new RegisterController());
+                this.isLoggedIn(() => new WelcomeController(), () => new RegisterController());
                 break;
 
             case CONTROLLER_LOGIN:

@@ -1,9 +1,7 @@
 class RegisterController {
-
     constructor() {
         this.registerRepository = new RegisterRepository();
-
-        jQuery.noConflict();
+        this.userRepository = new UserRepository();
 
         $.get("views/register.html")
             .done((htmlData) => this.setup(htmlData))
@@ -33,13 +31,31 @@ class RegisterController {
 
         console.log(`${username} - ${name} - ${email} - ${password} - ${gender} - ${age}`);
 
+        function checkPassword(str) {
+            const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$/;
+            return re.test(str);
+        }
 
-        if (username.length === "" || name.length == "" || email.length == "" || password.length == "" || validationPassword == "" || gender.length == "" || age.length === "") {
-            alert("Gelieve alles in te vullen en controleer of uw wachtwoorden overeenkomen.");
+        //checken of niks is leeggelaten, wachtwoorden overeenkomen en wachtwoord houdt aan de regels
+        if (username.length === "" || name.length === "" || email.length === "" || password.length === "" || validationPassword === "" || gender.length === "" || age.length === "") {
+            alert("Gelieve alle velden in te vullen.");
+        } else if (password !== validationPassword) {
+            alert("Controleer nogmaals of uw wachtwoorden overeenkomen.")
+        } else if (!checkPassword(password)) {
+            alert("Wachtwoord bevat niet minstens één hoofdletter en getal!");
         } else {
             try {
                 //versturen naar repository
-                this.registerRepository.create(username, name, email, password, gender, age);
+                const eventId = await this.registerRepository.create(username, name, email, password, gender, age);
+                console.log(eventId);
+
+                //TODO: session
+                const user = await this.registerRepository.login(username, password);
+
+                sessionManager.set("username", user.username);
+
+                //doorsturen naar welcome.html
+                app.loadController(CONTROLLER_WELCOME);
             } catch (e) {
                 if (e.code === 401) {
                     this.registerView
