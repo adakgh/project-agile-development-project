@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="profiel controller en repository aangemaakt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/profielController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/profielAanpassenController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/profielRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/profielAanpassenRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/gebruikersProfielAanpassen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/config.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/config.live.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.live.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/config.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/utils/databaseHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/utils/databaseHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

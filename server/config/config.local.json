@@ -4,6 +4,7 @@
     "timeout": 30000,
     "username": "pad_bsc_11",
     "password": "OQh8AMcUM9WIqdqQ",
-    "database": "pad_bsc_11_dev"
+    "database": "pad_bsc_11_dev",
+    "connectionLimit": 1
   }
 }
