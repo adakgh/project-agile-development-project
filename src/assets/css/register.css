@@ -1,11 +1,3 @@
-body {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h2 {
-    font-weight: 700;
-}
-
 .showcase .showcase-text {
     text-align: center;
     font-size: 18px;
@@ -34,6 +26,16 @@ footer.footer {
     font-size: 19px;
 }
 
+.btn{
+    color: white;
+    background: #47536e;
+}
+
+.btn:hover {
+    color: white;
+    background: #5777ba;
+}
+
 .info {
     position: relative;
     float: left;
@@ -47,4 +49,14 @@ footer.footer {
 
 .invalid-feedback{
     font-size: 16px;
+}
+
+h1{
+    color: black;
+    font-weight: bold;
+}
+
+p, .custom-control-label{
+    color: #515f7d;
+
 }

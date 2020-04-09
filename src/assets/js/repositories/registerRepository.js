@@ -1,6 +1,15 @@
 class RegisterRepository {
     constructor() {
-        this.route = "/user";
+        this.route = "/user"
+    }
+
+    async getAll() {
+
+    }
+
+    async get(roomId) {
+        return await networkManager
+            .doRequest(this.route, {id: roomId});
     }
 
     async create(username, name, email, password, gender, age) {
@@ -18,5 +27,13 @@ class RegisterRepository {
     async register(username, password) {
         return await networkManager
             .doRequest(`${this.route}/login`, {"username": username, "password": password});
+    }
+
+    async delete() {
+
+    }
+
+    async update(id, values = {}) {
+
     }
 }

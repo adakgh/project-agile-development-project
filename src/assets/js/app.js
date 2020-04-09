@@ -14,6 +14,9 @@ const CONTROLLER_WELCOME = "welcome";
 const CONTROLLER_REGISTER = "register";
 const CONTROLLER_FORUM = "forum";
 const CONTROLLER_PROFIEL = "profiel";
+const CONTROLLER_EVENTS = "activiteiten";
+const CONTROLLER_NEWS = "nieuws";
+const CONTROLLER_AGENDA = "agenda";
 
 const sessionManager = new SessionManager();
 const networkManager = new NetworkManager();
@@ -70,12 +73,27 @@ class App {
 
             case CONTROLLER_WELCOME:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new WelcomeController, () => new LoginController());
+                this.isLoggedIn(() => new WelcomeController, () => new IndexController());
                 break;
 
             case CONTROLLER_PROFIEL:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new WelcomeController, () => new LoginController());
+                break;
+
+            case CONTROLLER_EVENTS:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new EventsController(), () => new EventsController());
+                break;
+
+            case CONTROLLER_NEWS:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new NewsController(), () => new NewsController());
+                break;
+
+            case CONTROLLER_AGENDA:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new AgendaController(), () => new AgendaController());
                 break;
 
             default:

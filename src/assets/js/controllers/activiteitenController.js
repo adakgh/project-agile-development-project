@@ -1,15 +1,15 @@
-class AgendaController {
+class EventsController {
 
     constructor() {
-        $.get("views/agenda.html")
+        $.get("views/activiteiten.html")
             .done((htmlData) => this.setup(htmlData))
             .fail(() => this.error());
     }
 
     setup(htmlData) {
-        this.agendaView = $(htmlData);
+        this.eventsView = $(htmlData);
 
-        $(".content").empty().append(this.agendaView);
+        $(".content").empty().append(this.eventsView);
     }
 
     error() {
