@@ -2,105 +2,150 @@
 
 <br>
 <br>
-<div class="text">
-    <h1 class="h2 mb-2">Forum</h1>
-    <div class="text-left">
-        <p>U kunt hier artikelen bekijken die gepost zijn door andere gebruikers. U kunt op het artikel
-            drukken om meer te lezen.<br> U kunt ook zelf een artikel schrijven door
-            middel van de knop rechts van deze tekst.
-        </p>
+<br>
+<br>
+
+<div class="wrapper">
+    <div class="main">
+        <button type="button" class="button" id="add-button"><i class="material-icons">add</i>
+            Begin een topic
+        </button>
+        <div class="category" id="category-event">
+            <div class="category-head" id="event-posts">
+                Activiteit-gerelateerd
+            </div>
+            <script type="text/html" id="event-template">
+                <div class="forum" id="forum-event">
+                    <div class="forum-icon">
+                        <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+                    </div>
+                    <div class="forum-title" id="event-title">
+                        gebruiker1
+                    </div>
+                    <div class="forum-description" id=event-description">
+                        <a href="#"> Lorem ipsum dolor sit amet.</a>
+                    </div>
+                    <div class="forum-topics">
+
+                    </div>
+                    <div class="forum-posts">
+
+                    </div>
+                </div>
+            </script>
+        </div>
+
+
+        <div class="category" id="discussie-posts">
+            <div class="category-head" id="category-discussie">
+                Discussie
+            </div>
+            <script type="text/html" id="discussion-template">
+                <div class="forum" id="forum-discussion">
+                    <div class="forum-icon">
+                        <i class="fas fa-info"></i>
+                    </div>
+                    <div class="forum-title">
+                        Forum
+                    </div>
+                    <div class="forum-description">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="forum-topics">
+                        4
+                    </div>
+                    <div class="forum-posts">
+                        1
+                    </div>
+                </div>
+            </script>
+        </div>
+
+        <div class="category" id="help-posts">
+            <div class="category-head" id="category-help">
+                Hulp nodig
+            </div>
+            <script type="text/html" id="help-template">
+                <div class="forum">
+                    <div class="forum-icon">
+                        <i class="fas fa-info"></i>
+                    </div>
+                    <div class="forum-title">
+                        Forum
+                    </div>
+                    <div class="forum-description">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="forum-topics">
+                        7
+                    </div>
+                    <div class="forum-posts">
+                        9
+                    </div>
+                </div>
+            </script>
+        </div>
+
+        <div class="category" id="offtopic-posts">
+            <div class="category-head" id="category-offtopic">
+                Off-topic
+            </div>
+            <script type="text/html" id="offtopic-template">
+                <div class="forum">
+                    <div class="forum-icon">
+                        <i class="fas fa-info"></i>
+                    </div>
+                    <div class="forum-title">
+                        Forum
+                    </div>
+                    <div class="forum-description">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="forum-topics">
+                        13
+                    </div>
+                    <div class="forum-posts">
+                        21
+                    </div>
+                </div>
+            </script>
+        </div>
     </div>
+
+    <aside>
+        <div class="side rounded">
+            <div class="col-sm-1 p-3 pb-1 bg-light rounded">
+                <h4 class="font-italic">Forum</h4>
+                <p class="text-nowrap">U kunt hier artikelen
+                    <br> bekijken die gepost zijn <br> door andere gebruikers.<br>
+                    Wilt u zelf een artikel<br> schrijven? Druk op de knop <br>hierboven.</p>
+            </div>
+
+            <div class="side-head">
+                Categorieën
+            </div>
+            <div class="side-item" id="side-all">
+                <a class="side-all">Alle categorieën</a>
+                <span class="float-right badge badge-light round">5</span>
+            </div>
+            <div class="side-item" id="side-event">
+                <a class="side-event">Activiteit-gerelateerd</a>
+                <span class="float-right badge badge-light round">2</span>
+            </div>
+            <div class="side-item" id="side-discussion">
+                <a class="side-discussion">Discussie</a>
+                <span class="float-right badge badge-light round">1</span>
+            </div>
+            <div class="side-item" id="side-help">
+                <a class="side-help">Hulp nodig</a>
+                <span class="float-right badge badge-light round">1</span>
+            </div>
+            <div class="side-item" id="side-offtopic">
+                <a class="side-offtopic">Off-topic</a>
+                <span class="float-right badge badge-light round">1</span>
+            </div>
+        </div>
+    </aside>
 </div>
-<br>
-<br>
-<br>
-<button type="button" onclick="onAddPost()" class="btn btn-outline-secondary">+</button>
 
 <br>
-
-<div class="panel">
-    <div class="panel-element">
-        <div class="element-content">
-            <div class="content-post">
-                <div class="post-avatar"></div>
-                <div class="post-content">
-                    <span class="post-title h2">Onderwerp</span>
-                    <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="text-right">
-                    <span><i><small>Gepost door Naam Achternaam</small></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-element">
-        <div class="element-content">
-            <div class="content-post">
-                <div class="post-avatar"></div>
-                <div class="post-content">
-                    <span class="post-title h2">Onderwerp</span>
-                    <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="text-right">
-                    <span><i><small>Gepost door Naam Achternaam</small></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-element">
-        <div class="element-content">
-            <div class="content-post">
-                <div class="post-avatar"></div>
-                <div class="post-content">
-                    <span class="post-title h2">Onderwerp</span>
-                    <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="text-right">
-                    <span><i><small>Gepost door Naam Achternaam</small></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-element">
-        <div class="element-content">
-            <div class="content-post">
-                <div class="post-avatar"></div>
-                <div class="post-content">
-                    <span class="post-title h2">Onderwerp</span>
-                    <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="text-right">
-                    <span><i><small>Gepost door Naam Achternaam</small></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-element">
-        <div class="element-content">
-            <div class="content-post">
-                <div class="post-avatar"></div>
-                <div class="post-content">
-                    <span class="post-title h2">Onderwerp</span>
-                    <p class="post-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class="text-right">
-                    <span><i><small>Gepost door Naam Achternaam</small></i></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
