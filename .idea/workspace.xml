@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
+    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="profiel controller en repository aangemaakt">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/activiteitenController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/indexController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/navbarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/navbarController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/welcomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/welcomeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/forumRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/forumRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/roomExampleRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/roomExampleRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/activiteiten.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/activiteiten.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/nieuws.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +54,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -48,6 +73,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
@@ -64,13 +90,17 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/img/avatars" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="forumController.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" working-dir="$PROJECT_DIR$/src/assets/js/controllers">
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -84,6 +114,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.forumController.js" />
       </list>
     </recent_temporary>
   </component>
@@ -118,6 +149,13 @@
       <workItem from="1585618739342" duration="10036000" />
       <workItem from="1585640100429" duration="7147000" />
       <workItem from="1585648354980" duration="237000" />
+      <workItem from="1585927116516" duration="3367000" />
+      <workItem from="1586114228481" duration="409000" />
+      <workItem from="1586185342287" duration="3323000" />
+      <workItem from="1586259843687" duration="7082000" />
+      <workItem from="1586323533136" duration="7495000" />
+      <workItem from="1586382463670" duration="4157000" />
+      <workItem from="1586414776864" duration="16980000" />
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -168,8 +206,7 @@
     <MESSAGE value="vraag en antwoord toegevoegd. Nog niet helemaal goed," />
     <MESSAGE value="antwoord toegevoegd aangepast. Nog niet helemaal goed." />
     <MESSAGE value="profiel controller en repository aangemaakt" />
-    <MESSAGE value="profiel controller en repository aangemaakt. profiel aanpassen pagina aangepast." />
-    <option name="LAST_COMMIT_MESSAGE" value="profiel controller en repository aangemaakt. profiel aanpassen pagina aangepast." />
+    <option name="LAST_COMMIT_MESSAGE" value="profiel controller en repository aangemaakt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="74" key="#Project_Structure" timestamp="1585317898421">
@@ -185,47 +222,88 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.823@0.23.1440.823" timestamp="1583848294647" />
-    <state x="432" y="23" key="CommitChangelistDialog2" timestamp="1585678731690">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="432" y="23" key="CommitChangelistDialog2" timestamp="1586440653685">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
     <state x="384" y="5" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585237974315" />
     <state x="384" y="23" key="CommitChangelistDialog2/0.23.1280.720@0.23.1280.720" timestamp="1585238442028" />
+    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.803@0.23.1440.803" timestamp="1586440653685" />
     <state x="432" y="29" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1583855421171" />
-    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1585678731690" />
+    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1585678671115" />
     <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1585264002752" />
+    <state width="398" height="438" key="DebuggerActiveHint" timestamp="1585876329280">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="398" height="438" key="DebuggerActiveHint/0.23.1440.803@0.23.1440.803" timestamp="1585876329280" />
     <state x="870" y="307" key="FileChooserDialogImpl" timestamp="1583870089667">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
-    <state width="1234" height="82" key="GridCell.Tab.0.bottom" timestamp="1585681280751">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="945" height="73" key="GridCell.Tab.0.bottom" timestamp="1586440666137">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
-    <state width="1065" height="371" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1585630777322" />
+    <state width="945" height="73" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586440666137" />
     <state width="1065" height="374" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585619186992" />
-    <state width="1234" height="82" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585681280751" />
-    <state width="1234" height="82" key="GridCell.Tab.0.center" timestamp="1585681280750">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1065" height="195" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1585959381230" />
+    <state width="1234" height="82" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
+    <state width="945" height="73" key="GridCell.Tab.0.center" timestamp="1586440666135">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
-    <state width="1065" height="371" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
+    <state width="945" height="73" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1586440666135" />
     <state width="1065" height="374" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
-    <state width="1234" height="82" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585681280750" />
-    <state width="1234" height="82" key="GridCell.Tab.0.left" timestamp="1585681280749">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1065" height="195" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1585959381229" />
+    <state width="1234" height="82" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585663214575" />
+    <state width="945" height="73" key="GridCell.Tab.0.left" timestamp="1586440666134">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
-    <state width="1065" height="371" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1585630777314" />
+    <state width="945" height="73" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1586440666134" />
     <state width="1065" height="374" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1585619186990" />
-    <state width="1234" height="82" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585681280749" />
-    <state width="1234" height="82" key="GridCell.Tab.0.right" timestamp="1585681280750">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1065" height="195" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1585959381228" />
+    <state width="1234" height="82" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585663214574" />
+    <state width="945" height="73" key="GridCell.Tab.0.right" timestamp="1586440666136">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
-    <state width="1065" height="371" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1585630777315" />
+    <state width="945" height="73" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1586440666136" />
     <state width="1065" height="374" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
-    <state width="1234" height="82" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585681280750" />
-    <state x="327" y="148" key="Vcs.Push.Dialog.v2" timestamp="1585680870558">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state width="1065" height="195" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1585959381229" />
+    <state width="1234" height="82" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
+    <state width="1065" height="467" key="GridCell.Tab.1.bottom" timestamp="1586188859163">
+      <screen x="0" y="23" width="1440" height="803" />
     </state>
-    <state x="327" y="148" key="Vcs.Push.Dialog.v2/0.23.1440.811@0.23.1440.811" timestamp="1585680870558" />
+    <state width="1065" height="467" key="GridCell.Tab.1.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586188859163" />
+    <state width="1065" height="467" key="GridCell.Tab.1.center" timestamp="1586188859162">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.1.center/0.23.1440.803@0.23.1440.803" timestamp="1586188859162" />
+    <state width="1065" height="467" key="GridCell.Tab.1.left" timestamp="1586188859162">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.1.left/0.23.1440.803@0.23.1440.803" timestamp="1586188859162" />
+    <state width="1065" height="467" key="GridCell.Tab.1.right" timestamp="1586188859163">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.1.right/0.23.1440.803@0.23.1440.803" timestamp="1586188859163" />
+    <state width="1065" height="467" key="GridCell.Tab.2.bottom" timestamp="1586188859164">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.2.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586188859164" />
+    <state width="1065" height="467" key="GridCell.Tab.2.center" timestamp="1586188859164">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.2.center/0.23.1440.803@0.23.1440.803" timestamp="1586188859164" />
+    <state width="1065" height="467" key="GridCell.Tab.2.left" timestamp="1586188859163">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.2.left/0.23.1440.803@0.23.1440.803" timestamp="1586188859163" />
+    <state width="1065" height="467" key="GridCell.Tab.2.right" timestamp="1586188859164">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state width="1065" height="467" key="GridCell.Tab.2.right/0.23.1440.803@0.23.1440.803" timestamp="1586188859164" />
+    <state x="235" y="63" key="SettingsEditor" timestamp="1586187180057">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="235" y="63" key="SettingsEditor/0.23.1440.803@0.23.1440.803" timestamp="1586187180057" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -235,11 +313,19 @@
       <screen x="0" y="23" width="1440" height="803" />
     </state>
     <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.803@0.23.1440.803" timestamp="1585645642450" />
-    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585831121052">
+    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585678635763">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="621" y="307" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.720@0.23.1280.720" timestamp="1585236505189" />
-    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1585831121052" />
+    <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1585678635763" />
     <state x="699" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1585253057093" />
+    <state x="436" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1585875851112">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="436" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.803@0.23.1440.803" timestamp="1585875851112" />
+    <state x="468" y="149" width="837" height="550" key="find.popup" timestamp="1586261532516">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="468" y="149" width="837" height="550" key="find.popup/0.23.1440.803@0.23.1440.803" timestamp="1586261532516" />
   </component>
 </project>

@@ -50,11 +50,11 @@ app.post("/user/login", (req, res) => {
     }, (err) => res.status(badRequestCode).json({reason: err}));
 });
 
-//dummy data example - rooms
-app.post("/room_example", (req, res) => {
+//dummy data example - id
+app.post("/user", (req, res) => {
 
     db.handleQuery(connectionPool, {
-            query: "SELECT id, surface FROM room_example WHERE id = ?",
+            query: "SELECT naam, username FROM user WHERE id = ?",
             values: [req.body.id]
         }, (data) => {
             //just give all data back as json

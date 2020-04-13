@@ -1,123 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Nieuws - The Agile Elderly</title>
-    <!-- Load our stylesheets -->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <title>Nieuws - The Agile Elderly</title>-->
+<!--    &lt;!&ndash; Load our stylesheets &ndash;&gt;-->
 
-    <!-- Load jQuery 3.4.1 -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<!--    &lt;!&ndash; Load jQuery 3.4.1 &ndash;&gt;-->
+<!--    <script src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>-->
+<!--    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>-->
 
-    <!-- Load Bootstrap stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--    &lt;!&ndash; Load Bootstrap stylesheet &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
 
-    <!-- Load Bootstrap script -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+<!--    &lt;!&ndash; Load Bootstrap script &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"-->
+<!--            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
+<!--            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
+<!--            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"-->
+<!--            crossorigin="anonymous"></script>-->
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
-</head>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+<!--    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">-->
+<!--</head>-->
+<!--<header>-->
+<!--    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">-->
 
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
-                The Agile Elderly</a>
+<!--        <div class="container">-->
+<!--            <a class="navbar-brand" href="index.html">-->
+<!--                <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">-->
+<!--                The Agile Elderly</a>-->
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item" >
-                        <a class="nav-link"  data-controller="home" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item" >
-                        <a class="nav-link text-white"  data-controller="nieuws" href="nieuws.html"><b>Nieuws</b></a>
-                    </li>
-                    <li class="nav-item" >
-                        <a class="nav-link"  data-controller="agenda" href="agenda.html">Agenda</a>
-                    </li>
-                    <li class="nav-item" >
-                        <a class="nav-link"  data-controller="activiteiten" href="activiteiten.html">Activiteiten</a>
-                    </li>
-                    <li class="nav-item" >
-                        <a class="nav-link"  data-controller="forum" href="forum.html">Forum</a>
-                    </li>
-                    <li class="nav-item" >
-                        <a class="nav-link"  data-controller="overons" href="overons.html">Over ons
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="login" href="login.html">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="logout" href="loguit.html">Log uit</a>
-                    </li>
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"-->
+<!--                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
+<!--                <ul class="navbar-nav ml-auto">-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link"  data-controller="home" href="index.html">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link text-white"  data-controller="nieuws" href="nieuws.html"><b>Nieuws</b></a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link"  data-controller="agenda" href="agenda.html">Agenda</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link"  data-controller="activiteiten" href="activiteiten.html">Activiteiten</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link"  data-controller="forum" href="forum.html">Forum</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" >-->
+<!--                        <a class="nav-link"  data-controller="overons" href="overons.html">Over ons-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="login" href="login.html">Log in</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="logout" href="loguit.html">Log uit</a>-->
+<!--                    </li>-->
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<body>
-<footer class="page-footer font-small text-white bg-dark pt-4">
-    <div class="container text-center text-md-left">
-        <div class="row">
-            <br>
-            <div class="col-md-2 mx-auto">
-                <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="nieuws.html">Nieuws</a>
-                    </li>
-                    <li>
-                        <a href="agenda.html">Agenda</a>
-                    </li>
-                    <li>
-                        <a href="activiteiten.html">Activiteiten</a>
-                    </li>
-                    <li>
-                        <a href="forum.html">Forum</a>
-                    </li>
-                </ul>
-            </div>
-            <br>
-            <div class="col-md-2 mx-auto">
-                <h5 class="text-uppercase mt-3 mb-4">Account</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="login.html">Log in</a>
-                    </li>
-                    <li>
-                        <a href="register.html.html">Registreer</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="#"> The Agile Elderly</a>
-        <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">
-    </div>
-</footer>
-</body>
-</html>
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
+<!--<body>-->
+<!--<footer class="page-footer font-small text-white bg-dark pt-4">-->
+<!--    <div class="container text-center text-md-left">-->
+<!--        <div class="row">-->
+<!--            <br>-->
+<!--            <div class="col-md-2 mx-auto">-->
+<!--                <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>-->
+<!--                <ul class="list-unstyled">-->
+<!--                    <li>-->
+<!--                        <a href="index.html">Home</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="nieuws.html">Nieuws</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="agenda.html">Agenda</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="activiteiten.html">Activiteiten</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="forum.html">Forum</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="col-md-2 mx-auto">-->
+<!--                <h5 class="text-uppercase mt-3 mb-4">Account</h5>-->
+<!--                <ul class="list-unstyled">-->
+<!--                    <li>-->
+<!--                        <a href="login.html">Log in</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="register.html.html">Registreer</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <div class="footer-copyright text-center py-3">© 2020 Copyright:-->
+<!--        <a href="#"> The Agile Elderly</a>-->
+<!--        <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">-->
+<!--    </div>-->
+<!--</footer>-->
+<!--</body>-->
+<!--</html>-->

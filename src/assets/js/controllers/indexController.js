@@ -1,15 +1,15 @@
-class AgendaController {
+class IndexController {
 
     constructor() {
-        $.get("views/agenda.html")
+        $.get("views/index.html")
             .done((htmlData) => this.setup(htmlData))
             .fail(() => this.error());
     }
 
     setup(htmlData) {
-        this.agendaView = $(htmlData);
+        this.indexView = $(htmlData);
 
-        $(".content").empty().append(this.agendaView);
+        $(".content").empty().append(this.indexView);
     }
 
     error() {

@@ -1,7 +1,11 @@
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<link href="../assets/css/default.css" rel="stylesheet" type="text/css"/>
 
-        <div class="container">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
                 The Agile Elderly</a>
@@ -10,38 +14,128 @@
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mx-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" data-controller="welcome" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="nieuws" href="#">Nieuws</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="agenda" href="#">Agenda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="activiteiten" href="#">Activiteiten</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="forum" href="#">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="register" href="#">Registreren</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="login" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-controller="logout" href="#">Logout</a>
+                        <a href="#" class="nav-link" data-controller="welcome"> <i class="material-icons">home</i>
+                            Home
+                        </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-controller="nieuws"> <i class="material-icons">mail</i>
+                            Nieuws
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-controller="agenda"> <i class="material-icons">today</i>
+                            Agenda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-controller="activiteiten"> <i class="material-icons">date_range</i>
+                            Activiteiten
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-controller="forum"> <i class="material-icons">forum</i>
+                            Forum
+                        </a>
+                    </li>
                 </ul>
             </div>
+
+            <!-- items te zien wanneer ingelogd -->
+            <ul class="navbar-nav ml-auto loggedin">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-controller="instellingen"> <i class="material-icons">settings</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-controller="mijnprofiel"> <i
+                            class="material-icons">account_circle</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-controller="logout"> <i class="material-icons">exit_to_app</i>Log
+                        uit
+                    </a>
+                </li>
+            </ul>
+
+            <!-- items te zien wanneer uitgelogd -->
+            <ul class="navbar-nav ml-auto loggedout">
+                <li class="nav-item hide">
+                    <a class="nav-link register" id="register" data-controller="register" href="#">Registreren</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-controller="login" href="#">Login</a>
+            </ul>
         </div>
     </nav>
 </header>
+
+<!--vorige header -->
+
+<!--<header>-->
+<!--    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">-->
+
+<!--        <div class="container">-->
+<!--            <a class="navbar-brand" href="#">-->
+<!--                <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">-->
+<!--                The Agile Elderly</a>-->
+<!--            -->
+<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"-->
+<!--                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+
+<!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
+<!--                <ul class="navbar-nav ml-auto">-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="welcome" href="#">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="nieuws" href="#">Nieuws</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="agenda" href="#">Agenda</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="activiteiten" href="#">Activiteiten</a>-->
+<!--                    </li>-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="forum" href="#">Forum</a>-->
+
+
+<!--                    </li>-->
+
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="register" href="#">Registreren</a>-->
+
+
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="login" href="#">Login</a>-->
+
+
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" data-controller="logout" href="#">Logout</a>-->
+
+
+<!--                    </li>-->
+
+<!--                </ul>-->
+<!--            </div>-->
+
+
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
 
 

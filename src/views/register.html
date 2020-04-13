@@ -10,7 +10,7 @@
                 <div class="col-lg-7">
                     <div class="p-4">
                         <div class="text-center">
-                            <h1 class="h2 text-gray-900 mb-1">Registreren</h1>
+                            <h1 class="h2 mb-1">Registreren</h1>
                             <p>U kunt zich hier registreren</p>
                         </div>
 
@@ -145,7 +145,7 @@
                                     <option>100</option>
                                 </select>
                             </div>
-                            <br>
+
                             <!-- Newsletter -->
                             <div class="form-group text-center">
                                 <div class="custom-control custom-checkbox">
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                             <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary w-75">Registratie voltooien</button>
+                                <button type="submit" class="btn w-75">Registratie voltooien</button>
                             </div>
                             <hr>
                         </form>
@@ -165,7 +165,7 @@
                             <a href="#" data-controller="forgotpassword">Wachtwoord vergeten?</a>
                         </div>
                         <div class="text-center">
-                            <a data-controller="login" href="#">Ik heb al een account!</a>
+                            <a onclick="app.loadController(CONTROLLER_LOGIN)" href="#">Ik heb al een account!</a>
                         </div>
                     </div>
                 </div>

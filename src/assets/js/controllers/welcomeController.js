@@ -6,7 +6,8 @@
  */
 class WelcomeController {
     constructor() {
-        this.roomExampleRepository = new RoomExampleRepository();
+        // this.roomExampleRepository = new RoomExampleRepository();
+        this.registerRepository = new RegisterRepository();
 
         $.get("views/welcome.html")
             .done((data) => this.setup(data))
@@ -24,20 +25,21 @@ class WelcomeController {
         //Empty the content-div and add the resulting view to the page
         $(".content").empty().append(this.welcomeView);
 
-        this.fetchRooms(1256);
+        this.fetchRooms();
     }
 
     /**
      * async function that retrieves a kamer by its id via repository
      * @param roomId the room id to retrieve
      */
-    async fetchRooms(roomId) {
-        const exampleResponse = this.welcomeView.find(".example-response");
+    async fetchRooms() {
+        const exampleResponse = this.welcomeView.find(".mt-5");
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
-            const roomData = await this.roomExampleRepository.get(roomId);
+            // const roomData = await this.registerRepository.get();
 
-            exampleResponse.text(JSON.stringify(roomData, null, 4));
+            const gebruiker =(JSON.stringify(sessionManager.get("username")).replace(/['"]+/g, ''));
+            exampleResponse.text("Welkom terug " + gebruiker + ", ")
         } catch (e) {
             console.log("error while fetching rooms", e);
 

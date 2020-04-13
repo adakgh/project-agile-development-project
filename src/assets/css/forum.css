@@ -4,17 +4,23 @@
     left: 100px;
 }
 
+h1 {
+    color: black;
+}
+
+p {
+    color: #515f7d;
+}
+
 .btn {
     position: relative;
     float: right;
     right: 100px;
-    cursor: pointer;
     display: inline-block;
     width: 45px;
     height: 45px;
     border-width: 2px;
     border-style: solid;
-    border-radius: 50%;
 }
 
 .panel {

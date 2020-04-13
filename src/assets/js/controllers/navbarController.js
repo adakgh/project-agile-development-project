@@ -5,6 +5,14 @@
  */
 class NavbarController {
     constructor() {
+        //refresht welcome en login pagina voor sessie
+        function locationHashChanged() {
+            if (location.hash === '#welcome' || location.hash === '#login') {
+                window.location.reload(true);
+            }
+        }
+        window.onhashchange = locationHashChanged;
+
         $.get("views/navbar.html")
             .done((data) => this.setup(data))
             .fail(() => this.error());
@@ -18,10 +26,16 @@ class NavbarController {
         //Find all anchors and register the click-event
         sidebarView.find("a").on("click", this.handleClickMenuItem);
 
-        //TODO: Add logic here to determine which menu items should be visible or not
-
-        //Empty the sidebar-div and add the resulting view to the page
-        $(".sidebar").empty().append(sidebarView);
+        //navbar items worden verborgen of getoond wanneer in of uitgelogd
+        if (sessionManager.get("username")) {
+            sidebarView.find(".loggedout").hide();
+            sidebarView.find(".loggedin").show();
+            $(".sidebar").empty().append(sidebarView);
+        } else {
+            sidebarView.find(".loggedout").show();
+            sidebarView.find(".loggedin").hide();
+            $(".sidebar").empty().append(sidebarView);
+        }
     }
 
     handleClickMenuItem() {

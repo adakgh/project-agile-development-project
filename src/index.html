@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Project Agile Development - Framework</title>
 
     <!-- Load our stylesheets -->
-    <link href="assets/css/default.css" rel="stylesheet" type="text/css"/>
     <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Load jQuery 3.4.1 -->
@@ -27,6 +26,8 @@
     <script src="assets/js/controllers/nieuwsController.js"></script>
     <script src="assets/js/controllers/agendaController.js"></script>
     <script src="assets/js/controllers/gebruikersProfielAanpassen.js"></script>
+    <script src="assets/js/controllers/indexController.js"></script>
+    <script src="assets/js/controllers/activiteitenController.js"></script>
 
     <!-- Repositories -->
     <script src="assets/js/repositories/roomExampleRepository.js"></script>
@@ -39,62 +40,63 @@
     <script src="assets/js/app.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="sidebar">
-        <!-- Loads navigation via JS -->
-    </div>
+<!-- Navigation -->
+<div class="sidebar">
+    <!-- Loads navigation via JS -->
+</div>
 
-    <!-- Page Content -->
-    <div class="content">
-        <!-- Loads content via JS -->
-    </div>
+<!-- Page Content -->
+<div class="content">
+    <!-- Loads content via JS -->
+</div>
 
-    <!-- Footer -->
-    <footer class="page-footer font-small text-white bg-dark pt-4">
-        <div class="container text-center text-md-left">
-            <div class="row">
-                <br>
-                <div class="col-md-2 mx-auto">
-                    <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="nieuws.html">Nieuws</a>
-                        </li>
-                        <li>
-                            <a href="agenda.html">Agenda</a>
-                        </li>
-                        <li>
-                            <a href="activiteiten.html">Activiteiten</a>
-                        </li>
-                        <li>
-                            <a href="forum.html">Forum</a>
-                        </li>
-                    </ul>
-                </div>
-                <br>
-                <div class="col-md-2 mx-auto">
-                    <h5 class="text-uppercase mt-3 mb-4">Account</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="login.html">Login</a>
-                        </li>
-                        <li>
-                            <a href="register.html">Registreer</a>
-                        </li>
-                    </ul>
-                </div>
+<!-- Footer -->
+<footer class="page-footer font-small text-white bg-dark pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <br>
+            <div class="col-md-2 mx-auto">
+                <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_WELCOME)">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_NEWS)">Nieuws</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_AGENDA)">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_EVENTS)">Activiteiten</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_FORUM)">Forum</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="col-md-2 mx-auto">
+                <h5 class="text-uppercase mt-3 mb-4">Account</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_LOGIN)">Login</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_REGISTER)">Registreer</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="footer-copyright text-center py-3">© 2020 Copyright
-            <a href="#"> The Agile Elderly</a>
-            <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">
-        </div>
-    </footer>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright
+        <a href="#"> The Agile Elderly</a>
+        <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">
+    </div>
+</footer>
+
 </body>
 </html>

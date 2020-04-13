@@ -8,7 +8,7 @@
 class RoomExampleRepository {
 
     constructor() {
-        this.route = "/room_example"
+        this.route = "/user"
     }
 
     async getAll() {
