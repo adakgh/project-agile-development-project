@@ -90,7 +90,6 @@ app.post("/user", (req, res) => {
     );
 });
 
-<<<<<<< Updated upstream
 app.post("/forum/create", (req, res) => {
     // res.send({username: req.body.username, title: req.body.title, forum_text: req.body.forum_text, tag: req.body.tag });
     db.handleQuery(connectionPool, {
@@ -114,7 +113,7 @@ app.post("/forum", (req, res) => {
         }, (err) => res.status(badRequestCode).json({reason: err})
     );
 });
-=======
+
 app.post("/event", (req, res) => {
     //res.send({person_amount: req.body.person_amount, date: req.body.date })
 
@@ -131,7 +130,6 @@ app.post("/event", (req, res) => {
 
 
 
->>>>>>> Stashed changes
 
 //------- END ROUTES -------
 
