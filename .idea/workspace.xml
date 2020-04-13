@@ -130,15 +130,19 @@
       <workItem from="1585216938004" duration="968000" />
       <workItem from="1585235633077" duration="259000" />
       <workItem from="1585236453569" duration="1942000" />
+<<<<<<< Updated upstream
       <workItem from="1585618739342" duration="10036000" />
       <workItem from="1585640100429" duration="7147000" />
+<<<<<<< Updated upstream
       <workItem from="1585648354980" duration="237000" />
+<<<<<<< Updated upstream
       <workItem from="1585927116516" duration="3367000" />
       <workItem from="1586114228481" duration="409000" />
       <workItem from="1586185342287" duration="3323000" />
       <workItem from="1586259843687" duration="7082000" />
       <workItem from="1586323533136" duration="7495000" />
       <workItem from="1586382463670" duration="4157000" />
+<<<<<<< Updated upstream
       <workItem from="1586414776864" duration="17626000" />
       <workItem from="1586443640255" duration="10770000" />
       <workItem from="1586527790508" duration="22250000" />
@@ -146,6 +150,17 @@
       <workItem from="1586623030442" duration="13717000" />
       <workItem from="1586686328158" duration="24944000" />
       <workItem from="1586777758778" duration="7856000" />
+=======
+      <workItem from="1586414776864" duration="16980000" />
+=======
+=======
+      <workItem from="1585648354980" duration="4085000" />
+=======
+      <workItem from="1585642739453" duration="291000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -238,8 +253,24 @@
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
+<<<<<<< Updated upstream
     <state width="967" height="72" key="GridCell.Tab.0.bottom" timestamp="1586737698728">
       <screen x="0" y="23" width="1440" height="801" />
+=======
+<<<<<<< Updated upstream
+    <state width="945" height="73" key="GridCell.Tab.0.bottom" timestamp="1586440666137">
+      <screen x="0" y="23" width="1440" height="803" />
+=======
+<<<<<<< Updated upstream
+    <state width="1234" height="82" key="GridCell.Tab.0.bottom" timestamp="1585663214576">
+      <screen x="0" y="23" width="1440" height="811" />
+=======
+<<<<<<< Updated upstream
+    <state width="1065" height="344" key="GridCell.Tab.0.bottom" timestamp="1585651754766">
+      <screen x="0" y="23" width="1440" height="803" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </state>
     <state width="967" height="72" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1586737698728" />
     <state width="945" height="72" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586585667999" />
@@ -307,9 +338,12 @@
     </state>
     <state x="235" y="63" key="SettingsEditor/0.23.1440.803@0.23.1440.803" timestamp="1586187180057" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
+=======
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585642740857">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585235639464" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585642740857" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1584627857487" />
     <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585645642450">
       <screen x="0" y="23" width="1440" height="803" />
