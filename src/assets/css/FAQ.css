@@ -1,11 +1,11 @@
 h2 {
     font-family: Arial, Verdana;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 30px;
     text-align: center;
     font-weight: 800;
-    font-size: 4rem;
-    color: #1f7de2;
+    font-size: 3rem;
+    color: black;
     text-transform: uppercase;
 }
 .accordion-section .panel-default > .panel-heading {
@@ -22,7 +22,7 @@ h2 {
     font-style: normal;
     font-size: 3rem;
     content: "\f106";
-    color: #1f7de2;
+    color: #47536e;
     float: right;
     margin-top: -12px;
 }
