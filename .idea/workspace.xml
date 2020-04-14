@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="profiel controller en repository aangemaakt">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/activiteitenController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/indexController.js" afterDir="false" />
+    <list default="true" id="5665dea4-105e-455f-ac94-e39cd8c55d53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/js/controllers/postForum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/postForum.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/default.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/forum.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/agendaController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/forumController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/navbarController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/navbarController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/nieuwsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/controllers/welcomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/controllers/welcomeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/forumRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/forumRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/registerRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/repositories/roomExampleRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/repositories/roomExampleRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/activiteiten.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/activiteiten.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/agenda.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/agenda.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/nieuws.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/nieuws.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -146,16 +130,37 @@
       <workItem from="1585216938004" duration="968000" />
       <workItem from="1585235633077" duration="259000" />
       <workItem from="1585236453569" duration="1942000" />
+<<<<<<< Updated upstream
       <workItem from="1585618739342" duration="10036000" />
       <workItem from="1585640100429" duration="7147000" />
+<<<<<<< Updated upstream
       <workItem from="1585648354980" duration="237000" />
+<<<<<<< Updated upstream
       <workItem from="1585927116516" duration="3367000" />
       <workItem from="1586114228481" duration="409000" />
       <workItem from="1586185342287" duration="3323000" />
       <workItem from="1586259843687" duration="7082000" />
       <workItem from="1586323533136" duration="7495000" />
       <workItem from="1586382463670" duration="4157000" />
+<<<<<<< Updated upstream
+      <workItem from="1586414776864" duration="17626000" />
+      <workItem from="1586443640255" duration="10770000" />
+      <workItem from="1586527790508" duration="22250000" />
+      <workItem from="1586583289704" duration="21978000" />
+      <workItem from="1586623030442" duration="13717000" />
+      <workItem from="1586686328158" duration="24944000" />
+      <workItem from="1586777758778" duration="7856000" />
+=======
       <workItem from="1586414776864" duration="16980000" />
+=======
+=======
+      <workItem from="1585648354980" duration="4085000" />
+=======
+      <workItem from="1585642739453" duration="291000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="registreren">
       <created>1583853127698</created>
@@ -178,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585238105464</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="controllers aangemaakt, navbar aangepast en verandert wanneer ingelogd, landingpage en welkom pagina begin">
+      <created>1586440754263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586440754263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +218,8 @@
     <MESSAGE value="vraag en antwoord toegevoegd. Nog niet helemaal goed," />
     <MESSAGE value="antwoord toegevoegd aangepast. Nog niet helemaal goed." />
     <MESSAGE value="profiel controller en repository aangemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="profiel controller en repository aangemaakt" />
+    <MESSAGE value="controllers aangemaakt, navbar aangepast en verandert wanneer ingelogd, landingpage en welkom pagina begin" />
+    <option name="LAST_COMMIT_MESSAGE" value="controllers aangemaakt, navbar aangepast en verandert wanneer ingelogd, landingpage en welkom pagina begin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="74" key="#Project_Structure" timestamp="1585317898421">
@@ -222,12 +235,12 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="784" y="297" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.823@0.23.1440.823" timestamp="1583848294647" />
-    <state x="432" y="23" key="CommitChangelistDialog2" timestamp="1586440653685">
+    <state x="279" y="23" key="CommitChangelistDialog2" timestamp="1586440753827">
       <screen x="0" y="23" width="1440" height="803" />
     </state>
     <state x="384" y="5" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1585237974315" />
     <state x="384" y="23" key="CommitChangelistDialog2/0.23.1280.720@0.23.1280.720" timestamp="1585238442028" />
-    <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.803@0.23.1440.803" timestamp="1586440653685" />
+    <state x="279" y="23" key="CommitChangelistDialog2/0.23.1440.803@0.23.1440.803" timestamp="1586440753827" />
     <state x="432" y="29" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1583855421171" />
     <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1585678671115" />
     <state x="432" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1585264002752" />
@@ -240,31 +253,51 @@
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1583159624063" />
     <state x="870" y="307" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1583870089667" />
+<<<<<<< Updated upstream
+    <state width="967" height="72" key="GridCell.Tab.0.bottom" timestamp="1586737698728">
+      <screen x="0" y="23" width="1440" height="801" />
+=======
+<<<<<<< Updated upstream
     <state width="945" height="73" key="GridCell.Tab.0.bottom" timestamp="1586440666137">
       <screen x="0" y="23" width="1440" height="803" />
+=======
+<<<<<<< Updated upstream
+    <state width="1234" height="82" key="GridCell.Tab.0.bottom" timestamp="1585663214576">
+      <screen x="0" y="23" width="1440" height="811" />
+=======
+<<<<<<< Updated upstream
+    <state width="1065" height="344" key="GridCell.Tab.0.bottom" timestamp="1585651754766">
+      <screen x="0" y="23" width="1440" height="803" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </state>
-    <state width="945" height="73" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586440666137" />
+    <state width="967" height="72" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1586737698728" />
+    <state width="945" height="72" key="GridCell.Tab.0.bottom/0.23.1440.803@0.23.1440.803" timestamp="1586585667999" />
     <state width="1065" height="374" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585619186992" />
     <state width="1065" height="195" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1585959381230" />
     <state width="1234" height="82" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
-    <state width="945" height="73" key="GridCell.Tab.0.center" timestamp="1586440666135">
-      <screen x="0" y="23" width="1440" height="803" />
+    <state width="967" height="72" key="GridCell.Tab.0.center" timestamp="1586737698726">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="945" height="73" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1586440666135" />
+    <state width="967" height="72" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1586737698726" />
+    <state width="945" height="72" key="GridCell.Tab.0.center/0.23.1440.803@0.23.1440.803" timestamp="1586585667997" />
     <state width="1065" height="374" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
     <state width="1065" height="195" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1585959381229" />
     <state width="1234" height="82" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1585663214575" />
-    <state width="945" height="73" key="GridCell.Tab.0.left" timestamp="1586440666134">
-      <screen x="0" y="23" width="1440" height="803" />
+    <state width="967" height="72" key="GridCell.Tab.0.left" timestamp="1586737698726">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="945" height="73" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1586440666134" />
+    <state width="967" height="72" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1586737698726" />
+    <state width="945" height="72" key="GridCell.Tab.0.left/0.23.1440.803@0.23.1440.803" timestamp="1586585667996" />
     <state width="1065" height="374" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1585619186990" />
     <state width="1065" height="195" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1585959381228" />
     <state width="1234" height="82" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1585663214574" />
-    <state width="945" height="73" key="GridCell.Tab.0.right" timestamp="1586440666136">
-      <screen x="0" y="23" width="1440" height="803" />
+    <state width="967" height="72" key="GridCell.Tab.0.right" timestamp="1586737698727">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="945" height="73" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1586440666136" />
+    <state width="967" height="72" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1586737698727" />
+    <state width="945" height="72" key="GridCell.Tab.0.right/0.23.1440.803@0.23.1440.803" timestamp="1586585667998" />
     <state width="1065" height="374" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1585619186991" />
     <state width="1065" height="195" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1585959381229" />
     <state width="1234" height="82" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1585663214576" />
@@ -305,9 +338,12 @@
     </state>
     <state x="235" y="63" key="SettingsEditor/0.23.1440.803@0.23.1440.803" timestamp="1586187180057" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585235639464">
+=======
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1585642740857">
+>>>>>>> Stashed changes
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585235639464" />
+    <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585642740857" />
     <state x="577" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.823@0.23.1440.823" timestamp="1584627857487" />
     <state x="409" y="77" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585645642450">
       <screen x="0" y="23" width="1440" height="803" />
@@ -323,9 +359,10 @@
       <screen x="0" y="23" width="1440" height="803" />
     </state>
     <state x="436" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.803@0.23.1440.803" timestamp="1585875851112" />
-    <state x="468" y="149" width="837" height="550" key="find.popup" timestamp="1586261532516">
-      <screen x="0" y="23" width="1440" height="803" />
+    <state x="468" y="149" width="837" height="550" key="find.popup" timestamp="1586734293757">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="468" y="149" width="837" height="550" key="find.popup/0.23.1440.803@0.23.1440.803" timestamp="1586261532516" />
+    <state x="468" y="149" width="837" height="550" key="find.popup/0.23.1440.801@0.23.1440.801" timestamp="1586734293757" />
+    <state x="468" y="149" width="837" height="550" key="find.popup/0.23.1440.803@0.23.1440.803" timestamp="1586551287921" />
   </component>
 </project>

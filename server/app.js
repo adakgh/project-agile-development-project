@@ -90,6 +90,46 @@ app.post("/user", (req, res) => {
     );
 });
 
+app.post("/forum/create", (req, res) => {
+    // res.send({username: req.body.username, title: req.body.title, forum_text: req.body.forum_text, tag: req.body.tag });
+    db.handleQuery(connectionPool, {
+            query: "INSERT INTO forum(username, title, forum_text, tag) VALUES (?,?,?,?)",
+            values: [req.body.username, req.body.title, req.body.forum_text, req.body.tag]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
+        }, (err) => {
+            res.status(badRequestCode).json({reason: err})
+        }
+    );
+});
+
+//forum artikelen
+app.post("/forum", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT * FROM forum ",
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+app.post("/event", (req, res) => {
+    //res.send({person_amount: req.body.person_amount, date: req.body.date })
+
+    db.handleQuery(connectionPool, {
+        query: "INSERT INTO event(name, date, person_amount), VALUES(?,?,?)",
+        values: [req.body.name, req.body.person_amount, req.body.date]
+    }, (data) => {
+        res.status(httpOkCode).json(data);
+    }, (err) => {
+        res.status(badRequestCode).json({reason: err})
+    }
+    );
+})
+
+
+
 
 //------- END ROUTES -------
 
