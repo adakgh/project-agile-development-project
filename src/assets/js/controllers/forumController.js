@@ -88,7 +88,7 @@ class ForumController {
     }
 
     onAddPost() {
-        new PostForum();
+        new PostForumController();
     }
 
     error() {
