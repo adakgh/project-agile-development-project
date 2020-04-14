@@ -1,4 +1,4 @@
-class PostForum {
+class PostForumController {
     constructor() {
         this.forumRepository = new ForumRepository();
 
