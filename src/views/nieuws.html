@@ -1,123 +1,59 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8"/>-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-<!--    <title>Nieuws - The Agile Elderly</title>-->
-<!--    &lt;!&ndash; Load our stylesheets &ndash;&gt;-->
+<link href="../assets/css/nieuws.css" rel="stylesheet" type="text/css"/>
 
-<!--    &lt;!&ndash; Load jQuery 3.4.1 &ndash;&gt;-->
-<!--    <script src="assets/vendors/jquery/jquery-3.4.1.min.js"></script>-->
-<!--    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>-->
 
-<!--    &lt;!&ndash; Load Bootstrap stylesheet &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
-<!--          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+<section id="block2" class="module-block">
+    <h2>Nieuws</h2>
+    <article class="post">
+        <h3>
+            <a class="title">
+                Vannacht vorst, daarna loopt temperatuur pijlsnel op
+                <img src="https://www.telegraaf.nl/images/1680x945/filters:format(jpeg):quality(50)/cdn-kiosk-api.telegraaf.nl/ae8a2224-7e1b-11ea-8624-0217670beecd.jpg"
+                     alt=""/>
+            </a>
+        </h3>
+        <strong class="date">14 april 2020</strong>
+        <p class="text">De temperatuur is na een lange tijd van zonnig en uitzonderlijk warm lenteweer nu even gedaald. Die dip zal
+            snel verleden tijd zijn, verwacht Weeronline. De komende twee dagen zal het kwik net zo snel weer stijgen.
+            Maar eerst krijgen we vorst! Omdat het dinsdagnacht overal opklaart, kan het in het midden, oosten en zuiden
+            van ons land ’gemakkelijk 1 tot 3 graden vriezen’, aldus het weerbureau. Het noorden en westen worden
+            ontzien. Daar zal het nipt boven 0 graden blijven<span id="dots">...</span>
+            <span id="more">„Mocht je de, overal al verkrijgbare ,éénjarige zomerbloeiers al in de tuin hebben gezet dan is het raadzaam
+        om deze af te dekken of binnen te halen als ze in een pot zitten”, aldus Weeronline. „Ook fruittelers zullen
+        de kwetsbare bloesem moeten beschermen tegen vorstschade.”
 
-<!--    &lt;!&ndash; Load Bootstrap script &ndash;&gt;-->
-<!--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"-->
-<!--            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"-->
-<!--            crossorigin="anonymous"></script>-->
-<!--    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
-<!--            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
-<!--            crossorigin="anonymous"></script>-->
-<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
-<!--            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"-->
-<!--            crossorigin="anonymous"></script>-->
+        Temperatuur stijgt snel
+        Het is dinsdag zo’n 8 tot 11 graden; dat is kouder dan gebruikelijk, want de gemiddelde temperatuur ligt
+        half april rond 12 of 13 graden overdag. Maar die gemiddelde waarden zullen we, na een letterlijk ijskoude
+        nacht, snel weer voorbijsnellen.
 
-<!--    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">-->
-<!--</head>-->
-<!--<header>-->
-<!--    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">-->
+        Woensdag gaan we naar 13 tot 17 graden en donderdag kan het 17 tot 23 graden worden, aldus Weeronline.
+        Daarmee zijn we binnen 48 uur terug bij het warme lenteweer van vorige week.
 
-<!--        <div class="container">-->
-<!--            <a class="navbar-brand" href="index.html">-->
-<!--                <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">-->
-<!--                The Agile Elderly</a>-->
+        Veel zon
+        Het warme weer heeft te maken met een zwakke tot matige wind uit het oosten, waarmee zachte lucht wordt
+        aangevoerd. Zowel woensdag als donderdag zal het erg zonnig zijn, al komen er vanuit het zuiden donderdag
+        stapelwolken ons land in.
 
-<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"-->
-<!--                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
-<!--            <div class="collapse navbar-collapse" id="navbarResponsive">-->
-<!--                <ul class="navbar-nav ml-auto">-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link"  data-controller="home" href="index.html">Home</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link text-white"  data-controller="nieuws" href="nieuws.html"><b>Nieuws</b></a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link"  data-controller="agenda" href="agenda.html">Agenda</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link"  data-controller="activiteiten" href="activiteiten.html">Activiteiten</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link"  data-controller="forum" href="forum.html">Forum</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item" >-->
-<!--                        <a class="nav-link"  data-controller="overons" href="overons.html">Over ons-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link" data-controller="login" href="login.html">Log in</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link" data-controller="logout" href="loguit.html">Log uit</a>-->
-<!--                    </li>-->
+        Vrijdag wordt het weer minder aangenaam. Dan draait de wind naar het noordoosten. Verwachte temperaturen
+        liggen tussen de 12 en maximaal 18 graden.</span>
+        </p>
+        <br>
+        <a href="#" class="more" id="morebutton">Lees meer
+            &darr;</a></p>
+    </article>
 
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </nav>-->
-<!--</header>-->
-<!--<body>-->
-<!--<footer class="page-footer font-small text-white bg-dark pt-4">-->
-<!--    <div class="container text-center text-md-left">-->
-<!--        <div class="row">-->
-<!--            <br>-->
-<!--            <div class="col-md-2 mx-auto">-->
-<!--                <h5 class="text-uppercase mt-3 mb-4">Pagina's</h5>-->
-<!--                <ul class="list-unstyled">-->
-<!--                    <li>-->
-<!--                        <a href="index.html">Home</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="nieuws.html">Nieuws</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="agenda.html">Agenda</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="activiteiten.html">Activiteiten</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="forum.html">Forum</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <br>-->
-<!--            <div class="col-md-2 mx-auto">-->
-<!--                <h5 class="text-uppercase mt-3 mb-4">Account</h5>-->
-<!--                <ul class="list-unstyled">-->
-<!--                    <li>-->
-<!--                        <a href="login.html">Log in</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="register.html.html">Registreer</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <br>-->
-<!--    <div class="footer-copyright text-center py-3">© 2020 Copyright:-->
-<!--        <a href="#"> The Agile Elderly</a>-->
-<!--        <img src="../assets/img/avatars/man.png" width="25" height="25" alt="">-->
-<!--    </div>-->
-<!--</footer>-->
-<!--</body>-->
-<!--</html>-->
+    <article class="post">
+        <h3>
+            <a class="title">
+                Felle supermaan boven Nederland en rest van de wereld
+                <img src="https://media.nu.nl/m/y1bx3xhaq7ii_wd640.jpg" alt=""/>
+            </a>
+        </h3>
+        <strong class="date">8 april 2020</strong>
+        <p class="text">Boven Nederland en de rest van de wereld was in de nacht van dinsdag op woensdag een heuse supermaan te zien.
+            Doordat de afstand tussen de aarde en de maan verkort was tot een respectabele 363.595 kilometer afstand,
+            leek de maan veel groter en feller dan normaal. Dat leverde prachtige plaatjes op.
+            <br>
+    </article>
+
+</section>

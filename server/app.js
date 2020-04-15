@@ -52,7 +52,6 @@ app.post("/user/login", (req, res) => {
 
 //dummy data example - id
 app.post("/user", (req, res) => {
-
     db.handleQuery(connectionPool, {
             query: "SELECT naam, username FROM user WHERE id = ?",
             values: [req.body.id]
@@ -90,6 +89,7 @@ app.post("/user", (req, res) => {
     );
 });
 
+
 app.post("/forum/create", (req, res) => {
     // res.send({username: req.body.username, title: req.body.title, forum_text: req.body.forum_text, tag: req.body.tag });
     db.handleQuery(connectionPool, {
@@ -103,10 +103,24 @@ app.post("/forum/create", (req, res) => {
     );
 });
 
+
 //forum artikelen
-app.post("/forum", (req, res) => {
+app.post("/forum/getAll", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT * FROM forum ",
+            query: "SELECT * FROM forum",
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+
+//bepaalde forum artikel bekijken
+app.post("/forum/get", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT * FROM forum WHERE id = ?",
+            values: [req.body.id]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
@@ -115,10 +129,9 @@ app.post("/forum", (req, res) => {
 });
 
 app.post("/event", (req, res) => {
-    //res.send({person_amount: req.body.person_amount, date: req.body.date })
-
+    // res.send({person_amount: req.body.person_amount, date: req.body.date });
     db.handleQuery(connectionPool, {
-        query: "INSERT INTO event(name, date, person_amount), VALUES(?,?,?)",
+        query: "INSERT INTO event(name, person_amount, date) VALUES (?,?,?)",
         values: [req.body.name, req.body.person_amount, req.body.date]
     }, (data) => {
         res.status(httpOkCode).json(data);
@@ -126,9 +139,7 @@ app.post("/event", (req, res) => {
         res.status(badRequestCode).json({reason: err})
     }
     );
-})
-
-
+});
 
 
 //------- END ROUTES -------

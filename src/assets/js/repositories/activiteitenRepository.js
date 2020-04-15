@@ -1,5 +1,4 @@
 class activiteitenRepository {
-
     constructor() {
         this.route = "/event"
     }

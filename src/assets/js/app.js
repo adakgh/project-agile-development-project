@@ -80,7 +80,7 @@ class App {
 
             case CONTROLLER_PROFIEL:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new WelcomeController, () => new LoginController());
+                this.isLoggedIn(() => new ProfielAanpassenController(), () => new ProfielAanpassenController());
                 break;
 
             case CONTROLLER_EVENTS:

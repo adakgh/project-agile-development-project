@@ -27,9 +27,9 @@ class EventsController {
 
         //versturen naar repository
         try {
-            const eventId = await this.activiteitenRepository.create(name, personAmount, eventDate)
-            console.log(eventId)
-            app.loadController(CONTROLLER_WELCOME)
+            const eventId = await this.activiteitenRepository.create(name, personAmount, eventDate);
+            console.log(eventId);
+            app.loadController(CONTROLLER_EVENTS)
         } catch (e) {
             console.log(e)
         }
