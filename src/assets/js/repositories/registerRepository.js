@@ -7,11 +7,6 @@ class RegisterRepository {
 
     }
 
-    async get(roomId) {
-        return await networkManager
-            .doRequest(this.route, {id: roomId});
-    }
-
     async create(username, name, email, password, gender, age) {
         return await networkManager
             .doRequest(this.route, {
@@ -24,10 +19,7 @@ class RegisterRepository {
             })
     }
 
-    async register(username, password) {
-        return await networkManager
-            .doRequest(`${this.route}/login`, {"username": username, "password": password});
-    }
+
 
     async delete() {
 

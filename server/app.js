@@ -50,19 +50,6 @@ app.post("/user/login", (req, res) => {
     }, (err) => res.status(badRequestCode).json({reason: err}));
 });
 
-//dummy data example - id
-app.post("/user", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "SELECT naam, username FROM user WHERE id = ?",
-            values: [req.body.id]
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-
-});
-
 app.post("/post", (req, res) => {
     res.send({person_amount: req.body.person_amount, date: req.body.date });
 
