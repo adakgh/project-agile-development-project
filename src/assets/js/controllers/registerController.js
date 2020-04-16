@@ -50,11 +50,11 @@ class RegisterController {
                 console.log(eventId);
 
                 //TODO: session
-                const user = await this.registerRepository.register(username, password);
+                const user = await this.userRepository.login(username, password);
                 sessionManager.set("username", user.username);
 
                 //doorsturen naar welcome.html
-                app.loadController(CONTROLLER_WELCOME);
+                new WelcomeController();
             } catch (e) {
                 if (e.code === 401) {
                     this.registerView
