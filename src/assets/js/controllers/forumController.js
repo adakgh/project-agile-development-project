@@ -1,5 +1,5 @@
 /**
- * Responsible for handling the actions happening on sidebar view
+ * Responsible for handling the actions happening on the forum
  *
  * @author Lennard Fonteijn, Pim Meijer
  */
@@ -7,7 +7,6 @@ class ForumController {
 
     constructor() {
         this.forumRepository = new ForumRepository();
-
         // jQuery.noConflict();
 
         $.get("views/forum.html")
@@ -20,6 +19,7 @@ class ForumController {
 
         $(".content").empty().append(this.forumView);
 
+        //als gebruiker niet is ingelogd kan hij/zij geen artikel plaatsen
         if (sessionManager.get("username")) {
             $("#add-button").show();
         } else {
@@ -28,65 +28,24 @@ class ForumController {
             $("#add-button").hide();
         }
 
-        this.fetchArticles();
+        //wanneer er op de forum artikel aanmaken knop wordt gedrukt
         this.forumView.find(".button").on("click", () => this.onAddPost());
-        this.getEventPosts();
+
+        //ophalen van alle forum artikelen uit het database
+        this.allArticles();
+
+        //filteren op categorieen
+        //ophalen van alle categorieen
         this.forumView.find("#side-all").on("click", () => this.getAll());
+
+        //ophalen van categorie: event-gerelateerd, discussie, hulp nodig en off-topic
         this.forumView.find("#side-event").on("click", () => this.getEvents());
         this.forumView.find("#side-discussion").on("click", () => this.getDiscussion());
         this.forumView.find("#side-help").on("click", () => this.getHelp());
         this.forumView.find("#side-offtopic").on("click", () => this.getOfftopic());
-        // this.forumView.find(".category").on("click", () => this.item());
     }
 
-    //ophalen van artikelen
-    async fetchArticles() {
-        try {
-            const forum = await this.getProducts();
-            const template = $("#template1").html();
-
-            for (let article of forum) {
-                const articles = $(template);
-
-                articles.find(".h5").empty().append(article.username);
-                articles.find(".card-title").empty().append(article.title);
-                articles.find(".card-text").empty().append(article.forum_text);
-                articles.find(".badge").empty().append(article.tag);
-
-                // $('#hideshow').on('click', function () {
-                //     if ($("span[class='discussion']")){
-                //         $("#card").hide();
-                //     }
-                // });
-
-                // articles.find('data-tags').empty().append(article.tag);
-
-                // articles.find('.mdl-cell').attr("data-tags", article.tag);
-                // articles.find('.mdl-card').attr("data-filter-tag", article.tag);
-
-                // let num = articles.find(".mdl-cell").attr("data-tags", article.tag);
-                // num = article.tag;
-                // console.log(num);
-                // articles.find('#tag').attr('data-tags', num);
-                //
-                // let num1 = articles.find(".mdl-card").attr("data-filter-tag", article.tag);
-                // num1 = article.tag;
-                // console.log(num1);
-                // $('#badge').attr('data-filter-tag', num1);
-
-                console.log(article);
-                $("#card").append(articles);
-            }
-        } catch (e) {
-            console.log("error while fetching", e);
-        }
-
-    }
-
-    async getProducts() {
-        return this.forumRepository.getAll();
-    }
-
+    //html pagina waar je een artikel kunt schrijven wordt geopend
     onAddPost() {
         new PostForumController();
     }
@@ -95,14 +54,19 @@ class ForumController {
         $(".content").html("Failed to load content")
     }
 
-    async getEventPosts() {
+    //ophalen van alle artikelen
+    async allArticles() {
         try {
-            const forum = await this.getProducts();
+            //artikelen ophalen uit database
+            const forum = await this.forumRepository.getAll();
+            //artikelen in template plaatsen
             const template = $("#event-template").html();
 
+            //loop om alles uit het database op te halen
             for (let article of forum) {
                 const articles = $(template);
 
+                //artikelen worden gesorteerd op basis van categorieen
                 if (article.tag === "event") {
                     articles.find(".forum-title").empty().append(article.username);
                     articles.find(".forum-description").empty().append(article.title);
@@ -124,20 +88,18 @@ class ForumController {
 
                     $("#offtopic-posts").append(articles);
                 }
-                const id = articles.find(".forum-description").attr("onclick", `item(${article.id})`);
-                // const id2 = articles.find("a[href='#']").attr("href", "http://www.google.com");
 
-
+                //id van artikel wordt opgehaald
+                const id = articles.find(".button").attr('onclick', `${article.id}`);
                 console.log(id);
-                // console.log(id2)
             }
 
         } catch (e) {
             console.log("error while fetching", e);
         }
-
     }
 
+    //op categorie filteren
     getAll() {
         $('#category-event').show();
         $('#discussie-posts').show();
@@ -174,10 +136,3 @@ class ForumController {
         $('#help-posts').hide();
     }
 }
-
-function item(id) {
-    console.log("works");
-    window.location.hash = 'forum/' + id;
-    
-}
-

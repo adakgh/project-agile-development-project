@@ -22,14 +22,17 @@ class EventsController {
         const name = this.eventsView.find("#inputName").val();
         const personAmount = this.eventsView.find("#inputPersonAmount").val();
         const eventDate = this.eventsView.find("#inputDate").val();
+        const description = this.eventsView.find("#inputDescription").val();
+        const place = this.eventsView.find("#inputLocation").val();
+        const eventTime = this.eventsView.find("#inputTime").val();
 
-        console.log(`${name} - ${personAmount} - ${eventDate}`);
+        console.log(`${name} - ${personAmount} - ${eventDate} - ${description} - ${place} - ${eventTime}`);
 
         //versturen naar repository
         try {
-            const eventId = await this.activiteitenRepository.create(name, personAmount, eventDate)
-            console.log(eventId)
-            app.loadController(CONTROLLER_WELCOME)
+            const eventId = await this.activiteitenRepository.create(name, personAmount, eventDate, description, place, eventTime);
+            console.log(eventId);
+            app.loadController(CONTROLLER_EVENTS)
         } catch (e) {
             console.log(e)
         }
