@@ -90,10 +90,9 @@ class ForumController {
                 }
 
                 //id van artikel wordt opgehaald
-                const id = articles.find(".button").attr('onclick', `${article.id}`);
+                const id = articles.find(".forum").attr('onclick', `item(${article.id})`);
                 console.log(id);
             }
-
         } catch (e) {
             console.log("error while fetching", e);
         }
@@ -134,5 +133,57 @@ class ForumController {
         $('#discussie-posts').hide();
         $('#category-event').hide();
         $('#help-posts').hide();
+    }
+}
+
+async function item(id) {
+    this.forumRepository = new ForumRepository();
+
+    //pagina met artikel wordt opgeroepen
+    $.get("views/forumArticle.html")
+        .done((htmlData) => newsetup(htmlData));
+
+    //data uit database met bepaalde id wordt opgehaald
+    try {
+        const forum = await this.forumRepository.get(id);
+        const articleTemplate = $("#article-template").html();
+
+        for (let article of forum) {
+            const articles = $(articleTemplate);
+
+            articles.find(".user").empty().append(article.username);
+            articles.find(".threadTitleHeader").empty().append(article.title);
+            articles.find(".descriptionText").empty().append(article.forum_text);
+
+            // if (article.tag === "event") {
+            //     articles.find(".category-name").empty().append("Activiteit-gerelateerd");
+            // } else if (article.tag === "discussion") {
+            //     articles.find(".category-name").empty().append("Discussie");
+            // } else if (article.tag === "help") {
+            //     articles.find(".category-name").empty().append("Hulp nodig");
+            // } else if (article.tag === "off-topic") {
+            //     articles.find(".category-name").empty().append("Off-topic");
+            // }
+
+            $(".threadsList").append(articles);
+        }
+    } catch (e) {
+        console.log("error while fetching", e);
+    }
+}
+
+function newsetup(htmlData) {
+    this.forumView = $(htmlData);
+
+    $(".content").empty().append(this.forumView);
+
+    //rapporteren
+    this.forumView.find(".report").on("click", () => report());
+}
+
+function report() {
+    if (confirm("Weet u zeker dat u deze post wilt aangeven?")) {
+        alert("Uw bericht is ontvangen.")
+    } else {
     }
 }

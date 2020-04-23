@@ -7,7 +7,7 @@ class RegisterRepository {
 
     }
 
-    async create(username, name, email, password, gender, age) {
+    async create(username, name, email, password, gender, age, newsletter) {
         return await networkManager
             .doRequest(this.route, {
                 username: username,
@@ -15,11 +15,10 @@ class RegisterRepository {
                 password: password,
                 email: email,
                 leeftijd: age,
-                geslacht: gender
+                geslacht: gender,
+                newsletter: newsletter
             })
     }
-
-
 
     async delete() {
 

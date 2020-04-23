@@ -1,46 +1,62 @@
-.post {
-    position: relative;
-    margin-bottom: 90px;
-    padding-left: 20%;
+/*nieuws is nu active in de navbar*/
+#nieuws {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
 }
 
-.post h3 {
-    margin-bottom: 10px;
+body{
+    background-color: #f2f5fa;
 }
 
-.post img {
-    max-width: 17%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 0;
-}
+/*.post {*/
+/*    position: relative;*/
+/*    margin-bottom: 90px;*/
+/*    padding-left: 20%;*/
+/*}*/
 
-.date {
-    display: block;
-    margin-bottom: 10px;
-}
+/*.post h3 {*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
-.page-wrap {
-    max-width:960px;
-    padding: 0 20px;
-    margin:0 auto;
-}
+/*.post img {*/
+/*    max-width: 17%;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    border-radius: 0;*/
+/*}*/
 
-.module-block {
-    margin:0 0 70px 0;
-    padding: 40px;
+/*.date {*/
+/*    display: block;*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
-}
+/*.page-wrap {*/
+/*    max-width:960px;*/
+/*    padding: 0 20px;*/
+/*    margin:0 auto;*/
+/*}*/
 
-.module-block h2 {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 1px dashed rgba(0,0,0,.3);
-}
+/*.module-block {*/
+/*    margin:0 0 70px 0;*/
+/*    padding: 40px;*/
 
-.more{
+/*}*/
+
+/*.module-block h2 {*/
+/*    padding-bottom: 30px;*/
+/*    margin-bottom: 30px;*/
+/*    border-bottom: 1px dashed rgba(0,0,0,.3);*/
+/*}*/
+
+#morebutton{
+    color: #5777ba;
     float: right;
+}
+
+#morebutton:hover {
+    cursor: pointer;
+
 }
 
 h3{
@@ -51,6 +67,35 @@ h3{
     display: none;
 }
 
+
 .text, span{
     font-size: 18px;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.card-body {
+    background-color: #f2f5fa;
+    padding: 0;
+    padding-top: 10px;
+}
+
+.h1, h1 {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.small, small {
+    color: #47536e;
+
+    font-size: 12px;
+    font-weight: 400;
 }

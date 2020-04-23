@@ -1,3 +1,13 @@
+/*registreren is nu active in de navbar*/
+#register {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
+body{
+    background-color: #f2f5fa;
+}
+
 .showcase .showcase-text {
     text-align: center;
     font-size: 18px;
