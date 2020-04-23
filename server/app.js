@@ -62,6 +62,7 @@ app.post("/post", (req, res) => {
     );
 });
 
+//registreren
 app.post("/user", (req, res) => {
     // res.send({username: req.body.username, password: req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht });
 
@@ -77,6 +78,7 @@ app.post("/user", (req, res) => {
 });
 
 
+//forum artikel aanmaken
 app.post("/forum/create", (req, res) => {
     // res.send({username: req.body.username, title: req.body.title, forum_text: req.body.forum_text, tag: req.body.tag });
     db.handleQuery(connectionPool, {
