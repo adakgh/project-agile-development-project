@@ -1,0 +1,48 @@
+#rcorners {
+    border-radius: 25px;
+    border: 2px solid #005cbf;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#forum {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
+.gegevens {
+    position: relative;
+}
+
+.side-item:hover {
+    background-color: #ebebeb;
+}
+
+.main {
+    grid-area: main;
+    width: 99%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 'main main main' 'side side side';
+}
+
+
+.side-item {
+    font-size: 16px;
+    color: #5777ba;
+    cursor: pointer;
+    padding: .8rem;
+    border-bottom: 1px solid #f0f0f0;
+}
