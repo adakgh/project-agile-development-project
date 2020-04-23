@@ -102,6 +102,17 @@ app.post("/forum/getAll", (req, res) => {
     );
 });
 
+//agenda
+app.post("/agenda", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT date, time, status, place FROM event WHERE username = ?",
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
 
 //bepaalde forum artikel bekijken
 app.post("/forum/get", (req, res) => {

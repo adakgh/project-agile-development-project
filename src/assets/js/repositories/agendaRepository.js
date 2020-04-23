@@ -13,10 +13,6 @@ class agendaRepository {
             });
     }
 
-    async defer () {
-        src: "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    }
-
     async get(id) {
         return await networkManager
             .doRequest(`${this.route}/get`, {
