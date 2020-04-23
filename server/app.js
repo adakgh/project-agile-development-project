@@ -66,10 +66,10 @@ app.post("/user", (req, res) => {
     // res.send({username: req.body.username, password: req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht });
 
     db.handleQuery(connectionPool, {
-        query: "INSERT INTO user(username, password, email, naam, leeftijd, geslacht) VALUES (?,?,?,?,?,?)",
-        values: [req.body.username, req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht]
-    }, (data) => {
-        res.status(httpOkCode).json(data);
+            query: "INSERT INTO user(username, password, email, naam, leeftijd, geslacht, newsletter) VALUES (?,?,?,?,?,?,?)",
+            values: [req.body.username, req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht, req.body.newsletter]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
         }, (err) => {
             res.status(badRequestCode).json({reason: err})
         }
