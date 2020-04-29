@@ -10,6 +10,7 @@ const db = require("./utils/databaseHelper");
 const cryptoHelper = require("./utils/cryptoHelper");
 const corsConfig = require("./utils/corsConfigHelper");
 const app = express();
+const fileUpload = require("express-fileupload");
 
 //logger lib  - 'short' is basic logging info
 app.use(morgan("short"));
@@ -23,6 +24,9 @@ app.use(bodyParser.json());
 
 //CORS config - Cross Origin Requests
 app.use(corsConfig);
+
+//File uploads
+app.use(fileUpload());
 
 // ------ ROUTES - add all api endpoints here ------
 const httpOkCode = 200;
@@ -49,6 +53,37 @@ app.post("/user/login", (req, res) => {
 
     }, (err) => res.status(badRequestCode).json({reason: err}));
 });
+
+//dummy data example - rooms
+app.post("/room_example", (req, res) => {
+
+    db.handleQuery(connectionPool, {
+            query: "SELECT id, surface FROM room_example WHERE id = ?",
+            values: [req.body.id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+
+});
+
+app.post("/upload", function (req, res) {
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(badRequestCode).json({ reason: "No files were uploaded." });
+    }
+
+    let sampleFile = req.files.sampleFile;
+
+    sampleFile.mv(wwwrootPath + "/uploads/test.jpg", function (err) {
+        if (err) {
+            return res.status(badRequestCode).json({ reason: err });
+        }
+
+        return res.status(httpOkCode).json("OK");
+    });
+});
+//------- END ROUTES -------
 
 app.post("/post", (req, res) => {
     res.send({person_amount: req.body.person_amount, date: req.body.date });
@@ -142,7 +177,97 @@ app.post("/event", (req, res) => {
 });
 
 
+function listen(port, callback) {
+    const server = app.listen(port, callback);
+
+    initializeSocketIO(server);
+}
+
+function initializeSocketIO(server) {
+    const io = require("socket.io")
+        .listen(server);
+
+    var numUsers = 0;
+
+    io.on('connection', (socket) => {
+        var addedUser = false;
+
+        // when the client emits 'new message', this listens and executes
+        socket.on('new message', (data) => {
+            // we tell the client to execute 'new message'
+            socket.broadcast.emit('new message', {
+                username: socket.username,
+                message: data
+            });
+        });
+
+        // when the client emits 'add user', this listens and executes
+        socket.on('add user', (username) => {
+            if (addedUser) return;
+
+            // we store the username in the socket session for this client
+            socket.username = username;
+            ++numUsers;
+            addedUser = true;
+            socket.emit('login', {
+                numUsers: numUsers
+            });
+            // echo globally (all clients) that a person has connected
+            socket.broadcast.emit('user joined', {
+                username: socket.username,
+                numUsers: numUsers
+            });
+        });
+
+        // when the client emits 'typing', we broadcast it to others
+        socket.on('typing', () => {
+            socket.broadcast.emit('typing', {
+                username: socket.username
+            });
+        });
+
+        // when the client emits 'stop typing', we broadcast it to others
+        socket.on('stop typing', () => {
+            socket.broadcast.emit('stop typing', {
+                username: socket.username
+            });
+        });
+
+        // when the user disconnects.. perform this
+        socket.on('disconnect', () => {
+            if (addedUser) {
+                --numUsers;
+
+                // echo globally that this client has left
+                socket.broadcast.emit('user left', {
+                    username: socket.username,
+                    numUsers: numUsers
+                });
+            }
+        });
+    });
+}
+
+// Chat
+//
+// const users = {}
+//
+// io.on('connection', socket => {
+//     socket.on('new-user', name => {
+//         users[socket.id] = name
+//         socket.broadcast.emit('user-connected', name)
+//     })
+//     socket.on('send-chat-message', message => {
+//         socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
+//     })
+//     socket.on('disconnect', () => {
+//         socket.broadcast.emit('user-disconnected', users[socket.id])
+//         delete users[socket.id]
+//     })
+// })
+
 //------- END ROUTES -------
 
-module.exports = app;
-
+module.exports = {
+    listen: listen
+};

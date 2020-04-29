@@ -12,7 +12,7 @@ class activiteitenRepository {
                 status: description,
                 place: place,
                 time: eventTime
-            })
+            });
     }
 
 }

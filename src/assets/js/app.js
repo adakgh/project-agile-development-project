@@ -17,6 +17,7 @@ const CONTROLLER_PROFIEL = "profiel";
 const CONTROLLER_EVENTS = "activiteiten";
 const CONTROLLER_NEWS = "nieuws";
 const CONTROLLER_AGENDA = "agenda";
+const CONTROLLER_CHAT = "chat";
 const CONTROLLER_OVERONS = "overons";
 const CONTROLLER_FAQ = "FAQ";
 
@@ -96,6 +97,11 @@ class App {
             case CONTROLLER_AGENDA:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new AgendaController(), () => new AgendaController());
+                break;
+
+            case CONTROLLER_CHAT:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new ChatController(), () => new ChatController());
                 break;
 
             case CONTROLLER_OVERONS:

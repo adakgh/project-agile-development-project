@@ -5,7 +5,7 @@ class agendaRepository {
 
     async getAll(date,time, status, place) {
         return await networkManager
-            .doRequest(this.route, {
+            .doRequest(`${this.route}/getAll`, {
                 date: date,
                 time: time,
                 status: status,
