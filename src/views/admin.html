@@ -1,0 +1,169 @@
+<link href="../assets/css/default.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<div class="row">
+    <div class="col-12 text-left ml-3">
+        <br>
+        <div class="alert alert-primary" role="alert">
+            <h4> Ingelogd als admin</h4>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content-wrapper col-lg-12">
+    <div class="container-fluid">
+
+        <!-- Icon Cards-->
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="card text-white o-hidden h-100 usercard">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="material-icons">account_circle</i>
+                                </div>
+                                <div class="col-8 text-right users">
+                                    <div class="h2"></div>
+                                    <div>nieuwe gebruikers!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a onclick="window.location.hash='userTitle';">
+                        <div class="card-footer text-white"><span class="pull-left">Beheren</span><span
+                                class="pull-right"><i class="fa fa-arrow-circle-down"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="card text-white o-hidden h-100 forumcard">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="material-icons">forum</i>
+                                </div>
+                                <div class="col-9 text-right forum">
+                                    <div class="h2"></div>
+                                    <div>nieuwe forum artikelen!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a onclick="window.location.hash='forumTitle';">
+                        <div class="card-footer text-white"><span class="pull-left">Beheren</span><span
+                                class="pull-right"><i class="fa fa-arrow-circle-down"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="card text-white o-hidden h-100 eventcard">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="material-icons">date_range</i>
+                                </div>
+                                <div class="col-8 text-right event">
+                                    <div class="h2">12</div>
+                                    <div>nieuwe activiteiten!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="card text-white o-hidden h-100 reportcard">
+                    <div class="card-body">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="fa fa-exclamation-circle fa-4x"></i>
+                                </div>
+                                <div class="col-8 text-right reports">
+                                    <div class="h2">2</div>
+                                    <div>nieuwe reports!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="title" id="userTitle"></i>Gebruikers van The Agile Elderly
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="userTable">
+                        <thead>
+                        <tr>
+                            <th>Gebruikersnaam</th>
+                            <th>Naam</th>
+                            <th>E-mail</th>
+                            <th>Geslacht</th>
+                            <th>Leeftijd</th>
+                            <th>Biografie</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="title" id="forumTitle"></i>Forum artikelen van The Agile Elderly
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="forumTable">
+                        <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Gebruikersnaam</th>
+                            <th>Tag</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

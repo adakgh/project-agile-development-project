@@ -256,3 +256,23 @@ body {
 .left {
     font-size: 19px;
 }
+
+.terug{
+    background: grey;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 20px;
+    top: 107px;
+    position: absolute;
+}
+
+.terug:hover {
+    background: #707070;
+    color: black;
+}

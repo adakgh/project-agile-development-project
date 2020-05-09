@@ -9,9 +9,18 @@ class WelcomeController {
         // this.roomExampleRepository = new RoomExampleRepository();
         this.registerRepository = new RegisterRepository();
 
-        $.get("views/welcome.html")
-            .done((data) => this.setup(data))
-            .fail(() => this.error());
+        //als ingelogd als admin laat admin pagina zien
+        if (sessionManager.get("username") === "test") {
+            $.get("views/admin.html")
+                .done((data) => this.setup(data))
+                .fail(() => this.error());
+
+            new AdminController();
+        } else {
+            $.get("views/welcome.html")
+                .done((data) => this.setup(data))
+                .fail(() => this.error());
+        }
     }
 
     //Called when the welcome.html has been loaded
@@ -33,7 +42,7 @@ class WelcomeController {
      * @param roomId the room id to retrieve
      */
     async fetchRooms() {
-        const exampleResponse = this.welcomeView.find(".mt-5");
+        const exampleResponse = this.welcomeView.find(".welcome");
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
             // const roomData = await this.registerRepository.get();
