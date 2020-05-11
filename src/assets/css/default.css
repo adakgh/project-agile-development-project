@@ -343,6 +343,11 @@ section {
     margin: 0 0 7px 0;
 }
 
+.media-body {
+    flex: 1;
+    width: 340px;
+}
+
 .media .timeEl {
     display: inline-block;
     line-height: 14px;
@@ -482,4 +487,8 @@ p {
 
 .forumbtn{
     margin-left: 120px;
+}
+
+.eventbtn{
+    margin-left: 200px;
 }

@@ -33,7 +33,7 @@ class AdminController {
         }
 
         const forumData = await this.forumRepository.getAll();
-        const forumAlert = $(".forum");
+        const forumAlert = $(".forumalert");
 
         for (let i = 0; i < 1; i++) {
             let infoForum = `<div class="h2">${forumData.length}</div>`;
