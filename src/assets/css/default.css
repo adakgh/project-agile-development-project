@@ -45,7 +45,7 @@ header {
     border-radius: 4px;
 }
 
-h1, h2 {
+h2 {
     color: black;
 }
 
@@ -53,6 +53,40 @@ a {
     color: #5777ba;
 }
 
+a {
+    color: #5777ba;
+}
+
+a:hover {
+    color: #7b94c9;
+    text-decoration: none;
+}
+
+.jumbotron {
+    position: relative;
+    background: url(https://cf.ltkcdn.net/seniors/images/orig/214166-1732x1372-seniorscards.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.jumbotron:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.jumb {
+    padding: 75px 0;
+}
+
+h1, .lead, .lead .btn {
+    color: #fff;
+}
 
 section {
     padding: 40px 0;
@@ -154,11 +188,11 @@ section {
 .events__item {
     display: flex;
     padding: 12px 0px;
-    border: solid 1px #5777ba;
+    border: solid 1px #47536e;
 }
 
 .events__date {
-    background-color: #5777ba;
+    background-color: #47536e;
     text-align: center;
     margin-right: 10px;
     margin-top: -12px;
@@ -227,18 +261,22 @@ section {
 }
 
 .smaller {
-    font-size: 0.7rem; }
+    font-size: 0.7rem;
+}
 
 .o-hidden {
-    overflow: hidden !important; }
+    overflow: hidden !important;
+}
 
 .z-0 {
-    z-index: 0; }
+    z-index: 0;
+}
 
 .z-1 {
-    z-index: 1; }
+    z-index: 1;
+}
 
-.usercard{
+.usercard {
     background: #4b94b8;
 }
 
@@ -249,7 +287,8 @@ section {
 .eventcard {
     background: #65b873;
 }
-.reportcard{
+
+.reportcard {
     background: #b95b5b;
 }
 
@@ -257,10 +296,190 @@ section {
     font-size: 4rem;
 }
 
-.card-footer{
+.card-footer {
     cursor: pointer;
 }
 
 .welcometext {
     margin-bottom: -50px;
+}
+
+.media > .pull-left {
+    margin-right: 29px;
+}
+
+.media {
+    border: #47536e 1px solid;
+
+}
+
+.media .dateEl {
+    display: inline-block;
+    text-align: center;
+    background: #47536e;
+    padding: 18px 0 25px 0;
+    color: white;
+    width: 113px;
+    font-size: 19px;
+    text-transform: lowercase;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.media .dateEl em {
+    display: block;
+    color: white;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 5px;
+    font-style: normal;
+}
+
+.media .media-heading a {
+    color: black;
+}
+
+.media .meta-data {
+    margin: 0 0 7px 0;
+}
+
+.media .timeEl {
+    display: inline-block;
+    line-height: 14px;
+    color: black;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(100%);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.sec-pricing{
+    background-color: #eef1f6;
+}
+
+.forumcontainer{
+    background-color: #eef1f6;
+}
+
+.forumrow{
+    margin-left: 235px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-areas: 'wrapper wrapper wrapper wrapper wrapper wrapper';
+    grid-auto-rows: minmax(60px, auto);
+}
+
+.forum {
+    position: relative;
+    grid-auto-rows: minmax(90px, auto);
+    display: grid;
+    grid-template-areas: 'icon title description likes posts more';
+    text-align: center;
+    font-size: 17px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.forum:hover {
+    cursor: pointer;
+    background-color: #ebebeb;
+}
+
+.category-head {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    background: #47536e;
+    padding: .8rem;
+    color: #fff;
+}
+
+#category-discussie {
+    background: #566782;
+}
+
+#category-help {
+    background: #6e82a0;
+}
+
+#category-offtopic {
+    background: #8095b4;
+}
+
+
+.forum-icon {
+    grid-area: icon;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+    line-height: 4rem;
+    color: #fff;
+}
+
+.forum-title {
+    grid-area: title;
+    margin: auto;
+    width: 90px;
+}
+
+.forum-description {
+    grid-area: description;
+    margin: auto;
+    min-width: 390px;
+}
+
+.forum-likes {
+    grid-area: likes;
+    margin: auto;
+}
+
+.forum-posts {
+    grid-area: posts;
+    margin: auto;
+}
+
+.forum-more {
+    grid-area: more;
+    margin-top: 32px;
+}
+
+.main {
+    grid-area: main;
+    width: 99%;
+}
+
+
+.feature-dark {
+    background: #f2f5fa;
+}
+
+.feature-content {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 991px) {
+    .feature-content {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.featurelead{
+    color: black;
+}
+
+.forumtext{
+    margin-left: 120px;
+}
+
+.forumbtn{
+    margin-left: 120px;
 }
