@@ -1,0 +1,278 @@
+/*forum is nu active in de navbar*/
+#forum {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
+body {
+    background-color: #f2f5fa;
+}
+
+.top {
+    margin-top: -12px;
+}
+
+.report {
+    color: red;
+    font-size: 22px;
+    margin-right: -21px;
+    top: -26.5px;
+    position: relative;
+}
+
+.report:hover {
+    cursor: pointer;
+}
+
+form {
+    width: 70%;
+    padding: 0%;
+    margin: 0%;
+}
+
+form textarea {
+    clear: both;
+    display: block;
+    width: 100%;
+    padding: 1%;
+    margin: 1% 0 4% 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #777;
+    resize: none;
+}
+
+textarea:focus {
+    border-bottom: 1px solid #47536e;
+}
+
+form {
+    text-align: center;
+}
+
+.comment-button {
+    border: 0px solid;
+    background-color: #47536e;
+    color: white;
+    padding: 1%;
+    box-shadow: 0 2px 5px black;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+.postedBy, .postedBy a {
+    color: #3b4256;
+    height: 18px;
+    width: auto;
+    text-decoration: none !important;
+    font-weight: bold;
+
+    list-style: none outside none;
+    margin: 5px 0px 0px;
+    text-align: center;
+}
+
+.avatarCoin {
+    position: absolute;
+    margin: -33px 0px 0px -70px;
+    color: black;
+    font-weight: bold;
+}
+
+#wrapper {
+    margin: 50px;
+    width: auto !important;
+}
+
+.threadItem {
+    box-sizing: border-box;
+    color: rgb(87, 99, 102);
+
+    position: relative;
+    width: 100%;
+    perspective-origin: 655px 67px;
+    transform-origin: 655px 67px;
+    border-top: 1px solid rgb(237, 239, 240);
+    border-right: 0px none rgb(87, 99, 102);
+    border-bottom: 0px none rgb(87, 99, 102);
+    border-left: 0px none rgb(87, 99, 102);
+    list-style: none outside none;
+    outline: rgb(87, 99, 102) none 0px;
+    padding: 15px 0px 0px;
+}
+
+.postContainer {
+    box-sizing: border-box;
+    color: rgb(87, 99, 102);
+
+    text-align: left;
+    perspective-origin: 476.25px 56px;
+    transform-origin: 476.25px 56px;
+    border: 0px none rgb(87, 99, 102);
+    list-style: none outside none;
+    outline: rgb(87, 99, 102) none 0px;
+    padding: 0px 0px 30px 55px;
+}
+
+.threadItemLabel {
+    color: #7b8b8e;
+    text-align: center;
+}
+
+.answerCountContainer {
+    box-sizing: border-box;
+    color: rgb(87, 99, 102);
+    float: right;
+    height: 72px;
+    text-align: center;
+    perspective-origin: 25.5px 36px;
+    transform-origin: 25.5px 36px;
+    border: 0px none rgb(87, 99, 102);
+    list-style: none outside none;
+    margin-right: 40px;
+    outline: rgb(87, 99, 102) none 0px;
+    padding: 5px 0px 0px;
+}
+
+
+.threadTitleHeader {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    background: #47536e;
+    padding: .8rem;
+    color: #fff;
+    text-align: left;
+    width: 90%;
+    top: 120px;
+    position: absolute;
+    left: 90px;
+}
+
+.threadTitleHeader > a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.postedBy {
+    color: #C5C5C5;
+}
+
+.descriptionText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 50px;
+}
+
+
+#wrapper {
+    background-color: #FFF;
+    border-radius: 5px;
+    margin-left: 90px;
+}
+
+.firstPost {
+    border: 0;
+}
+
+.forwardButton {
+    position: relative;
+    right: 5px;
+}
+
+.backButton {
+    position: relative;
+    left: 5px;
+}
+
+.btn-on {
+    background-color: #D0CECE;
+}
+
+@media (max-width: 777px) {
+    .avatarCoin {
+        border: 5px solid #FFF;
+    }
+
+    .threadItem {
+        margin: 0px;
+    }
+
+    .answerCountContainer {
+        padding-left: 10px;
+        padding-right: 30px;
+        width: 100%;
+        margin: 0px;
+
+    }
+
+    .replyCount {
+        padding: 0px;
+    }
+
+    .postContainer {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 669px) {
+    .threadTitleHeader, .postedBy {
+        text-align: center;
+    }
+
+    .pageNumber {
+        font-size: 11px;
+        width: auto;
+    }
+
+    .lastUpdated, .expandDesc {
+        display: none;
+    }
+
+    .threadTitleHeader, .postedBy {
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .descriptionText {
+        display: block !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .pageNumber {
+        display: none;
+    }
+}
+
+.left {
+    font-size: 19px;
+}
+
+.terug{
+    background: grey;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 20px;
+    top: 107px;
+    position: absolute;
+}
+
+.terug:hover {
+    background: #707070;
+    color: black;
+}

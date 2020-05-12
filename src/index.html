@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Project Agile Development - Framework</title>
+    <title>The Agile Elderly | Ben Sajet Centrum</title>
 
     <!-- Load our stylesheets -->
     <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet"/>
@@ -31,6 +31,9 @@
     <script src="assets/js/controllers/activiteitenController.js"></script>
     <script src="assets/js/controllers/overOnsController.js"></script>
     <script src="assets/js/controllers/faqController.js"></script>
+    <script src="assets/js/controllers/adminController.js"></script>
+    <script src="assets/js/controllers/chatController.js"></script>
+
 
     <!-- Repositories -->
     <script src="assets/js/repositories/roomExampleRepository.js"></script>
@@ -39,6 +42,7 @@
     <script src="assets/js/repositories/forumRepository.js"></script>
     <script src="assets/js/repositories/profielAanpassenRepository.js"></script>
     <script src="assets/js/repositories/activiteitenRepository.js"></script>
+    <script src="assets/js/repositories/agendaRepository.js"></script>
 
     <!-- Start of our application! -->
     <script src="assets/js/app.js"></script>
@@ -87,6 +91,9 @@
                     </li>
                     <li>
                         <a href="#" onclick="app.loadController(CONTROLLER_FORUM)">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="app.loadController(CONTROLLER_CHAT)">Chat</a>
                     </li>
                 </ul>
             </div>

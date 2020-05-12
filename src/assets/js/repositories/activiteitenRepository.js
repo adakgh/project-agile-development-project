@@ -12,7 +12,19 @@ class activiteitenRepository {
                 status: description,
                 place: place,
                 time: eventTime
-            })
+            });
+    }
+
+    async getAll(name, personAmount, eventDate, description, place, eventTime) {
+        return await networkManager
+            .doRequest(`${this.route}/getAll`, {
+                name: name,
+                person_amount: personAmount,
+                date: eventDate,
+                status: description,
+                place: place,
+                time: eventTime
+            });
     }
 
 }

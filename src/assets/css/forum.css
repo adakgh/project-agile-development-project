@@ -4,6 +4,10 @@
     border-radius: 4px;
 }
 
+body{
+    background-color: #f2f5fa;
+}
+
 h1 {
     color: black;
 }
@@ -48,6 +52,7 @@ h1 {
     border: none;
 }
 
+/*aanmaken van topic */
 form {
     margin: 0 auto;
     max-width: 700px;
@@ -135,15 +140,15 @@ form button:hover:before, form button:focus:before {
     background: #47536e;
 }
 
+
 .wrapper {
     grid-area: wrapper;
     width: 90%;
     display: grid;
-    grid-template-areas: 'main main main main main side ';
+    grid-template-areas: 'main main main main side side';
     grid-auto-rows: minmax(60px, auto);
     margin: 0 auto;
     margin-top: -3rem;
-    background: #ffffff;
     padding: 1rem;
 }
 
@@ -173,13 +178,18 @@ form button:hover:before, form button:focus:before {
 }
 
 .forum {
+    position: relative;
     grid-auto-rows: minmax(90px, auto);
     display: grid;
-    grid-template-areas: 'icon title description description topics posts lastPost lastPost';
+    grid-template-areas: 'icon title description likes posts more';
     text-align: center;
+    font-size: 17px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .forum:hover {
+    cursor: pointer;
     background-color: #ebebeb;
 }
 
@@ -246,14 +256,13 @@ form button:hover:before, form button:focus:before {
 }
 
 .forum-description {
-    cursor: pointer;
     grid-area: description;
     margin: auto;
     min-width: 390px;
 }
 
-.forum-topics {
-    grid-area: topics;
+.forum-likes {
+    grid-area: likes;
     margin: auto;
 }
 
@@ -262,48 +271,14 @@ form button:hover:before, form button:focus:before {
     margin: auto;
 }
 
+.forum-more {
+    grid-area: more;
+    margin-top: 32px;
+}
+
 .main {
     grid-area: main;
     width: 99%;
-}
-
-.forum {
-    font-size: 17px;
-    background: #ffffff;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-@media screen and (max-width: 992px) {
-    .grid {
-        display: grid;
-        grid-template-areas: 'wrapper wrapper wrapper';
-    }
-
-    .wrapper {
-        display: grid;
-        grid-template-areas: 'main main main' 'side side side';
-    }
-
-    .category-head {
-        font-size: 2.2rem;
-    }
-
-    .forum {
-        grid-auto-rows: minmax(90px, auto);
-        display: grid;
-        grid-template-areas: 'icon title title';
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    .forum-description,
-    .forum-posts {
-        display: none;
-    }
-
-    .side-head {
-        font-size: 2.2rem;
-    }
 }
 
 .blog-sidebar {

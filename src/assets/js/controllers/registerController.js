@@ -27,9 +27,13 @@ class RegisterController {
         const validationPassword = this.registerView.find("#exampleRepeatPassword").val();
         const gender = this.registerView.find("#exampleGender").val();
         const age = this.registerView.find("#exampleAge").val();
-        const newsletter = this.registerView.find("#defaultRegisterFormNewsletter").val();
+        if ($('#defaultRegisterFormNewsletter').is(':checked')) {
+            this.newsletter = '1';
+        } else {
+            this.newsletter = '0';
+        }
 
-        console.log(`${username} - ${name} - ${email} - ${password} - ${gender} - ${age}`);
+        console.log(`${username} - ${name} - ${email} - ${password} - ${gender} - ${age} - ${this.newsletter}`);
 
         function checkPassword(str) {
             const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$/;
@@ -46,7 +50,7 @@ class RegisterController {
         } else {
             try {
                 //versturen naar repository
-                const eventId = await this.registerRepository.create(username, name, email, password, gender, age);
+                const eventId = await this.registerRepository.create(username, name, email, password, gender, age, this.newsletter);
                 console.log(eventId);
 
                 //TODO: session
@@ -55,11 +59,17 @@ class RegisterController {
 
                 //doorsturen naar welcome.html
                 new WelcomeController();
+
+                //refresht welcome pagina voor sessie
+                window.location.reload(true);
+
             } catch (e) {
                 if (e.code === 401) {
                     this.registerView
                         .find(".error")
                         .html(e.reason);
+                }else if (e.code === 400){
+                    alert("Deze gebruikersnaam is al in gebruik!");
                 } else {
                     console.log(e);
                 }

@@ -1,3 +1,13 @@
+/*registreren is nu active in de navbar*/
+#register {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
+body{
+    background-color: #f2f5fa;
+}
+
 .showcase .showcase-text {
     text-align: center;
     font-size: 18px;
@@ -20,6 +30,10 @@ footer.footer {
     clear: both;
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+
+.container{
+    width: 90%;
 }
 
 .form-control, .custom-select, .btn {

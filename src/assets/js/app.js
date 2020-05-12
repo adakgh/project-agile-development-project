@@ -11,12 +11,14 @@ const CONTROLLER_SIDEBAR = "sidebar";
 const CONTROLLER_LOGIN = "login";
 const CONTROLLER_LOGOUT = "logout";
 const CONTROLLER_WELCOME = "welcome";
+const CONTROLLER_ADMIN = "admin";
 const CONTROLLER_REGISTER = "register";
 const CONTROLLER_FORUM = "forum";
 const CONTROLLER_PROFIEL = "profiel";
 const CONTROLLER_EVENTS = "activiteiten";
 const CONTROLLER_NEWS = "nieuws";
 const CONTROLLER_AGENDA = "agenda";
+const CONTROLLER_CHAT = "chat";
 const CONTROLLER_OVERONS = "overons";
 const CONTROLLER_FAQ = "FAQ";
 
@@ -78,6 +80,11 @@ class App {
                 this.isLoggedIn(() => new WelcomeController, () => new IndexController());
                 break;
 
+            case CONTROLLER_ADMIN:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new AdminController(), () => new IndexController());
+                break;
+
             case CONTROLLER_PROFIEL:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new ProfielAanpassenController(), () => new ProfielAanpassenController());
@@ -96,6 +103,11 @@ class App {
             case CONTROLLER_AGENDA:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new AgendaController(), () => new AgendaController());
+                break;
+
+            case CONTROLLER_CHAT:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new ChatController(), () => new ChatController());
                 break;
 
             case CONTROLLER_OVERONS:

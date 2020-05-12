@@ -10,8 +10,17 @@ class UserRepository {
         this.route = "/user"
     }
 
-    async getAll() {
-
+    async getAll(id, username, name, email, geslacht, leeftijd, bio) {
+        return await networkManager
+            .doRequest(`${this.route}/getAll`, {
+                id: id,
+                username: username,
+                name: name,
+                email: email,
+                geslacht: geslacht,
+                leeftijd: leeftijd,
+                bio: bio
+            });
     }
 
     /**
