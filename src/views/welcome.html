@@ -1,20 +1,199 @@
 <link href="../assets/css/default.css" rel="stylesheet" type="text/css"/>
 
-<div class="row">
-    <div class="col-lg-12 text-left ml-5">
-        <h2 class="mt-5 h3"></h2>
-        <span>Dit is wat je hebt gemist:</span>
+<div class="row welcometext">
+    <div class="col-12 text-left ml-3">
+        <br>
+        <div class="alert alert-primary" role="alert">
+            <h4 class="welcome"></h4>
+        </div>
     </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-10 pb-5 ml-3">
+            <!--eerst volgende activiteiten waarvoor is aangemeld (agenda)-->
+            <!--SECTION START-->
+            <section class="row">
+                <div class="events">
+                    <ul class="events__list">
+                    </ul>
+
+                    <button class="btn meer float-right mt-3" onclick="app.loadController(new EventsController())">
+                        Meer..
+                    </button>
+                </div>
+
+
+                <!--Start box news-->
+                <div class="col-12 col-md-6 mb-3 mb-lg-4 ml-4">
+                    <div class="row flex-nowrap mt-3">
+                        <!--news box-->
+                        <div class="col-6 pb-1 pr-1 pt-1">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <img class="img-fluid"
+                                             src="https://images0.persgroep.net/rcs/jSSWGujtn1sLFq3b31nmzutlcwU/diocontent/168618542/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8">
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-success">Sport</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">Vitesse: Halveren huur Gelredome, anders
+                                            rechtszaak</h2>
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">7 mei 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pr-1 pt-1 ml-2">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                            <img class="img-fluid"
+                                                 src="https://images1.persgroep.net/rcs/Q3zL4TkXWNsHrDVPVNeRaZM5Fz8/diocontent/48620449/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8"></a>
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-secondary">Politiek</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">50Plus wint kort geding over digitaal
+                                            stemmen</h2>
+
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">6 mei 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pl-1 pt-1 ml-2">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <img class="img-fluid"
+                                             src="https://nos.nl/data/image/2020/04/28/646128/3200x1800a.jpg">
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-info">Cultuur</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">Piek van ruim 2 miljoen tv-kijkers voor
+                                            Koningsdag-uitzendingen</h2>
+
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">28 april 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-nowrap">
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pr-1 pt-1">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <img class="img-fluid" src="https://bootstrap.news/source/img8.jpg">
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-warning">Buitenland</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">Ditch receipts and four other tips to be a
+                                            shopper</h2>
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">20 april 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pr-1 pt-1 ml-2">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <img class="img-fluid"
+                                             src="https://www.telegraaf.nl/images/1680x945/filters:format(jpeg):quality(50)/cdn-kiosk-api.telegraaf.nl/ae8a2224-7e1b-11ea-8624-0217670beecd.jpg">
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-primary">Natuur</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">Vannacht vorst, daarna loopt temperatuur pijlsnel
+                                            op</h2>
+
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">14 april 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--news box-->
+                        <div class="col-6 pb-1 pl-1 pt-1 ml-2">
+                            <div class="card border-0 rounded text-white overflow zoom">
+                                <div class="position-relative">
+                                    <!--thumbnail img-->
+                                    <div class="ratio_right-cover-2 image-wrapper">
+                                        <img class="img-fluid" src="https://media.nu.nl/m/y1bx3xhaq7ii_wd640.jpg">
+                                    </div>
+                                    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                        <!-- category -->
+                                        <span class="badge badge-primary">Natuur</span>
+                                        <!--title-->
+                                        <h2 class="h5 text-white my-1">Felle supermaan boven Nederland en rest van de
+                                            wereld</h2>
+
+                                        <!-- meta title -->
+                                        <div class="news-meta">
+                                            <span class="news-date font-weight-bold">8 april 2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn meer float-right mt-3"
+                                    onclick="app.loadController(new NewsController())">Meer..
+                            </button>
+
+                        </div>
+                    </div>
+                    <!--end news box-->
+                </div>
+                <!--End box news-->
+            </section>
+            <!--END SECTION-->
+        </div>
+    </div>
+    <!--end code-->
+</div>
+
+
 <br>
 <br>

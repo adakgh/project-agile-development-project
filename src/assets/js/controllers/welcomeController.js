@@ -8,10 +8,20 @@ class WelcomeController {
     constructor() {
         // this.roomExampleRepository = new RoomExampleRepository();
         this.registerRepository = new RegisterRepository();
+        this.eventRepository = new activiteitenRepository();
 
-        $.get("views/welcome.html")
-            .done((data) => this.setup(data))
-            .fail(() => this.error());
+        //als ingelogd als admin laat admin pagina zien
+        if (sessionManager.get("username") === "test") {
+            $.get("views/admin.html")
+                .done((data) => this.setup(data))
+                .fail(() => this.error());
+
+            new AdminController();
+        } else {
+            $.get("views/welcome.html")
+                .done((data) => this.setup(data))
+                .fail(() => this.error());
+        }
     }
 
     //Called when the welcome.html has been loaded
@@ -26,6 +36,7 @@ class WelcomeController {
         $(".content").empty().append(this.welcomeView);
 
         this.fetchRooms();
+        this.getEvents();
     }
 
     /**
@@ -33,18 +44,55 @@ class WelcomeController {
      * @param roomId the room id to retrieve
      */
     async fetchRooms() {
-        const exampleResponse = this.welcomeView.find(".mt-5");
+        const exampleResponse = this.welcomeView.find(".welcome");
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
             // const roomData = await this.registerRepository.get();
 
-            const gebruiker =(JSON.stringify(sessionManager.get("username")).replace(/['"]+/g, ''));
+            const gebruiker = (JSON.stringify(sessionManager.get("username")).replace(/['"]+/g, ''));
             exampleResponse.text("Welkom terug " + gebruiker + ", ")
         } catch (e) {
             console.log("error while fetching rooms", e);
 
             //for now just show every error on page, normally not all errors are appropriate for user
             exampleResponse.text(e);
+        }
+    }
+
+    async getEvents() {
+        const eventData = await this.eventRepository.getAll();
+        const eventTable = $(".events__list");
+
+        for (let i = 0; i < 4; i++) {
+            let nextEvent = "<li class=\"events__item rounded\">";
+
+            //dag van de activiteit omzetten
+            nextEvent += `<div class="events__date">
+                                <span class="events__day">${eventData[i].date.slice(8, -14)}</span>`;
+
+            //maand omzetten in tekst
+            if(eventData[i].date.slice(5, -17) === "06"){
+                nextEvent += `<div class="events__month">juni</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "07"){
+                nextEvent += `<div class="events__month">juli</div>
+                    </div>`;
+            }else if (eventData[i].date.slice(5, -17) === "08"){
+                nextEvent += `<div class="events__month">aug</div>
+                    </div>`;
+            }else if (eventData[i].date.slice(5, -17) === "09"){
+                nextEvent += `<div class="events__month">sep</div>
+                    </div>`;
+            }else if (eventData[i].date.slice(5, -17) === "10"){
+                nextEvent += `<div class="events__month">okt</div>
+                    </div>`;
+            }
+
+            nextEvent += `<p class="events__desc h4">${eventData[i].name}`;
+
+            nextEvent += `<br> <span class="font-weight-bold">${eventData[i].time.slice(0, -8)}</span></p></li> <br>`;
+
+            eventTable.append(nextEvent);
         }
     }
 

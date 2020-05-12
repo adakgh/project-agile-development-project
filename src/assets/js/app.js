@@ -11,6 +11,7 @@ const CONTROLLER_SIDEBAR = "sidebar";
 const CONTROLLER_LOGIN = "login";
 const CONTROLLER_LOGOUT = "logout";
 const CONTROLLER_WELCOME = "welcome";
+const CONTROLLER_ADMIN = "admin";
 const CONTROLLER_REGISTER = "register";
 const CONTROLLER_FORUM = "forum";
 const CONTROLLER_PROFIEL = "profiel";
@@ -77,6 +78,11 @@ class App {
             case CONTROLLER_WELCOME:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new WelcomeController, () => new IndexController());
+                break;
+
+            case CONTROLLER_ADMIN:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new AdminController(), () => new IndexController());
                 break;
 
             case CONTROLLER_PROFIEL:

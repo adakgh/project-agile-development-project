@@ -32,6 +32,10 @@ footer.footer {
     padding-bottom: 4rem;
 }
 
+.container{
+    width: 90%;
+}
+
 .form-control, .custom-select, .btn {
     font-size: 19px;
 }
