@@ -1,7 +1,8 @@
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center" xmlns="http://www.w3.org/1999/html">
     <div class="col-sm-4 m-3">
         <h2 class="mb-3">Evenement aanmaken</h2>
+        
 
         <form class="login-form">
             <div class="form-group">
@@ -10,7 +11,7 @@
             </div>
             <div class="form-group">
                 <label for="inputPersonAmount">Aantal personen die deelnemen</label>
-                <input type="number" name="personAmountName" class="form-control" id="inputPersonAmount" placeholder="Vul aantal deelnemers in">
+                <input type="number" min="2" max="50" name="personAmountName" class="form-control" id="inputPersonAmount" placeholder="Vul aantal deelnemers in" >
             </div>
             <div class="form-group">
                 <label for="inputDate">Datum van het evenement</label>
@@ -18,16 +19,21 @@
             </div>
             <div class="form-group">
                 <label for="inputDescription">Beschrijving</label>
-                <input type="text" name="eventDescription" class="form-control" id="inputDescription" placeholder="Vul beschrijving in">
+                <textarea type="text" name="eventDescription" class="form-control" id="inputDescription"  placeholder="Vul beschrijving in" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="inputLocation">Locatie</label>
                 <input type="text" name="eventLocation" class="form-control" id="inputLocation" placeholder="Vul locatie in">
             </div>
             <div class="form-group">
-                <label for="inputTime">Tijdstip van het evenement</label>
-                <input type="text" name="eventTime" class="form-control" id="inputTime" placeholder="Vul tijdstip in">
+                <label for="inputBeginTime">Begintijd van het evenement</label>
+                <input type="time" name="eventBeginTime" class="form-control" id="inputBeginTime" placeholder="Vul begintijd in">
             </div>
+            <div class="form-group">
+                <label for="inputEndTime">Eindtijd van het evenement</label>
+                <input type="time" name="eventEndTime" class="form-control" id="inputEndTime" placeholder="Vul eindtijd in">
+            </div>
+
 
             <div class="error mb-3 text-danger"></div>
 
