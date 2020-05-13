@@ -189,6 +189,17 @@ app.post("/user/getAll", (req, res) => {
     );
 });
 
+//activiteiten
+app.post("/event/getAll", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT * FROM event",
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
 function listen(port, callback) {
     const server = app.listen(port, callback);
 

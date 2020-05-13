@@ -3,7 +3,7 @@ class AdminController {
     constructor() {
         this.userRepository = new UserRepository();
         this.forumRepository = new ForumRepository();
-        // this.eventRepository = new activiteitenRepository();
+        this.eventRepository = new activiteitenRepository();
 
         $.get("views/admin.html")
             .done((htmlData) => this.setup(htmlData))
@@ -16,6 +16,7 @@ class AdminController {
         this.loadCardInfo();
         this.loadUsers();
         this.loadForums();
+        this.loadEvents();
 
         $(".content").empty().append(this.adminView);
     }
@@ -32,7 +33,7 @@ class AdminController {
         }
 
         const forumData = await this.forumRepository.getAll();
-        const forumAlert = $(".forum");
+        const forumAlert = $(".forumalert");
 
         for (let i = 0; i < 1; i++) {
             let infoForum = `<div class="h2">${forumData.length}</div>`;
@@ -41,17 +42,17 @@ class AdminController {
             forumAlert.prepend(infoForum);
         }
 
-        //TODO: getAll in activiteiten repoistory en app.js aanmaken
+        const eventData = await this.eventRepository.getAll();
+        const eventAlert = $(".event");
 
-        // const eventData = await this.eventRepository.getAll();
-        // const eventAlert = $(".event");
-        //
-        // for (let i = 0; i < 1; i++) {
-        //     let infoEvent = `<div class="h2">${eventData.length}</div>`;
-        //
-        //
-        //     eventAlert.prepend(infoEvent);
-        // }
+        for (let i = 0; i < 1; i++) {
+            let infoEvent = `<div class="h2">${eventData.length}</div>`;
+
+            eventAlert.prepend(infoEvent);
+        }
+
+        //TODO: reports in database zetten
+
 
     }
 
@@ -87,6 +88,24 @@ class AdminController {
             nextForum += `<td><i class="fa fa-trash"></i></td>`;
 
             forumTable.append(nextForum);
+        }
+    }
+
+    async loadEvents() {
+        const eventData = await this.eventRepository.getAll();
+        const eventTable = $("#eventTable");
+
+        for (let i = 0; i < eventData.length; i++) {
+            let nextEvent = "<tr>";
+            nextEvent += `<td>${eventData[i].name}</td>`;
+            nextEvent += `<td>${eventData[i].status}</td>`;
+            nextEvent += `<td>${eventData[i].date.slice(0, -14)}</td>`;
+            nextEvent += `<td>${eventData[i].time.slice(0, -8)}</td>`;
+            nextEvent += `<td>${eventData[i].place}</td>`;
+
+            nextEvent += `<td><i class="fa fa-trash"></i></td>`;
+
+            eventTable.append(nextEvent);
         }
     }
 

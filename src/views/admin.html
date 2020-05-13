@@ -51,7 +51,7 @@
                                 <div class="col-3">
                                     <i class="material-icons">forum</i>
                                 </div>
-                                <div class="col-9 text-right forum">
+                                <div class="col-9 text-right forumalert">
                                     <div class="h2"></div>
                                     <div>nieuwe forum artikelen!</div>
                                 </div>
@@ -76,12 +76,18 @@
                                     <i class="material-icons">date_range</i>
                                 </div>
                                 <div class="col-8 text-right event">
-                                    <div class="h2">12</div>
+                                    <div class="h2"></div>
                                     <div>nieuwe activiteiten!</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <a onclick="window.location.hash='eventTitle';">
+                        <div class="card-footer text-white"><span class="pull-left">Beheren</span><span
+                                class="pull-right"><i class="fa fa-arrow-circle-down"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -142,6 +148,30 @@
                             <th>Titel</th>
                             <th>Gebruikersnaam</th>
                             <th>Tag</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="title" id="eventTitle"></i>Activiteiten van The Agile Elderly
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="eventTable">
+                        <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Beschrijving</th>
+                            <th>Datum</th>
+                            <th>Tijd</th>
+                            <th>Plaats</th>
                             <th></th>
                         </tr>
                         </thead>
