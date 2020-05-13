@@ -76,7 +76,7 @@ class AdminController {
             $('.userDelete').on("click", (event) => {
                 console.log(event.currentTarget.dataset.userid);
                 const userid = event.currentTarget.dataset.userid;
-                this.userdelete(userid);
+                // this.userdelete(userid);
             });
 
             userTable.append(nextUser);
@@ -99,7 +99,7 @@ class AdminController {
             $('.forumDelete').on("click", (event) => {
                 console.log(event.currentTarget.dataset.forumid);
                 const forumid = event.currentTarget.dataset.forumid;
-                this.forumdelete(forumid);
+                // this.forumdelete(forumid);
             });
 
             forumTable.append(nextForum);
@@ -125,7 +125,7 @@ class AdminController {
             $('.eventDelete').on("click", (event) => {
                 console.log(event.currentTarget.dataset.eventid);
                 const eventid = event.currentTarget.dataset.eventid;
-                this.eventdelete(eventid);
+                // this.eventdelete(eventid);
             });
 
             eventTable.append(nextEvent);
@@ -133,43 +133,52 @@ class AdminController {
     }
 
     //Gebruiker verwijderen
-    async userdelete(id) {
-        try {
-            const userDelete = await this.userRepository.delete(id);
-            console.log(userDelete);
-
-            alert("Deze gebruiker is verwijderd!");
-            new WelcomeController();
-        } catch (e) {
-            console.log(e);
-        }
-    }
+    // async userdelete(id) {
+    //     try {
+    //         const userDelete = await this.userRepository.delete(id);
+    //         console.log(userDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze gebruiker wilt verwijderen?")) {
+    //             alert("Deze gebruiker is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
 
     //Forum verwijderen
-    async forumdelete(id) {
-        try {
-            const forumDelete = await this.forumRepository.delete(id);
-            console.log(forumDelete);
-
-            alert("Dit artikel is verwijderd!");
-            new WelcomeController();
-        } catch (e) {
-            console.log(e);
-        }
-    }
+    // async forumdelete(id) {
+    //     try {
+    //         const forumDelete = await this.forumRepository.delete(id);
+    //         console.log(forumDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze artikel wilt verwijderen?")) {
+    //             alert("Dit artikel is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
 
     //Activiteit verwijderen
-    async eventdelete(id) {
-        try {
-            const eventDelete = await this.eventRepository.delete(id);
-            console.log(eventDelete);
-
-            alert("Deze activiteit is verwijderd!");
-            new WelcomeController();
-        } catch (e) {
-            console.log(e);
-        }
-    }
+    // async eventdelete(id) {
+    //     try {
+    //         const eventDelete = await this.eventRepository.delete(id);
+    //         console.log(eventDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze activiteit wilt verwijderen?")) {
+    //             alert("Deze activiteit is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
 
 
     error() {
