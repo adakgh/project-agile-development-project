@@ -166,8 +166,9 @@ app.post("/forum/get", (req, res) => {
 app.post("/event", (req, res) => {
     // res.send({person_amount: req.body.person_amount, date: req.body.date });
     db.handleQuery(connectionPool, {
-        query: "INSERT INTO event(name, person_amount, date, status, place, time) VALUES (?,?,?,?,?,?)",
-        values: [req.body.name, req.body.person_amount, req.body.date, req.body.status, req.body.place, req.body.time]
+        query: "INSERT INTO event(name, person_amount, date, status, place, begin_time, end_time) VALUES (?,?,?,?,?,?,?)",
+        values: [req.body.name, req.body.person_amount, req.body.date, req.body.status, req.body.place,
+            req.body.begin_time, req.body.end_time]
     }, (data) => {
         res.status(httpOkCode).json(data);
     }, (err) => {
