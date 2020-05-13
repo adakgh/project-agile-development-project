@@ -69,7 +69,7 @@ class AdminController {
             nextUser += `<td>${userData[i].leeftijd}</td>`;
             nextUser += `<td>${userData[i].bio}</td>`;
 
-            nextUser += `<td><i class="fa fa-trash"></i></td>`;
+            nextUser += `<td><button type="button" class="btn btn-danger">Verwijderen</button></td>`;
 
             userTable.append(nextUser);
         }
@@ -85,7 +85,7 @@ class AdminController {
             nextForum += `<td>${forumData[i].username}</td>`;
             nextForum += `<td>${forumData[i].tag}</td>`;
 
-            nextForum += `<td><i class="fa fa-trash"></i></td>`;
+            nextForum += `<td><button type="button" class="btn btn-danger">Verwijderen</button></td>`;
 
             forumTable.append(nextForum);
         }
@@ -100,10 +100,11 @@ class AdminController {
             nextEvent += `<td>${eventData[i].name}</td>`;
             nextEvent += `<td>${eventData[i].status}</td>`;
             nextEvent += `<td>${eventData[i].date.slice(0, -14)}</td>`;
-            nextEvent += `<td>${eventData[i].time.slice(0, -8)}</td>`;
+            nextEvent += `<td>${eventData[i].begin_time}</td>`;
+            nextEvent += `<td>${eventData[i].end_time}</td>`;
             nextEvent += `<td>${eventData[i].place}</td>`;
 
-            nextEvent += `<td><i class="fa fa-trash"></i></td>`;
+            nextEvent += `<td><button type="button" class="btn btn-danger">Verwijderen</button></td>`;
 
             eventTable.append(nextEvent);
         }
