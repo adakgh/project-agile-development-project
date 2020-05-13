@@ -3,7 +3,7 @@ class activiteitenRepository {
         this.route = "/event"
     }
 
-    async create(name, personAmount, eventDate, description, place, eventTime) {
+    async create(name, personAmount, eventDate, description, place, eventBeginTime, eventEndTime) {
         return await networkManager
             .doRequest(this.route, {
                 name: name,
@@ -11,7 +11,8 @@ class activiteitenRepository {
                 date: eventDate,
                 status: description,
                 place: place,
-                time: eventTime
+                begin_time: eventBeginTime,
+                end_time: eventEndTime
             });
     }
 

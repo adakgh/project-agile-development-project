@@ -73,79 +73,79 @@ class AgendaController {
     }
 
 // op datum filteren
-getAll()
-{
-    $('#date-event').show();
-    $('#time-event').show();
-    $('#status-event').show();
-    $('#place-event').show();
-}
+    getAll() {
+        $('#date-event').show();
+        $('#time-event').show();
+        $('#status-event').show();
+        $('#place-event').show();
+    }
 
-getDates()
-{
-    $('#date-event').show();
-    $('#time-event').hide();
-    $('#status-event').hide();
-    $('#place-event').hide();
-}
+    getDates() {
+        $('#date-event').show();
+        $('#time-event').hide();
+        $('#status-event').hide();
+        $('#place-event').hide();
+    }
 
-getTime()
-{
-    $('#date-event').hide();
-    $('#time-event').show();
-    $('#status-event').hide();
-    $('#place-event').hide();
-}
+    getTime() {
+        $('#date-event').hide();
+        $('#time-event').show();
+        $('#status-event').hide();
+        $('#place-event').hide();
+    }
 
-getStatus()
-{
-    $('#date-event').hide();
-    $('#time-event').hide();
-    $('#status-event').show();
-    $('#place-event').hide();
-}
+    getStatus() {
+        $('#date-event').hide();
+        $('#time-event').hide();
+        $('#status-event').show();
+        $('#place-event').hide();
+    }
 
-getPlace()
-{
-    $('#date-event').hide();
-    $('#time-event').hide();
-    $('#status-event').hide();
-    $('#place-event').show();
-}
-}
+    getPlace() {
+        $('#date-event').hide();
+        $('#time-event').hide();
+        $('#status-event').hide();
+        $('#place-event').show();
+    }
 
 
-async onOpenAgenda(agenda){
-    agenda.preventDefault();
+    async async_onOpenAgenda(agenda) {
+        agenda.preventDefault();
 
-    //verzamelen van form gegevens
-    const date = this.agendaView.find("#dateAgenda").val();
-    const time = this.agendaView.find("#timeAgenda").val();
-    const status = this.agendaView.find("#statusAgenda").val();
-    const place = this.agendaView.find("#placeAgenda").val();
+        //verzamelen van form gegevens
+        const date = this.agendaView.find("#dateAgenda").val();
+        const time = this.agendaView.find("#timeAgenda").val();
+        const status = this.agendaView.find("#statusAgenda").val();
+        const place = this.agendaView.find("#placeAgenda").val();
 
-    console.log(`${date} - ${time} - ${status} - ${place}`);
+        console.log(`${date} - ${time} - ${status} - ${place}`);
 
-    //data uit database met bepaalde id wordt opgehaald
-    try {
-        const agenda = await this.forumRepository.get(id);
-        const articleTemplate = $("#article-template").html();
+        //data uit database met bepaalde id wordt opgehaald
+        try {
+            const agenda = await this.forumRepository.get(id);
+            const articleTemplate = $("#article-template").html();
 
-        for (let article of forum) {
-            const articles = $(articleTemplate);
+            for (let article of forum) {
+                const articles = $(articleTemplate);
+            }
+        }catch (e) {
+            console.log(e);
         }
+
+        //versturen naar repository
+        try {
+            const agendaId = await this.agendaRepository.create(date, time, status, place);
+            console.log(agendaId);
+            app.loadController(CONTROLLER_AGENDA)
+        } catch (e) {
+            console.log(e)
+        }
+
     }
 
-    //versturen naar repository
-    try {
-        const agendaId = await this.agendaRepository.create(date, time, status, place);
-        console.log(agendaId);
-        app.loadController(CONTROLLER_AGENDA)
-    } catch (e) {
-        console.log(e)
+    allAgenda() {
+
     }
-
-
 }
 
 // var map;
