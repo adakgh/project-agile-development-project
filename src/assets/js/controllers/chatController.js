@@ -32,6 +32,17 @@
 //     messageElement.innerText = message
 //     messageContainer.append(messageElement)
 // }
+class ChatController {
+
+    constructor() {
+        this.chatRepository = new chatRepository();
+        $.get("views/chat.html")
+            .done((htmlData) => this.setup(htmlData))
+            .fail(() => this.error());
+    }
+
+    setup(htmlData) {
+        this.chatView = $(htmlData);
 
 $(function () {
     var FADE_TIME = 150; // ms
@@ -316,3 +327,12 @@ $(function () {
     });
 
 });
+
+        $(".content").empty().append(this.chatView);
+
+    }
+    //Called when the login.html fails to load
+    error() {
+        $(".content").html("Failed to load content")
+    }
+}
