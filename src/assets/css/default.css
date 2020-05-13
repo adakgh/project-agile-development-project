@@ -62,6 +62,7 @@ a:hover {
     text-decoration: none;
 }
 
+/*//Index foto*/
 .jumbotron {
     position: relative;
     background: url(https://cf.ltkcdn.net/seniors/images/orig/214166-1732x1372-seniorscards.jpg);
@@ -169,6 +170,7 @@ section {
 /*    margin-left: 0;*/
 /*}*/
 
+/*Events cards*/
 .events {
     width: 39%;
     padding: 20px;
@@ -237,6 +239,7 @@ section {
 /*    margin-right: -280px;*/
 /*}*/
 
+/*Welcome buttons*/
 .meer {
     background: grey;
     height: 40px;
@@ -255,6 +258,7 @@ section {
 }
 
 
+/*Admin*/
 .content-wrapper {
     min-height: calc(100vh - 56px);
     padding-top: 1rem;
