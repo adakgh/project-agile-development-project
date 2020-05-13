@@ -45,12 +45,13 @@ class WelcomeController {
      */
     async fetchRooms() {
         const exampleResponse = this.welcomeView.find(".welcome");
+
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
             // const roomData = await this.registerRepository.get();
 
             const gebruiker = (JSON.stringify(sessionManager.get("username")).replace(/['"]+/g, ''));
-            exampleResponse.text("Welkom terug " + gebruiker + ", ")
+            exampleResponse.text("Welkom terug, " + gebruiker + "!")
         } catch (e) {
             console.log("error while fetching rooms", e);
 

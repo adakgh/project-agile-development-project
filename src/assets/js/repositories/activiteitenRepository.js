@@ -16,7 +16,7 @@ class activiteitenRepository {
             });
     }
 
-    async getAll(name, personAmount, eventDate, description, place, eventTime) {
+    async getAll(name, personAmount, eventDate, description, place, eventBeginTime, eventEndTime) {
         return await networkManager
             .doRequest(`${this.route}/getAll`, {
                 name: name,
@@ -24,7 +24,9 @@ class activiteitenRepository {
                 date: eventDate,
                 status: description,
                 place: place,
-                time: eventTime
+                begin_time: eventBeginTime,
+                end_time: eventEndTime
+
             });
     }
 
