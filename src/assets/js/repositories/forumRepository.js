@@ -31,8 +31,11 @@ class ForumRepository {
             });
     }
 
-    async delete() {
-
+    async delete(id) {
+        return await networkManager
+            .doRequest(`${this.route}/delete`, {
+                id: id
+            });
     }
 
     async update(id, values = {}) {

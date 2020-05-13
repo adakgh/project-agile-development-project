@@ -26,8 +26,13 @@ class activiteitenRepository {
                 place: place,
                 begin_time: eventBeginTime,
                 end_time: eventEndTime
-
             });
     }
 
+    async delete(id) {
+        return await networkManager
+            .doRequest(`${this.route}/delete`, {
+                id: id
+            });
+    }
 }
