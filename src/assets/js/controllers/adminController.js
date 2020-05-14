@@ -21,6 +21,7 @@ class AdminController {
         $(".content").empty().append(this.adminView);
     }
 
+    //Aantal van elke tabel weergeven
     async loadCardInfo() {
         const userData = await this.userRepository.getAll();
         const userAlert = $(".users");
@@ -56,6 +57,7 @@ class AdminController {
 
     }
 
+    //Gebruikers laden
     async loadUsers() {
         const userData = await this.userRepository.getAll();
         const userTable = $("#userTable");
@@ -69,12 +71,19 @@ class AdminController {
             nextUser += `<td>${userData[i].leeftijd}</td>`;
             nextUser += `<td>${userData[i].bio}</td>`;
 
-            nextUser += `<td><i class="fa fa-trash"></i></td>`;
+            nextUser += `<td><button type="button" class="btn btn-danger userDelete" data-userid = "${userData[i].id}">Verwijderen</button></td>`;
+
+            $('.userDelete').on("click", (event) => {
+                console.log(event.currentTarget.dataset.userid);
+                const userid = event.currentTarget.dataset.userid;
+                // this.userdelete(userid);
+            });
 
             userTable.append(nextUser);
         }
     }
 
+    //Forum laden
     async loadForums() {
         const forumData = await this.forumRepository.getAll();
         const forumTable = $("#forumTable");
@@ -85,12 +94,19 @@ class AdminController {
             nextForum += `<td>${forumData[i].username}</td>`;
             nextForum += `<td>${forumData[i].tag}</td>`;
 
-            nextForum += `<td><i class="fa fa-trash"></i></td>`;
+            nextForum += `<td><button type="button" class="btn btn-danger forumDelete" data-forumid = "${forumData[i].id}">Verwijderen</button></td>`;
+
+            $('.forumDelete').on("click", (event) => {
+                console.log(event.currentTarget.dataset.forumid);
+                const forumid = event.currentTarget.dataset.forumid;
+                // this.forumdelete(forumid);
+            });
 
             forumTable.append(nextForum);
         }
     }
 
+    //Activiteiten laden
     async loadEvents() {
         const eventData = await this.eventRepository.getAll();
         const eventTable = $("#eventTable");
@@ -100,14 +116,70 @@ class AdminController {
             nextEvent += `<td>${eventData[i].name}</td>`;
             nextEvent += `<td>${eventData[i].status}</td>`;
             nextEvent += `<td>${eventData[i].date.slice(0, -14)}</td>`;
-            nextEvent += `<td>${eventData[i].time.slice(0, -8)}</td>`;
+            nextEvent += `<td>${eventData[i].begin_time}</td>`;
+            nextEvent += `<td>${eventData[i].end_time}</td>`;
             nextEvent += `<td>${eventData[i].place}</td>`;
 
-            nextEvent += `<td><i class="fa fa-trash"></i></td>`;
+            nextEvent += `<td><button type="button" class="btn btn-danger eventDelete" data-eventid = "${eventData[i].id}">Verwijderen</button></td>`;
+
+            $('.eventDelete').on("click", (event) => {
+                console.log(event.currentTarget.dataset.eventid);
+                const eventid = event.currentTarget.dataset.eventid;
+                // this.eventdelete(eventid);
+            });
 
             eventTable.append(nextEvent);
         }
     }
+
+    //Gebruiker verwijderen
+    // async userdelete(id) {
+    //     try {
+    //         const userDelete = await this.userRepository.delete(id);
+    //         console.log(userDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze gebruiker wilt verwijderen?")) {
+    //             alert("Deze gebruiker is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
+
+    //Forum verwijderen
+    // async forumdelete(id) {
+    //     try {
+    //         const forumDelete = await this.forumRepository.delete(id);
+    //         console.log(forumDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze artikel wilt verwijderen?")) {
+    //             alert("Dit artikel is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
+
+    //Activiteit verwijderen
+    // async eventdelete(id) {
+    //     try {
+    //         const eventDelete = await this.eventRepository.delete(id);
+    //         console.log(eventDelete);
+    //
+    //         if (confirm("Weet u zeker dat u deze activiteit wilt verwijderen?")) {
+    //             alert("Deze activiteit is verwijderd!");
+    //             new WelcomeController();
+    //         } else {
+    //         }
+    //     } catch (e) {
+    //         console.log(e);
+    //     }
+    // }
+
 
     error() {
         $(".content").html("Failed to load content")

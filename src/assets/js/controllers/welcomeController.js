@@ -50,7 +50,7 @@ class WelcomeController {
             // const roomData = await this.registerRepository.get();
 
             const gebruiker = (JSON.stringify(sessionManager.get("username")).replace(/['"]+/g, ''));
-            exampleResponse.text("Welkom terug " + gebruiker + ", ")
+            exampleResponse.text("Welkom terug, " + gebruiker + "!")
         } catch (e) {
             console.log("error while fetching rooms", e);
 
@@ -86,11 +86,32 @@ class WelcomeController {
             }else if (eventData[i].date.slice(5, -17) === "10"){
                 nextEvent += `<div class="events__month">okt</div>
                     </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "11") {
+                nextEvent += `<div class="events__month">nov</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "12") {
+                nextEvent += `<div class="events__month">dec</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "01") {
+                nextEvent += `<div class="events__month">jan</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "02") {
+                nextEvent += `<div class="events__month">feb</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "03") {
+                nextEvent += `<div class="events__month">maart</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "04") {
+                nextEvent += `<div class="events__month">april</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "05") {
+                nextEvent += `<div class="events__month">mei</div>
+                    </div>`;
             }
 
             nextEvent += `<p class="events__desc h4">${eventData[i].name}`;
 
-            nextEvent += `<br> <span class="font-weight-bold">${eventData[i].time.slice(0, -8)}</span></p></li> <br>`;
+            nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
 
             eventTable.append(nextEvent);
         }

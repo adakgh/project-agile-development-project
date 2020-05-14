@@ -34,8 +34,11 @@ class UserRepository {
             .doRequest(`${this.route}/login`, {"username": username, "password": password});
     }
 
-    async delete() {
-
+    async delete(id) {
+        return await networkManager
+            .doRequest(`${this.route}/delete`, {
+                id: id
+            });
     }
 
 

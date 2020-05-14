@@ -68,21 +68,6 @@ app.post("/room_example", (req, res) => {
 
 });
 
-app.post("/upload", function (req, res) {
-    if (!req.files || Object.keys(req.files).length === 0) {
-        return res.status(badRequestCode).json({ reason: "No files were uploaded." });
-    }
-
-    let sampleFile = req.files.sampleFile;
-
-    sampleFile.mv(wwwrootPath + "/uploads/test.jpg", function (err) {
-        if (err) {
-            return res.status(badRequestCode).json({ reason: err });
-        }
-
-        return res.status(httpOkCode).json("OK");
-    });
-});
 //------- END ROUTES -------
 
 app.post("/post", (req, res) => {
@@ -163,6 +148,18 @@ app.post("/forum/get", (req, res) => {
     );
 });
 
+//forum verwijderen voor admin
+app.post("/forum/delete", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "DELETE FROM forum WHERE id = ?",
+            values: [req.body.id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
 app.post("/event", (req, res) => {
     // res.send({person_amount: req.body.person_amount, date: req.body.date });
     db.handleQuery(connectionPool, {
@@ -189,10 +186,34 @@ app.post("/user/getAll", (req, res) => {
     );
 });
 
+//gebruikers verwijderen voor admin
+app.post("/user/delete", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "DELETE FROM user WHERE id = ?",
+            values: [req.body.id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
 //activiteiten
 app.post("/event/getAll", (req, res) => {
     db.handleQuery(connectionPool, {
             query: "SELECT * FROM event",
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+//activiteit verwijderen voor admin
+app.post("/event/delete", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "DELETE FROM event WHERE id = ?",
+            values: [req.body.id]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);

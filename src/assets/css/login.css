@@ -1,3 +1,9 @@
+/*login is nu active in de navbar*/
+#login {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
 /*.img-fluid{*/
 /*        margin-top: -72.3%;*/
 /*        margin-bottom: -22%;*/
@@ -11,79 +17,79 @@
 /*}*/
 
 
-.text-center{
-    width: 35.5%;
-    left: 30%;
-    position: relative;
-    float: left;
-    border: 4px solid #1DA2CA;
-    border-radius: 35px;
-    font-size: 20px;
-}
+/*.text-center{*/
+/*    width: 35.5%;*/
+/*    left: 30%;*/
+/*    position: relative;*/
+/*    float: left;*/
+/*    border: 4px solid #1DA2CA;*/
+/*    border-radius: 35px;*/
+/*    font-size: 20px;*/
+/*}*/
 
-#defaultRegisterFormUserName{
-    font-size:18px;
-    width: 101%;
-}
+/*#defaultRegisterFormUserName{*/
+/*    font-size:18px;*/
+/*    width: 101%;*/
+/*}*/
 
-#defaultRegisterFormFirstName{
-    font-size:18px;
-    width: 101%;
-}
+/*#defaultRegisterFormFirstName{*/
+/*    font-size:18px;*/
+/*    width: 101%;*/
+/*}*/
 
-#defaultRegisterFormLastName{
-    font-size:18px;
-    width: 101%;
-}
+/*#defaultRegisterFormLastName{*/
+/*    font-size:18px;*/
+/*    width: 101%;*/
+/*}*/
 
-.col{
-    width: 94%;
-    font-size:18px;
-}
+/*.col{*/
+/*    width: 94%;*/
+/*    font-size:18px;*/
+/*}*/
 
-#defaultRegisterFormPassword{
-    font-size:18px;
-}
+/*#defaultRegisterFormPassword{*/
+/*    font-size:18px;*/
+/*}*/
 
-#defaultRegisterFormPassword1{
-    font-size:18px;
-}
+/*#defaultRegisterFormPassword1{*/
+/*    font-size:18px;*/
+/*}*/
 
-.form-row {
-    width: 95%;
-}
+/*.form-row {*/
+/*    width: 95%;*/
+/*}*/
 
-.mb-4{
-    width: 95%;
-}
+/*.mb-4{*/
+/*    width: 95%;*/
+/*}*/
 
-#defaultRegisterFormEmail{
-    font-size:18px;
-    width: 94%;
-}
+/*#defaultRegisterFormEmail{*/
+/*    font-size:18px;*/
+/*    width: 94%;*/
+/*}*/
 
-.form-control {
-    font-size:20px;
-    width: 94%;
-}
+/*.form-control {*/
+/*    font-size:20px;*/
+/*    width: 94%;*/
+/*}*/
 
-#gender1{
-    left: 10%;
-    font-size: 20px;
-}
-#gender2{
-    left: 25%;
-    font-size: 20px;
-}
+/*#gender1{*/
+/*    left: 10%;*/
+/*    font-size: 20px;*/
+/*}*/
+/*#gender2{*/
+/*    left: 25%;*/
+/*    font-size: 20px;*/
+/*}*/
 
-span{
-    left: 3%;
-    position:relative;
-    font-size: 20px;
-    color: dimgrey;
-}
+/*span{*/
+/*    left: 3%;*/
+/*    position:relative;*/
+/*    font-size: 20px;*/
+/*    color: dimgrey;*/
+/*}*/
 
-.btn{
-    font-size: 20px;
-    width: 94%;
-}
+/*.btn{*/
+/*    font-size: 20px;*/
+/*    width: 94%;*/
+/*}*/

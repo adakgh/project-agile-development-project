@@ -6,7 +6,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" onclick="app.loadController(CONTROLLER_WELCOME)">
                 <img src="../assets/img/avatars/man.png" width="50" height="50" alt="">
                 The Agile Elderly</a>
 
@@ -35,12 +35,7 @@
                             Agenda
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-controller="Chat"> <i class="material-icons">Chat</i>
-                            Chat
-                        </a>
-                    </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="activiteiten">
                         <a href="#" class="nav-link" data-controller="activiteiten"> <i class="material-icons">date_range</i>
                             Activiteiten
                         </a>
@@ -50,9 +45,14 @@
                             Forum
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-controller="chat"> <i class="material-icons">chat</i>
+                            Chat
+                        </a>
+                    </li>
                     <li class="nav-item" id="overons">
                         <a href="#" class="nav-link" data-controller="overons"> <i class="material-icons">people</i>
-                            Wie zijn wij
+                            Over ons
                         </a>
                     </li>
                     <li class="nav-item" id="faq">
@@ -83,7 +83,7 @@
                     <a class="nav-link register" id="register" data-controller="register" href="#">Registreren</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-controller="login" href="#">Login</a>
+                    <a class="nav-link" id="login" data-controller="login" href="#">Login</a>
             </ul>
         </div>
     </nav>
