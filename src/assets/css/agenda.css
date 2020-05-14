@@ -1,48 +1,106 @@
-#rcorners {
-    border-radius: 25px;
-    border: 2px solid #005cbf;
+/*#rcorners {*/
+/*    border-radius: 25px;*/
+/*    border: 2px solid #005cbf;*/
+/*    padding: 20px;*/
+/*    width: 200px;*/
+/*    height: 150px;*/
+/*}*/
+/*#map {*/
+/*    height: 100%;*/
+/*}*/
+/*!* Optional: Makes the sample page fill the window. *!*/
+/*html, body {*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*#forum {*/
+/*    background-color: hsla(0, 0%, 100%, .1);*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*.gegevens {*/
+/*    position: relative;*/
+/*}*/
+
+/*.side-item:hover {*/
+/*    background-color: #ebebeb;*/
+/*}*/
+
+/*.main {*/
+/*    grid-area: main;*/
+/*    width: 99%;*/
+/*}*/
+
+/*.wrapper {*/
+/*    display: grid;*/
+/*    grid-template-areas: 'main main main' 'side side side';*/
+/*}*/
+
+
+/*.side-item {*/
+/*    font-size: 16px;*/
+/*    color: #5777ba;*/
+/*    cursor: pointer;*/
+/*    padding: .8rem;*/
+/*    border-bottom: 1px solid #f0f0f0;*/
+/*}*/
+
+/*Events cards*/
+.events {
+    width: 39%;
     padding: 20px;
-    width: 200px;
-    height: 150px;
 }
-#map {
-    height: 100%;
+
+.events__heading {
+    margin: 0px 0px 10px 0px;
+    font-weight: 500;
 }
-/* Optional: Makes the sample page fill the window. */
-html, body {
-    height: 100%;
+
+.events__list {
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#forum {
-    background-color: hsla(0, 0%, 100%, .1);
-    border-radius: 4px;
+.events__item {
+    display: flex;
+    padding: 12px 0px;
+    border: solid 1px #47536e;
 }
 
-.gegevens {
-    position: relative;
+.events__date {
+    background-color: #47536e;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: -12px;
+    width: 80px;
+    margin-bottom: -12px;
+    padding: 15px;
 }
 
-.side-item:hover {
-    background-color: #ebebeb;
+.events__day {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
 }
 
-.main {
-    grid-area: main;
-    width: 99%;
+.events__month {
+    color: white;
+    font-size: 19px;
+    text-transform: lowercase;
+    font-weight: 600;
+    line-height: 1;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-areas: 'main main main' 'side side side';
+.events__desc {
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #000000;
 }
 
-
-.side-item {
-    font-size: 16px;
-    color: #5777ba;
-    cursor: pointer;
-    padding: .8rem;
-    border-bottom: 1px solid #f0f0f0;
+.font-weight-bold {
+    font-size: 18px;
 }

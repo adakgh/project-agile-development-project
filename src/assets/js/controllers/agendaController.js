@@ -2,6 +2,7 @@ class AgendaController {
 
     constructor() {
         this.agendaRepository = new agendaRepository();
+        this.eventRepository = new activiteitenRepository();
         $.get("views/agenda.html")
             .done((htmlData) => this.setup(htmlData))
             .fail(() => this.error());
@@ -12,147 +13,68 @@ class AgendaController {
 
         $(".content").empty().append(this.agendaView);
 
-        this.agendaView.find(".btn").on("click", (agenda) => this.onOpenAgenda(agenda))
-        //als gebruiker niet is ingelogd ziet hij/zij geen agenda
-        // if (sessionManager.get("date")) {
-        //     $("#rcorners").show();
-        // } else {
-        //     $(".text-nowrap").empty().append("U bent nog niet deelgenomen aan een activiteit<br>");
-        // }
-
-        //ophalen van alle forum artikelen uit het database
-        this.allAgenda();
-
-        //filteren op categorieen
-        //ophalen van alle categorieen
-        this.agendaView.find("#side-all").on("click", () => this.getAll());
-
-        //ophalen van categorie: event-gerelateerd, discussie, hulp nodig en off-topic
-        this.agendaView.find("#side-date").on("click", () => this.getDates());
-        this.agendaView.find("#side-time").on("click", () => this.getTime());
-        this.agendaView.find("#side-status").on("click", () => this.getStatus());
-        this.agendaView.find("#side-place").on("click", () => this.getPlace());
+        this.getEvents();
     }
 
-    //html pagina waar je maps kan zien wordt geopend
-    onMaps() {
-        new MapsController();
+    async getEvents() {
+        const eventData = await this.eventRepository.getAll();
+        const eventTable = $(".events__list");
+
+        for (let i = 0; i < 4; i++) {
+            let nextEvent = "<li class=\"events__item rounded\">";
+
+            //dag van de activiteit omzetten
+            nextEvent += `<div class="events__date">
+                                <span class="events__day">${eventData[i].date.slice(8, -14)}</span>`;
+
+            //maand omzetten in tekst
+            if (eventData[i].date.slice(5, -17) === "06") {
+                nextEvent += `<div class="events__month">juni</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "07") {
+                nextEvent += `<div class="events__month">juli</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "08") {
+                nextEvent += `<div class="events__month">aug</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "09") {
+                nextEvent += `<div class="events__month">sep</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "10") {
+                nextEvent += `<div class="events__month">okt</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "11") {
+                nextEvent += `<div class="events__month">nov</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "12") {
+                nextEvent += `<div class="events__month">dec</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "01") {
+                nextEvent += `<div class="events__month">jan</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "02") {
+                nextEvent += `<div class="events__month">feb</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "03") {
+                nextEvent += `<div class="events__month">maart</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "04") {
+                nextEvent += `<div class="events__month">april</div>
+                    </div>`;
+            } else if (eventData[i].date.slice(5, -17) === "05") {
+                nextEvent += `<div class="events__month">mei</div>
+                    </div>`;
+            }
+
+            nextEvent += `<p class="events__desc h4">${eventData[i].name}`;
+
+            nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
+
+            eventTable.append(nextEvent);
+        }
     }
 
     error() {
         $(".content").html("Failed to load content")
     }
-
-    async allDates() {
-        this.agendaRepository = new agendaRepository();
-
-        //Popup met Maps wordt opgeroepen
-        $.get("views/agendaMap.html")
-            .done((htmlData) => newsetup(htmlData));
-
-        try {
-            //datums ophalen uit de database
-            const datumen = await this.agendaRepository.getAll();
-            //datums in template plaatsen
-            const template = $("#agenda-template").html();
-
-            //loop om alles uit het database op te halen
-            for (let date of datumen) {
-                const agendaRow = $(template);
-
-                agendaRow.find(".date").empty().append(date.date);
-                agendaRow.find(".threadTitleHeader").empty().append(date.time);
-                agendaRow.find(".descriptionText").empty().append(date.status);
-
-                $(".dateList").append(agendaRow);
-            }
-        } catch (e) {
-            console.log("error while fetching", e);
-        }
-
-    }
-
-// op datum filteren
-    getAll() {
-        $('#date-event').show();
-        $('#time-event').show();
-        $('#status-event').show();
-        $('#place-event').show();
-    }
-
-    getDates() {
-        $('#date-event').show();
-        $('#time-event').hide();
-        $('#status-event').hide();
-        $('#place-event').hide();
-    }
-
-    getTime() {
-        $('#date-event').hide();
-        $('#time-event').show();
-        $('#status-event').hide();
-        $('#place-event').hide();
-    }
-
-    getStatus() {
-        $('#date-event').hide();
-        $('#time-event').hide();
-        $('#status-event').show();
-        $('#place-event').hide();
-    }
-
-    getPlace() {
-        $('#date-event').hide();
-        $('#time-event').hide();
-        $('#status-event').hide();
-        $('#place-event').show();
-    }
-
-
-    async async_onOpenAgenda(agenda) {
-        agenda.preventDefault();
-
-        //verzamelen van form gegevens
-        const date = this.agendaView.find("#dateAgenda").val();
-        const time = this.agendaView.find("#timeAgenda").val();
-        const status = this.agendaView.find("#statusAgenda").val();
-        const place = this.agendaView.find("#placeAgenda").val();
-
-        console.log(`${date} - ${time} - ${status} - ${place}`);
-
-        //data uit database met bepaalde id wordt opgehaald
-        try {
-            const agenda = await this.forumRepository.get(id);
-            const articleTemplate = $("#article-template").html();
-
-            for (let article of forum) {
-                const articles = $(articleTemplate);
-            }
-        }catch (e) {
-            console.log(e);
-        }
-
-        //versturen naar repository
-        try {
-            const agendaId = await this.agendaRepository.create(date, time, status, place);
-            console.log(agendaId);
-            app.loadController(CONTROLLER_AGENDA)
-        } catch (e) {
-            console.log(e)
-        }
-
-    }
-
-    allAgenda() {
-
-    }
 }
-
-// var map;
-//
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         center: {lat: -34.397, lng: 150.644},
-//         zoom: 8
-//     });
-// }
