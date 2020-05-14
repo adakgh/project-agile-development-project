@@ -1,4 +1,4 @@
- Fix user-agent
+Fix user-agent
 * {
     box-sizing: border-box;
 }
@@ -9,13 +9,14 @@ html {
 }
 
 html, input {
-    font-family: "HelveticaNeue-Light",
-    "Helvetica Neue Light",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    "Lucida Grande",
-    sans-serif;
+>>>>>>> Stashed changes
+font-family: "HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica,
+Arial,
+"Lucida Grande",
+sans-serif;
 }
 
 /* Optional: Makes the sample page fill the window. */
