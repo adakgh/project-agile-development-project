@@ -92,7 +92,7 @@ class App {
 
             case CONTROLLER_EVENTS:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new EventsController(), () => new EventsController());
+                this.isLoggedIn(() => new EventsController(), () => alert("Je moet eerst ingelogd zijn om de activiteiten te bekijken!"));
                 break;
 
             case CONTROLLER_NEWS:
