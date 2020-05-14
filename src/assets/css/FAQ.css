@@ -1,34 +1,99 @@
-h2 {
-    font-family: Arial, Verdana;
+/*faq is nu active in de navbar*/
+#faq {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
+
+.section-title h2 {
     padding-top: 25px;
-    padding-bottom: 30px;
     text-align: center;
-    font-weight: 800;
-    font-size: 3rem;
     color: black;
     text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
 }
-.accordion-section .panel-default > .panel-heading {
-    border: 0;
-    background: #f4f4f4;
+
+.faq .accordion-list {
+    font-size: 19px;
+    padding: 0 100px;
+}
+
+.faq .accordion-list ul {
+    font-size: 19px;
     padding: 0;
+    list-style: none;
 }
-.accordion-section .panel-default .panel-title a {
+
+.faq .accordion-list li + li {
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.faq .accordion-list li {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.faq .accordion-list a {
     display: block;
-    font-size: 1.5rem;
+    position: relative;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0 30px;
+    outline: none;
 }
-.accordion-section .panel-default .panel-title a:after {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-size: 3rem;
-    content: "\f106";
-    color: #47536e;
-    float: right;
-    margin-top: -12px;
+
+.faq .accordion-list .icon-help {
+    font-size: 26px;
+    position: absolute;
+    right: 0;
+    left: 20px;
+    color: #b1c0df;
 }
-.accordion-section .panel-default .panel-title a.collapsed:after {
-    content: "\f107";
+
+.faq .accordion-list .icon-show, .faq .accordion-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
-.accordion-section .panel-default .panel-body {
-    font-size: 1.2rem;
+
+.faq .accordion-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+}
+
+.faq .accordion-list .icon-show {
+    display: none;
+}
+
+.faq .accordion-list a.collapsed {
+    font-size: 19px;
+    color: #343a40;
+}
+
+.faq .accordion-list a.collapsed:hover {
+    font-size: 19px;
+    color: #5777ba;
+}
+
+.faq .accordion-list a.collapsed .icon-show {
+    font-size: 19px;
+    display: inline-block;
+}
+
+.faq .accordion-list a.collapsed .icon-close {
+    font-size: 19px;
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .faq .accordion-list {
+        font-size: 19px;
+        padding: 0;
+    }
 }

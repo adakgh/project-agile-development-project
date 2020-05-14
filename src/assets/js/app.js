@@ -92,7 +92,7 @@ class App {
 
             case CONTROLLER_EVENTS:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new EventsController(), () => alert("\nJe moet eerst inloggen om een activiteit te kunnen plaatsen!"));
+                this.isLoggedIn(() => new EventsController(), () => new EventsController());
                 break;
 
             case CONTROLLER_NEWS:
@@ -102,7 +102,7 @@ class App {
 
             case CONTROLLER_AGENDA:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new AgendaController(), () => new AgendaController());
+                this.isLoggedIn(() => new AgendaController(), () => alert("Je moet eerst ingelogd zijn om je agenda te bekijken!"));
                 break;
 
             case CONTROLLER_CHAT:

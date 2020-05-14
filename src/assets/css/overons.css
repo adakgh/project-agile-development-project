@@ -1,0 +1,5 @@
+/*overons is nu active in de navbar*/
+#overons {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}

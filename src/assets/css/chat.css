@@ -4,12 +4,7 @@
     box-sizing: border-box;
 }
 
-html {
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-}
-
-html, input {
+input {
     font-family: "HelveticaNeue-Light",
     "Helvetica Neue Light",
     "Helvetica Neue",
