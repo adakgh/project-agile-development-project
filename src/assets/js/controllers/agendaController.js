@@ -20,7 +20,7 @@ class AgendaController {
         const eventData = await this.eventRepository.getAll();
         const eventTable = $(".events__list");
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 10; i++) {
             let nextEvent = "<li class=\"events__item rounded\">";
 
             //dag van de activiteit omzetten

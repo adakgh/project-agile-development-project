@@ -3,7 +3,7 @@ class ChatController {
     constructor() {
         this.chatRepository = new chatRepository();
         $.get("views/chat.html")
-            .done((htmlData) => this.setup(htmlData))
+            .done((HtmlData) => this.setup(HtmlData))
             .fail(() => this.error());
     }
 
@@ -14,8 +14,8 @@ class ChatController {
 
     }
 
-    function(htmlData) {
-        this.chatDataView = $(htmlData);
+   function () {
+       this.chatDataView = $(htmldata);
         var FADE_TIME = 150; // ms
         var TYPING_TIMER_LENGTH = 400; // ms
         var COLORS = [
@@ -296,8 +296,7 @@ class ChatController {
         socket.on('reconnect_error', () => {
             log('attempt to reconnect has failed');
         });
-        $(".content").empty().append(this.chatDataView);
-
+       $(".content").empty().append(this.chatDataView);
     }
 
     //Called when the login.html fails to load
