@@ -11,3 +11,22 @@ body {
     font-size: 2em;
     color: black;
 }
+
+/*.btn-default,*/
+/*.btn-default:hover,*/
+/*.btn-default:active,*/
+/*.btn-default:visited,*/
+/*.btn-default:focus {*/
+/*    background-color: #8064A2;*/
+/*    border-color: #8064A2;*/
+/*}*/
+
+.btn-default {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+
+.btn-default:hover {
+    color: white;
+}
