@@ -41,6 +41,12 @@ class UserRepository {
             });
     }
 
+    async get(username) {
+        return await networkManager
+            .doRequest(`${this.route}/get`, {
+                username: username
+            });
+    }
 
     async register(username, password) {
 

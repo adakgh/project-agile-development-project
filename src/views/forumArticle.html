@@ -1,169 +1,32 @@
 <link href="../assets/css/forumArticle.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link href="../assets/css/forum.css" rel="stylesheet" type="text/css"/>-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <br>
 <br>
 <br>
 <button class="btn-secondary terug float-left mt-3" onclick="app.loadController(new ForumController())"><</button>
 
+
 <div id="wrapper">
     <ul class="threadsList">
-        <li class="threadItem firstPost">
-            <script type="text/html" id="article-template">
-                <div class="postContainer">
-                    <!--                    <div class="category">-->
-                    <!--                        <a class="category-name">CATEGORIE</a>-->
-                    <!--                    </div>-->
-
-                    <div class="answerCountContainer">
-                        <div class="top">
-                            <div class="report"><i class="fa fa-exclamation-circle"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="avatarCoin col-md-2 col-sm-3">
-                        <div class="clearfix">&nbsp;</div>
-                        <img class="img-rounded" width="75"
-                             src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt="">
-                        <div class="push_bottom_5"></div>
-                        <div class="user">gebruiker</div>
-                    </div>
-
-
-                    <h2 class="threadTitleHeader">
-                        <a>Hier komt titel</a>
-                    </h2>
-
-
-                    <div class="descriptionText">
-                    </div>
-                    <br>
-
-                </div>
-            </script>
-        </li>
-    </ul>
-
-    <ul>
-        <li class="threadItem firstComment">
-            <div class="postContainer">
-                <div class="answerCountContainer">
-                    <div class="top">
-                        <div class="report"><i class="fa fa-exclamation-circle"></i></div>
-                    </div>
-                </div>
-
-                <div class="avatarCoin col-md-2 col-sm-3">
-                    <div class="clearfix">&nbsp;</div>
-                    <img class="img-rounded" width="75"
-                         src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt="">
-                    <div class="push_bottom_5"></div>
-                    <div class="user">gebruiker2</div>
-                </div>
-
-
-                <div class="descriptionText">
-                    Voorbeeld antwoord
-                </div>
-                <br>
-                <br>
-                <br>
-
+        <div class="container">
+            <div class="be-comment-block">
             </div>
-        </li>
+        </div>
     </ul>
-
-
-    <!--    <form>-->
-    <!--        <p class="formtitle"> Laat commentaar achter </p>-->
-    <!--        <textarea placeholder="Typ hier.."></textarea>-->
-    <!--        <div class="form-group text-right">-->
-    <!--            <button type="submit" class="btn comment-button w-25">Reageren</button>-->
-    <!--        </div>-->
-    <!--    </form>-->
 </div>
 
-<!--<div class="container mt-3">-->
-<!--    <div class="row">-->
-<!--        &lt;!&ndash;        <div class="col-md-4">&ndash;&gt;-->
-<!--        <div class="col-md-3">-->
-<!--            <div class="card my-4">-->
-<!--                <button type="button" class="btn btn-secondary" onclick="new ForumController();">Terug</button>-->
+<div class="form-container">
+    <form>
+        <div class="title">Laat een reactie achter</div>
 
-
-<!--                &lt;!&ndash;                <h5 class="card-header">Andere forum artikelen</h5>&ndash;&gt;-->
-<!--                &lt;!&ndash;                <script type="text/html" id="event-template">&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <section class="recent-posts-section">&ndash;&gt;-->
-<!--                &lt;!&ndash;                        <ul class="recent-posts-list">&ndash;&gt;-->
-<!--                &lt;!&ndash;                            <li class="recent-post">&ndash;&gt;-->
-<!--                &lt;!&ndash;                                <div class="img-holder">&ndash;&gt;-->
-<!--                &lt;!&ndash;                                    <img class="recent-post-img"&ndash;&gt;-->
-<!--                &lt;!&ndash;                                         src="https://netology-code.github.io/html-2-diploma/sources/images/2.jpg"&ndash;&gt;-->
-<!--                &lt;!&ndash;                                         alt="">&ndash;&gt;-->
-<!--                &lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--                &lt;!&ndash;                                <div class="recent-post-holder">&ndash;&gt;-->
-<!--                &lt;!&ndash;                                    <time class="recent-post-datetime">June 14, 2015</time>&ndash;&gt;-->
-<!--                &lt;!&ndash;                                    <h3 class="recent-post-title">&ndash;&gt;-->
-<!--                &lt;!&ndash;                                        <a class="recent-post-link" href="#0">lorem ipsum now.</a>&ndash;&gt;-->
-<!--                &lt;!&ndash;                                    </h3>&ndash;&gt;-->
-<!--                &lt;!&ndash;                                </div>&ndash;&gt;-->
-<!--                &lt;!&ndash;                            </li>&ndash;&gt;-->
-<!--                &lt;!&ndash;                        </ul>&ndash;&gt;-->
-<!--                &lt;!&ndash;                    </section>&ndash;&gt;-->
-<!--                &lt;!&ndash;                </script>&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="col-md-8">-->
-
-<!--            <div class="container-md">-->
-<!--                <script type="text/html" id="article-template">-->
-<!--                    <div class="c-article-header">-->
-<!--                        <div class="c-rubric">-->
-<!--                            <a class="c-rubric__link">CATEGORIE</a>-->
-<!--                        </div>-->
-
-<!--                        <h1 class="c-article-header__hed">-->
-<!--                            TITEL-->
-<!--                        </h1>-->
-
-<!--                        <div class="c-article-meta">-->
-<!--                            <address class="c-byline">-->
-<!--                            <span class="c-byline__author">-->
-<!--                             <a class="c-byline__link">AUTEUR</a>-->
-<!--                             </span>-->
-<!--                            </address>-->
-<!--                        </div>-->
-
-<!--                        <p class="blog-text">TEXT</p>-->
-<!--                    </div>-->
-<!--                </script>-->
-<!--            </div>-->
-
-<!--            <div class="blog-footer">-->
-<!--                <ul>-->
-<!--                    <li class="report"><i class="fa fa-exclamation-circle"></i></li>-->
-<!--                    <li class="comments"><i class="fa fa-heart"></i><span class="numero">8</span></li>-->
-<!--                    <li class="shares"><i class="fa fa-comment"></i><span class="numero">3</span></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
-<!--            <div class="panel-header">-->
-<!--                <span id="panel-title">Reacties</span>-->
-<!--            </div>-->
-
-<!--            <div class="panel-collapse">-->
-
-<!--                <div class="comment">-->
-<!--                    <div class="comment-header">-->
-<!--                        <span>Lorem</span>-->
-<!--                        <small>5 april 2020</small>-->
-<!--                    </div>-->
-<!--                    <div class="comment-text">-->
-<!--                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar molestie urna, mollis mattis nibh cursus vel.-->
-<!--                    </div>-->
-<!--                </div>-->
+        <div class="form-element"><textarea id="reply" name="reply" placeholder="Typ hier.." required></textarea></div>
+        <div class="form-element submit">
+            <button>Reageren</button>
+        </div>
+    </form>
+</div>
 
 <br>
 <br>

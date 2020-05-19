@@ -100,8 +100,46 @@
                                     <i class="fa fa-exclamation-circle fa-4x"></i>
                                 </div>
                                 <div class="col-8 text-right reports">
-                                    <div class="h2">2</div>
+                                    <div class="h2"></div>
                                     <div>Nieuwe reports!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-white">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-block pull-left text-white" data-toggle="modal" data-target="#exampleModal">
+                         Bekijken
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="h4 modal-title" id="exampleModalLabel">Reports van Tijdloos Samen</h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="reportTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Gebruiker</th>
+                                                    <th>Activiteit</th>
+                                                    <th>Forum</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Afsluiten</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -113,13 +151,14 @@
         <!-- Example DataTables Card-->
         <div class="card mb-3">
             <div class="card-header">
-                <i class="title" id="userTitle"></i>Gebruikers van The Agile Elderly
+                <i class="title" id="userTitle"></i>Gebruikers van Tijdloos Samen
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="userTable">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Gebruikersnaam</th>
                             <th>Naam</th>
                             <th>E-mail</th>
@@ -138,13 +177,14 @@
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="title" id="forumTitle"></i>Forum artikelen van The Agile Elderly
+                <i class="title" id="forumTitle"></i>Forum artikelen van Tijdloos Samen
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="forumTable">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Titel</th>
                             <th>Gebruikersnaam</th>
                             <th>Tag</th>
@@ -160,13 +200,14 @@
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="title" id="eventTitle"></i>Activiteiten van The Agile Elderly
+                <i class="title" id="eventTitle"></i>Activiteiten van Tijdloos Samen
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="eventTable">
                         <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Naam</th>
                             <th>Beschrijving</th>
                             <th>Datum</th>
@@ -185,14 +226,6 @@
     </div>
 </div>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

@@ -58,6 +58,11 @@ form {
     max-width: 700px;
 }
 
+.starttopichead {
+    margin-left: 105px;
+    width: 77.5%;
+}
+
 form .row {
     margin-bottom: 25px;
     position: relative;

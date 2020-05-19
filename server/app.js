@@ -71,13 +71,13 @@ app.post("/room_example", (req, res) => {
 //------- END ROUTES -------
 
 app.post("/post", (req, res) => {
-    res.send({person_amount: req.body.person_amount, date: req.body.date });
+    res.send({person_amount: req.body.person_amount, date: req.body.date});
 
     db.handleQuery(connectionPool, {
-       query:"INSERT INTO post(person_amount, date) VALUE (?,?)",
-        values: [req.body.person_amount, req.body.date]
-    }, (data) => {
-        res.status(httpOkCode).json(data);
+            query: "INSERT INTO post(person_amount, date) VALUE (?,?)",
+            values: [req.body.person_amount, req.body.date]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
         }, (err) => res.status(badRequestCode).json({reason: err})
     );
 });
@@ -124,6 +124,44 @@ app.post("/forum/getAll", (req, res) => {
     );
 });
 
+//forum artikel aangeven
+app.post("/report/reportForum", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "INSERT INTO report(forum_id) VALUES (?)",
+            values: [req.body.forum_id]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
+        }, (err) => {
+            res.status(badRequestCode).json({reason: err})
+        }
+    );
+});
+
+//forum reacties
+app.post("/reply/getAll", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT * FROM reply WHERE forum_id = ?",
+            values: [req.body.forum_id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+//forum reactie plaatsen
+app.post("/reply/create", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "INSERT INTO reply(username, reply_text, forum_id) VALUES (?,?,?)",
+            values: [req.body.username, req.body.reply_text, req.body.forum_id]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
+        }, (err) => {
+            res.status(badRequestCode).json({reason: err})
+        }
+    );
+});
+
 //agenda
 app.post("/agenda", (req, res) => {
     db.handleQuery(connectionPool, {
@@ -163,14 +201,14 @@ app.post("/forum/delete", (req, res) => {
 app.post("/event", (req, res) => {
     // res.send({person_amount: req.body.person_amount, date: req.body.date });
     db.handleQuery(connectionPool, {
-        query: "INSERT INTO event(name, person_amount, date, status, place, begin_time, end_time) VALUES (?,?,?,?,?,?,?)",
-        values: [req.body.name, req.body.person_amount, req.body.date, req.body.status, req.body.place,
-            req.body.begin_time, req.body.end_time]
-    }, (data) => {
-        res.status(httpOkCode).json(data);
-    }, (err) => {
-        res.status(badRequestCode).json({reason: err})
-    }
+            query: "INSERT INTO event(name, person_amount, date, status, place, begin_time, end_time) VALUES (?,?,?,?,?,?,?)",
+            values: [req.body.name, req.body.person_amount, req.body.date, req.body.status, req.body.place,
+                req.body.begin_time, req.body.end_time]
+        }, (data) => {
+            res.status(httpOkCode).json(data);
+        }, (err) => {
+            res.status(badRequestCode).json({reason: err})
+        }
     );
 });
 
@@ -191,6 +229,17 @@ app.post("/user/delete", (req, res) => {
     db.handleQuery(connectionPool, {
             query: "DELETE FROM user WHERE id = ?",
             values: [req.body.id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+//reports voor admin
+app.post("/report/getAll", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT * FROM report",
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
@@ -220,52 +269,6 @@ app.post("/event/delete", (req, res) => {
         }, (err) => res.status(badRequestCode).json({reason: err})
     );
 });
-
-//profiel gegevens ophalen
-app.post("/user", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "SELECT naam, username, email, leeftijd, geslacht FROM user WHERE id = ?",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens update
-app.post("/profiel", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, achternaam = ?, email = ?, leeftijd = ? , stad = ?, telefoon_nummer = ?, geslacht = ? ",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens toevoegen
-app.post("/profiel", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "INSERT INTO profiel(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) VALUES (?,?,?,?,?,?,?,?)",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens aanpassen
-// app.post("/profiel", (req, res) => {
-//     db.handleQuery(connectionPool, {
-//             query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, achternaam = ?, email = ?, leeftijd = ? , stad = ?, telefoon_nummer = ?, geslacht = ?",
-//         }, (data) => {
-//             //just give all data back as json
-//             res.status(httpOkCode).json(data);
-//         }, (err) => res.status(badRequestCode).json({reason: err})
-//     );
-// });
-
-
 
 function listen(port, callback) {
     const server = app.listen(port, callback);
