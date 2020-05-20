@@ -38,6 +38,8 @@ class EventsController {
             nextEvent += `<td>${eventData[i].begin_time}</td>`;
             nextEvent += `<td>${eventData[i].end_time}</td>`;
 
+                const eventDelete = await this.activiteitenRepository.delete(id);
+                console.log(eventDelete);
 
             nextEvent += `<td><button type="button" class="btn btn-success eventAccept" data-eventid = "${eventData[i].id}">Deelnemen</button></td>`;
             nextEvent += `<td><button type="button" class="btn btn-danger eventReject" data-eventid = "${eventData[i].id}">Weigeren</button></td>`;
