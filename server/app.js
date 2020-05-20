@@ -270,8 +270,10 @@ app.post("/event/delete", (req, res) => {
     );
 });
 
+
+
 //profiel gegevens ophalen
-app.post("/user", (req, res) => {
+app.post("/user/getAll", (req, res) => {
     db.handleQuery(connectionPool, {
             query: "SELECT naam, username, email, leeftijd, geslacht FROM user WHERE id = ?",
         }, (data) => {
@@ -285,6 +287,8 @@ app.post("/user", (req, res) => {
 app.post("/profiel", (req, res) => {
     db.handleQuery(connectionPool, {
             query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, achternaam = ?, email = ?, leeftijd = ? , stad = ?, telefoon_nummer = ?, geslacht = ? ",
+        values: [req.body.username, req.body.naam, req.body.achternaam, req.body.email, req.body.leeftijd,
+            req.body.stad, req.body.telefoon_nummer, req.body.geslacht]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
@@ -293,54 +297,11 @@ app.post("/profiel", (req, res) => {
 });
 
 //profiel gegevens toevoegen
-app.post("/profiel", (req, res) => {
+app.post("/profiel/create", (req, res) => {
     db.handleQuery(connectionPool, {
             query: "INSERT INTO profiel(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) VALUES (?,?,?,?,?,?,?,?)",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens aanpassen
-// app.post("/profiel", (req, res) => {
-//     db.handleQuery(connectionPool, {
-//             query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, achternaam = ?, email = ?, leeftijd = ? , stad = ?, telefoon_nummer = ?, geslacht = ?",
-//         }, (data) => {
-//             //just give all data back as json
-//             res.status(httpOkCode).json(data);
-//         }, (err) => res.status(badRequestCode).json({reason: err})
-//     );
-// });
-
-
-//profiel gegevens ophalen
-app.post("/user", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "SELECT naam, username, email, leeftijd, geslacht FROM user WHERE id = ?",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens update
-app.post("/profiel", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, achternaam = ?, email = ?, leeftijd = ? , stad = ?, telefoon_nummer = ?, geslacht = ? ",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-//profiel gegevens toevoegen
-app.post("/profiel", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "INSERT INTO profiel(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) VALUES (?,?,?,?,?,?,?,?)",
+        values: [req.body.username, req.body.naam, req.body.achternaam, req.body.email, req.body.leeftijd,
+            req.body.stad, req.body.telefoon_nummer, req.body.geslacht]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);

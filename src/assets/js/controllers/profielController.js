@@ -10,7 +10,7 @@ class ProfielController {
     setup(htmlData) {
         this.gebruikersProfielView = $(htmlData);
 
-        this.gebruikersProfielView.find(".name").html(sessionManager.get("username"));
+        this.gebruikersProfielView.find(".name").html(sessionManager.get("naam, achternaam"));
 
         // this.loadEvents();
 
