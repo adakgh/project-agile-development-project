@@ -1,6 +1,6 @@
 class ProfielController {
     constructor() {
-        this.profielRepository = new profielRepository();
+        this.profielRepository = new ProfielRepository();
 
         $.get("views/gebruikersProfiel.html")
             .done((htmlData) => this.setup(htmlData))
@@ -12,7 +12,7 @@ class ProfielController {
 
         this.gebruikersProfielView.find(".name").html(sessionManager.get("username"));
 
-        this.loadEvents();
+        // this.loadEvents();
 
         $(".content").empty().append(this.gebruikersProfielView);
 
@@ -47,3 +47,4 @@ class ProfielController {
         $(".content").html("Failed to load content")
     }
 }
+
