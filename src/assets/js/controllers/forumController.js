@@ -193,39 +193,124 @@ class ForumController {
     }
 }
 
+//Geklikte artikel wordt opgehaald
 async function item(id) {
     this.forumRepository = new ForumRepository();
 
-    //pagina met artikel wordt opgeroepen
+    //Pagina met artikel wordt opgeroepen
     $.get("views/forumArticle.html")
         .done((htmlData) => newsetup(htmlData));
 
-    //data uit database met bepaalde id wordt opgehaald
+    //Data uit database met bepaalde id wordt opgehaald
     try {
         const forum = await this.forumRepository.get(id);
-        const articleTemplate = $("#article-template").html();
 
-        for (let article of forum) {
-            const articles = $(articleTemplate);
+        for (let i = 0; i < 1; i++) {
+            const template = $(".threadsList");
 
-            articles.find(".user").empty().append(article.username);
-            articles.find(".threadTitleHeader").empty().append(article.title);
-            articles.find(".descriptionText").empty().append(article.forum_text);
+            const id = `${forum[i].id}`;
+            this.loadReply(id);
 
-            // if (article.tag === "event") {
-            //     articles.find(".category-name").empty().append("Activiteit-gerelateerd");
-            // } else if (article.tag === "discussion") {
-            //     articles.find(".category-name").empty().append("Discussie");
-            // } else if (article.tag === "help") {
-            //     articles.find(".category-name").empty().append("Hulp nodig");
-            // } else if (article.tag === "off-topic") {
-            //     articles.find(".category-name").empty().append("Off-topic");
-            // }
+            let nextForum = `<div class="postContainer">`;
 
-            $(".threadsList").append(articles);
+            nextForum += `<div class="threadTitleHeader">${forum[i].title}</div>`;
+
+            nextForum += `<li class="threadItem firstPost"><div class="container">
+                            <div class="be-comment-block"><div class="be-img-comment">
+                            <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt=""
+                                 class="be-ava-comment"></div>`;
+
+            nextForum += `<div class="be-comment-content">
+                              <span class="be-comment-name">${forum[i].username}</span>`;
+
+            nextForum += `<div class="answerCountContainer"><span class="report be-comment-time" data-articleid = "${forum[i].id}">
+                        <i class="fa fa-exclamation-circle"></i></div></div></span></div></div>`;
+
+            nextForum += `<p class="be-comment-text">${forum[i].forum_text}</p></div></li></div>`;
+
+            template.append(nextForum);
+        }
+
+        //Als er op de rapporteren knop wordt gedrukt
+        $('.reportArticle').on("click", (event) => {
+            event.preventDefault();
+
+            console.log(event.currentTarget.dataset.articleid);
+            const articleid = event.currentTarget.dataset.articleid;
+            this.report(articleid);
+        });
+    } catch (e) {
+        console.log("error while fetching", e);
+    }
+}
+
+//Reacties ophalen
+async function loadReply(id) {
+    this.replyRepository = new ReplyRepository();
+
+    try {
+        const forum = await this.replyRepository.getAll(id);
+
+        console.log(forum);
+
+        for (let i = 0; i < forum.length; i++) {
+            const template = $("#wrapper");
+
+            let nextForum = `<ul class="comments"><div class="postContainer mt-3">`;
+
+            nextForum += `<li class="threadCommentItem"><div class="container">
+                <div class="be-comment-block"><div class="be-img-comment">
+                            <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png" alt=""
+                                 class="be-ava-comment">
+                        </div>`;
+
+            nextForum += `<div class="be-comment-content">
+                              <span class="be-comment-name">${forum[i].username}</span></div></div>`;
+
+            nextForum += `<p class="be-comment-text">${forum[i].reply_text}</p></li></div></ul>`;
+
+            template.append(nextForum);
         }
     } catch (e) {
         console.log("error while fetching", e);
+    }
+
+    //als er op de reageren knop wordt gedrukt
+    $(".submit").on("click", (event) => {
+        event.preventDefault();
+
+        this.createReply(id);
+    });
+}
+
+//Reactie aanmaken
+async function createReply(id) {
+    //Form gegevens verzamelen
+    const username = sessionManager.get("username");
+    const reply_text = this.forumView.find("#reply").val();
+
+    console.log(`${username} - ${reply_text}`);
+
+    //Checken of niks is leeggelaten
+    if (username.length === 0 || reply_text.length === 0) {
+        alert("Gelieve alle velden in te vullen.");
+    } else {
+        try {
+            //Versturen naar repository
+            await this.replyRepository.create(username, reply_text, id);
+
+            //Doorsturen naar forum.html
+            alert("Een reactie plaatsen is gelukt!");
+            app.loadController(CONTROLLER_FORUM);
+        } catch (e) {
+            if (e.code === 401) {
+                this.forumView
+                    .find(".error")
+                    .html(e.reason);
+            } else {
+                console.log(e);
+            }
+        }
     }
 }
 
@@ -233,13 +318,16 @@ function newsetup(htmlData) {
     this.forumView = $(htmlData);
 
     $(".content").empty().append(this.forumView);
-
-    //rapporteren
-    this.forumView.find(".report").on("click", () => report());
 }
 
-function report() {
+//Rapporteren
+async function report(id) {
+    this.reportRepository = new ReportRepository();
+
     if (confirm("Weet u zeker dat u deze post wilt aangeven?")) {
+
+        const reportArticle = await this.reportRepository.reportForum(id);
+        console.log(reportArticle);
         alert("Uw bericht is ontvangen.")
     } else {
     }

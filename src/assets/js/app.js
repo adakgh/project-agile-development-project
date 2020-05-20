@@ -85,10 +85,6 @@ class App {
                 this.isLoggedIn(() => new AdminController(), () => new IndexController());
                 break;
 
-            case CONTROLLER_PROFIEL:
-                this.setCurrentController(name);
-                this.isLoggedIn(() => new ProfielAanpassenController(), () => new ProfielAanpassenController());
-                break;
 
             case CONTROLLER_EVENTS:
                 this.setCurrentController(name);
@@ -118,6 +114,11 @@ class App {
             case CONTROLLER_FAQ:
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new FaqController(), () => new FaqController());
+                break;
+
+            case CONTROLLER_PROFIEL:
+                this.setCurrentController(name);
+                this.isLoggedIn(() => new ProfielController(), () => new ProfielController());
                 break;
 
             default:

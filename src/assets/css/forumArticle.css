@@ -88,6 +88,10 @@ body {
     width: auto !important;
 }
 
+.threadsList, .comments {
+    height: 160px;
+}
+
 .threadItem {
     box-sizing: border-box;
     color: rgb(87, 99, 102);
@@ -105,6 +109,30 @@ body {
     padding: 15px 0px 0px;
 }
 
+.threadCommentItem {
+    box-sizing: border-box;
+    color: rgb(87, 99, 102);
+
+    position: relative;
+    width: 100%;
+    perspective-origin: 655px 67px;
+    transform-origin: 655px 67px;
+    list-style: none outside none;
+    padding: 15px 0px 0px;
+}
+
+.comments {
+    box-sizing: border-box;
+    color: rgb(87, 99, 102);
+
+    position: relative;
+    width: 100%;
+    perspective-origin: 655px 67px;
+    transform-origin: 655px 67px;
+    border-top: 1px solid rgb(237, 239, 240);
+    list-style: none outside none;
+}
+
 .postContainer {
     box-sizing: border-box;
     color: rgb(87, 99, 102);
@@ -115,7 +143,6 @@ body {
     border: 0px none rgb(87, 99, 102);
     list-style: none outside none;
     outline: rgb(87, 99, 102) none 0px;
-    padding: 0px 0px 30px 55px;
 }
 
 .threadItemLabel {
@@ -136,6 +163,7 @@ body {
     margin-right: 40px;
     outline: rgb(87, 99, 102) none 0px;
     padding: 5px 0px 0px;
+    margin-top: 9px;
 }
 
 
@@ -257,7 +285,7 @@ body {
     font-size: 19px;
 }
 
-.terug{
+.terug {
     background: grey;
     height: 40px;
     line-height: 40px;
@@ -275,4 +303,285 @@ body {
 .terug:hover {
     background: #707070;
     color: black;
+}
+
+/*reactie achterlaten*/
+.commentbox {
+    margin-left: 90px;
+}
+
+.be-comment-block {
+    margin-bottom: 50px !important;
+    border-radius: 2px;
+    border: none;
+}
+
+.comments-title {
+    font-size: 16px;
+    color: #262626;
+    margin-bottom: 15px;
+}
+
+.be-img-comment {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.be-ava-comment {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.be-comment-content {
+    margin-left: 80px;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-name {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.be-comment-content a {
+    color: #383b43;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-time {
+    text-align: right;
+}
+
+.be-comment-text {
+    font-size: 18px;
+    margin-left: 78px;
+    margin-top: -60px;
+}
+
+.form-group.fl_icon .icon {
+    position: absolute;
+    top: 1px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: #f6f6f7;
+    color: #b5b8c2;
+    text-align: center;
+    line-height: 50px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.form-group .form-input {
+    font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #edeff2;
+    border-radius: 3px;
+}
+
+.form-group.fl_icon .form-input {
+    padding-left: 70px;
+}
+
+.form-group textarea.form-input {
+    height: 150px;
+}
+
+.post {
+    color: white;
+    border: none;
+    background: #5777ba;
+}
+
+.box {
+    background-color: white;
+}
+
+.form-container * {
+    box-sizing: border-box;
+}
+
+.form-container form,
+.form-container .form-message {
+    background-color: #ededed;
+    padding: 40px 30px 30px;
+    border-radius: 2px;
+    margin: 0px 90px;
+    color: #484e56;
+    position: relative;
+    width: 90%;
+}
+
+.form-container form .close-button,
+.form-container .form-message .close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 27px;
+}
+
+.form-container form input,
+.form-container form textarea,
+.form-container form select,
+.form-container form button,
+.form-container .form-message button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0 12px;
+    margin: 0;
+    background: #fff;
+    border-radius: 2px;
+    height: 34px;
+    line-height: 34px;
+    color: #484e56;
+}
+
+.form-container form textarea {
+    height: 114px;
+    resize: none;
+    padding: 12px;
+    line-height: 1.35;
+}
+
+.form-container form button,
+.form-container .form-message button {
+    width: auto;
+    background: #5777ba;
+    color: #fff;
+    padding: 0 45px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-container form > div {
+    margin-bottom: 25px;
+}
+
+.form-container form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form-container form .title {
+    font-size: 20px;
+    float: left;
+    color: black;
+    padding: 0 25px
+}
+
+.form-container form .form-group {
+    height: 34px;
+    width: 100%;
+}
+
+.form-container form .form-group .form-element {
+    width: 50%;
+    float: left;
+}
+
+.form-container form .form-element {
+    width: 100%;
+    min-height: 34px;
+    padding: 0 20px;
+}
+
+.form-container form.schedule-demo .form-group {
+    height: auto;
+    overflow: hidden;
+}
+
+.form-container form .form-element > .form-element {
+    width: 100%;
+    padding: 0;
+}
+
+.form-container form.schedule-demo .form-element + .form-element {
+    margin-top: 25px;
+}
+
+.form-container form .form-element.submit {
+    text-align: right;
+}
+
+.form-container form.schedule-demo .form-element.radio-group {
+    overflow: hidden;
+    margin: 0;
+    padding: 0 10px 0 9px;
+    font-size: 13px;
+}
+
+.form-container form .form-element.radio-group .radio {
+    width: 50%;
+    float: left;
+    margin-bottom: 25px;
+    height: 34px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.form-container form .radio-group label {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid #51b2e9;
+    border-radius: 2px;
+}
+
+.form-container form .radio-group input:checked + span {
+    background: #5777ba;
+    color: #edf6fa;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container form.schedule-demo > .form-group {
+    margin-bottom: 0;
+    overflow: visible;
+    min-height: 177px;
+}
+
+.form-container .form-message {
+    text-align: center;
+}
+
+.form-container .form-message .message {
+    font-size: 20px;
+    padding: 40px 0;
+}
+
+.form-container .form-message button.close-button {
+    font-size: 15px;
+    color: #fff;
+    position: static;
 }

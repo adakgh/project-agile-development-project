@@ -1,43 +1,9 @@
-// const socket = io('http://localhost:6000')
-// const messageContainer = document.getElementById('message-container')
-// const messageForm = document.getElementById('send-container')
-// const messageInput = document.getElementById('message-input')
-//
-// const name = prompt('What is your name?')
-// appendMessage('You joined')
-// socket.emit('new-user', name)
-//
-// socket.on('chat-message', data => {
-//     appendMessage(`${data.name}: ${data.message}`)
-// })
-//
-// socket.on('user-connected', name => {
-//     appendMessage(`${name} connected`)
-// })
-//
-// socket.on('user-disconnected', name => {
-//     appendMessage(`${name} disconnected`)
-// })
-//
-// messageForm.addEventListener('submit', e => {
-//     e.preventDefault()
-//     const message = messageInput.value
-//     appendMessage(`You: ${message}`)
-//     socket.emit('send-chat-message', message)
-//     messageInput.value = ''
-// })
-//
-// function appendMessage(message) {
-//     const messageElement = document.createElement('div')
-//     messageElement.innerText = message
-//     messageContainer.append(messageElement)
-// }
 class ChatController {
 
     constructor() {
         this.chatRepository = new chatRepository();
         $.get("views/chat.html")
-            .done((htmlData,data) => this.setup1(data),this.setup(htmlData))
+            .done((HtmlData) => this.setup(HtmlData))
             .fail(() => this.error());
     }
 
@@ -48,8 +14,8 @@ class ChatController {
 
     }
 
-    setup1 (data) {
-        this.chatDataView = $(data);
+   function () {
+       this.chatDataView = $(htmldata);
         var FADE_TIME = 150; // ms
         var TYPING_TIMER_LENGTH = 400; // ms
         var COLORS = [
@@ -330,8 +296,7 @@ class ChatController {
         socket.on('reconnect_error', () => {
             log('attempt to reconnect has failed');
         });
-
-        $(".content").empty().append(this.chatDataView);
+       $(".content").empty().append(this.chatDataView);
     }
 
     //Called when the login.html fails to load
