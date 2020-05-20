@@ -250,7 +250,7 @@ app.post("/report/getAll", (req, res) => {
 //activiteiten
 app.post("/event/getAll", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT * FROM event",
+            query: "SELECT * FROM event ORDER BY `date` ASC",
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);

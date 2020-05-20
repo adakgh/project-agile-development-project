@@ -35,4 +35,5 @@ class activiteitenRepository {
                 id: id
             });
     }
+
 }
