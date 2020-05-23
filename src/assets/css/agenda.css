@@ -1,11 +1,11 @@
 .events {
-    width: 39%;
+    width: 96%;
     padding: 20px;
 }
 
 .events__heading {
     margin: 0px 0px 10px 0px;
-font-weight: 500;
+    font-weight: 500;
 }
 
 .events__list {
@@ -53,4 +53,16 @@ font-weight: 500;
 
 .font-weight-bold {
     font-size: 18px;
+}
+
+ul.events__list {
+    list-style:none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.events li {
+    flex: 0 0 32%;
 }

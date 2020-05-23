@@ -57,7 +57,7 @@ class App {
 
             case CONTROLLER_FORUM:
                 this.setCurrentController(name);
-                this.isLoggedIn(() => new ForumController(), () => new ForumController());
+                this.isLoggedIn(() => new ForumController(), () => alert("Je moet eerst ingelogd zijn om het forum te bekijken!"));
                 break;
 
             case CONTROLLER_REGISTER:
@@ -84,7 +84,6 @@ class App {
                 this.setCurrentController(name);
                 this.isLoggedIn(() => new AdminController(), () => new IndexController());
                 break;
-
 
             case CONTROLLER_EVENTS:
                 this.setCurrentController(name);

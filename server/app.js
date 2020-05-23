@@ -162,10 +162,11 @@ app.post("/reply/create", (req, res) => {
     );
 });
 
-//agenda
-app.post("/agenda", (req, res) => {
+//agenda ophalen
+app.post("/participate/getAgenda", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT date, time, status, place FROM event WHERE username = ?",
+            query: "SELECT * FROM participant INNER JOIN event ON participant.event_id = event.id WHERE user_id = ?",
+            values: [req.body.id]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
@@ -212,6 +213,29 @@ app.post("/event", (req, res) => {
     );
 });
 
+//gebruiker ophalen bij username
+app.post("/user/get", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "SELECT id, naam, email, leeftijd, geslacht FROM user WHERE username = ?",
+            values: [req.body.username]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
+
+//aan activiteit deelnemen
+app.post("/participant/participate", (req, res) => {
+    db.handleQuery(connectionPool, {
+            query: "INSERT INTO participant SET event_id = ?, user_id = ? ",
+            values: [req.body.event_id, req.body.user_id]
+        }, (data) => {
+            //just give all data back as json
+            res.status(httpOkCode).json(data);
+        }, (err) => res.status(badRequestCode).json({reason: err})
+    );
+});
 
 //gebruikers voor admin
 app.post("/user/getAll", (req, res) => {

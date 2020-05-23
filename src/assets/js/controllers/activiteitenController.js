@@ -38,14 +38,19 @@ class EventsController {
             nextEvent += `<td>${eventData[i].begin_time}</td>`;
             nextEvent += `<td>${eventData[i].end_time}</td>`;
 
-                const eventDelete = await this.activiteitenRepository.delete(id);
-                console.log(eventDelete);
-
             nextEvent += `<td><button type="button" class="btn btn-success eventAccept" data-eventid = "${eventData[i].id}">Deelnemen</button></td>`;
             nextEvent += `<td><button type="button" class="btn btn-danger eventReject" data-eventid = "${eventData[i].id}">Weigeren</button></td>`;
 
             eventTable.append(nextEvent)
         }
+
+        //userid ophalen van de deelnemer
+        this.userRepository = new UserRepository();
+        const user = await this.userRepository.get(sessionManager.get("username"));
+        const userId = `${user[0].id}`;
+
+        console.log(userId);
+
         //Als er op de weigeren knop wordt gedrukt
         $('.eventReject').on("click", (event) => {
             event.preventDefault();
@@ -61,16 +66,16 @@ class EventsController {
 
             console.log(event.currentTarget.dataset.eventid);
             const eventid = event.currentTarget.dataset.eventid;
-            this.eventaccept(eventid);
+            this.eventaccept(eventid, userId);
         });
     }
 
-    async eventaccept(id) {
+    async eventaccept(id, userId) {
         try {
             if (confirm("Weet u zeker dat u wilt deelnemen aan deze activiteit?")) {
                 alert("U heeft deelgenomen aan deze activiteit!");
 
-                const eventAccept = await this.activiteitenRepository.delete(id);
+                const eventAccept = await this.activiteitenRepository.participate(id, userId);
                 console.log(eventAccept);
 
                 new AgendaController();
@@ -87,8 +92,8 @@ class EventsController {
             if (confirm("Weet u zeker dat u deze activiteit wilt weigeren?")) {
                 alert("U heeft deze activiteit geweigerd!");
 
-                const eventDelete = await this.activiteitenRepository.delete(id);
-                console.log(eventDelete);
+                // const eventDelete = await this.activiteitenRepository.delete(id);
+                // console.log(eventDelete);
 
                 new EventsController();
             } else {
@@ -97,6 +102,7 @@ class EventsController {
             console.log(e);
         }
     }
+
     error() {
         $(".content").html("Failed to load content")
     }

@@ -1,7 +1,7 @@
 class AgendaController {
 
     constructor() {
-        this.agendaRepository = new agendaRepository();
+        this.userRepository = new UserRepository();
         this.eventRepository = new activiteitenRepository();
         $.get("views/agenda.html")
             .done((htmlData) => this.setup(htmlData))
@@ -17,11 +17,14 @@ class AgendaController {
     }
 
     async getEvents() {
-        const eventData = await this.eventRepository.getAll();
+        const user = await this.userRepository.get(sessionManager.get("username"));
+        const id = `${user[0].id}`;
+
+        const eventData = await this.eventRepository.getAgenda(id);
         const eventTable = $(".events__list");
 
-        for (let i = 0; i < 10; i++) {
-            let nextEvent = "<li class=\"events__item rounded\">";
+        for (let i = 0; i < eventData.length; i++) {
+            let nextEvent = "<li class=\"events__item rounded col-4 m-2\">";
 
             //dag van de activiteit omzetten
             nextEvent += `<div class="events__date">
@@ -71,6 +74,10 @@ class AgendaController {
             nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
 
             eventTable.append(nextEvent);
+        }
+
+        if(eventData.length === 0){
+            eventTable.append(`<div class=\"h4 text\">Uw agenda is leeg, neem deel aan activiteiten op de activiteitenpagina.</div>`)
         }
     }
 
