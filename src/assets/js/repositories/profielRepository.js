@@ -8,6 +8,20 @@ class ProfielRepository{
     //         .doRequest(this.route, {username : username});
     // }
 
+    setup(data) {
+        //Load the welcome-content into memory
+        this.gebruikersProfielView = $(data);
+
+        //Set the name in the view from the session
+        this.gebruikersProfielView.find(".name").html(sessionManager.get("username"));
+
+        //Empty the content-div and add the resulting view to the page
+        $(".content").empty().append(this.gebruikersProfielView);
+
+        this.fetchRooms();
+        this.getEvents();
+    }
+
     async getAll(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) {
         return await networkManager
             .doRequest(`${this.route}/getAll`, {

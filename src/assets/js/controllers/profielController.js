@@ -10,7 +10,7 @@ class ProfielController {
     setup(htmlData) {
         this.gebruikersProfielView = $(htmlData);
 
-        this.gebruikersProfielView.find(".name").html(sessionManager.get("naam, achternaam"));
+        // this.gebruikersProfielView.find(".name").html(sessionManager.get("naam, achternaam"));
 
         // this.loadEvents();
 
@@ -20,7 +20,9 @@ class ProfielController {
          this.gebruikersProfielView.find(".button").on("click", () => this.onAddPost());
 
         this.fetchRooms();
+        this.username();
     }
+
 
     //html pagina waar je profiel kunt aanpassen wordt geopend
     onAddPost() {
