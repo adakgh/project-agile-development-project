@@ -16,10 +16,15 @@ class ProfielController {
 
         $(".content").empty().append(this.gebruikersProfielView);
 
-        //wanneer er op de edit knop wordt gedrukt
+        //wanneer er op de wijzig knop wordt gedrukt
          this.gebruikersProfielView.find(".button").on("click", () => this.onAddPost());
 
         this.fetchRooms();
+    }
+
+    //html pagina waar je profiel kunt aanpassen wordt geopend
+    onAddPost() {
+        new ProfielAanpassenController();
     }
 
     async fetchRooms() {
@@ -36,11 +41,6 @@ class ProfielController {
             //for now just show every error on page, normally not all errors are appropriate for user
             exampleResponse.text(e);
         }
-    }
-
-    //html pagina waar je profiel kunt aanpassen wordt geopend
-    onAddPost() {
-        new ProfielAanpassenController();
     }
 
     error() {
