@@ -232,7 +232,7 @@ async function item(id) {
         }
 
         //Als er op de rapporteren knop wordt gedrukt
-        $('.reportArticle').on("click", (event) => {
+        $('.answerCountContainer').on("click", (event) => {
             event.preventDefault();
 
             console.log(event.currentTarget.dataset.articleid);
