@@ -11,24 +11,12 @@ class NewsController {
 
         $(".content").empty().append(this.newsView);
 
-        $(".more").on('click', () => this.readMore());
-    }
+        //lees meer knop
+        $('.read-more-content').addClass('hide');
 
-    readMore() {
-        const dots = document.getElementById("dots");
-        const moreText = document.getElementById("more");
-        const btnText = document.getElementById("morebutton");
-
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Lees meer &darr;";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Lees minder &uarr;";
-            moreText.style.display = "inline";
-        }
-
+        $('.read-more-toggle').on('click', function() {
+            $(this).next('.read-more-content').toggleClass('hide');
+        });
     }
 
     error() {

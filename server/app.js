@@ -165,7 +165,7 @@ app.post("/reply/create", (req, res) => {
 //agenda ophalen
 app.post("/participate/getAgenda", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT * FROM participant INNER JOIN event ON participant.event_id = event.id WHERE user_id = ?",
+            query: "SELECT * FROM participant INNER JOIN event ON participant.event_id = event.id WHERE user_id = ? ORDER BY DATE ASC",
             values: [req.body.id]
         }, (data) => {
             //just give all data back as json
