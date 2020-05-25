@@ -12,9 +12,9 @@ class NewsController {
         $(".content").empty().append(this.newsView);
 
         //lees meer knop
-        $('.read-more-content').addClass('hide');
+        this.newsView.find('.read-more-content').addClass('hide');
 
-        $('.read-more-toggle').on('click', function() {
+        this.newsView.find('.read-more-toggle').on('click', function() {
             $(this).next('.read-more-content').toggleClass('hide');
         });
     }
