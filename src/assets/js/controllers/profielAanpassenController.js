@@ -21,7 +21,7 @@ class ProfielAanpassenController {
 
         //verzamelen van gegevens
         const username = sessionManager.get("username");
-        const naam = this.gebruikersProfielAanpassenView.find("#name").val();
+        const naam = this.gebruikersProfielAanpassenView.find("#naam").val();
         const email = this.gebruikersProfielAanpassenView.find("#email").val();
         const stad = this.gebruikersProfielAanpassenView.find("#stad").val();
         const telefoonnr = this.gebruikersProfielAanpassenView.find("#telefoonnr").val();
@@ -32,7 +32,7 @@ class ProfielAanpassenController {
 
             try {
                 //versturen naar repository
-                await this.ProfielRepository.create(username, name, email, stad, telefoonnr, leeftijd, geslacht);
+                await this.ProfielRepository.create(naam,email, stad, telefoonnr, leeftijd, geslacht);
 
                 //doorsturen naar profiel.html
                 alert("Uw gegevens zijn aangepast!");

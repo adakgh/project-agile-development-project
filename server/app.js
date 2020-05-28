@@ -299,7 +299,7 @@ app.post("/event/delete", (req, res) => {
 //profiel gegevens ophalen
 app.post("/user/getAll", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT naam, username, email, leeftijd, geslacht FROM user WHERE id = ?",
+            query: "SELECT username, naam, email, leeftijd, geslacht FROM user WHERE id = ?",
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
@@ -307,17 +307,31 @@ app.post("/user/getAll", (req, res) => {
     );
 });
 
+
+
 //profiel gegevens update
+
 app.post("/profiel", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, email = ? , stad = ?, telefoon_nummer = ?, leeftijd = ?, geslacht = ? ",
-        values: [req.body.username, req.body.naam, req.body.email, req.body.stad, req.body.telefoon_nummer, req.body.leeftijd, req.body.geslacht]
+            query: "UPDATE profiel SET username = ?, naam = ?, email = ? , stad = ?, telefoon_nummer = ?, leeftijd = ?, geslacht = ? ",
+            values: [req.body.username, req.body.naam, req.body.email, req.body.stad, req.body.telefoon_nummer, req.body.leeftijd, req.body.geslacht]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
         }, (err) => res.status(badRequestCode).json({reason: err})
     );
 });
+
+// app.post("/profiel", (req, res) => {
+//     db.handleQuery(connectionPool, {
+//             query: "UPDATE profiel INNER JOIN username ON profiel.username = user.username SET username = ?, naam = ?, email = ? , stad = ?, telefoon_nummer = ?, leeftijd = ?, geslacht = ? ",
+//         values: [req.body.username, req.body.naam, req.body.email, req.body.stad, req.body.telefoon_nummer, req.body.leeftijd, req.body.geslacht]
+//         }, (data) => {
+//             //just give all data back as json
+//             res.status(httpOkCode).json(data);
+//         }, (err) => res.status(badRequestCode).json({reason: err})
+//     );
+// });
 
 //profiel gegevens toevoegen
 app.post("/profiel/create", (req, res) => {
