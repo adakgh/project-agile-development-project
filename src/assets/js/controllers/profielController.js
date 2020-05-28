@@ -30,7 +30,7 @@ class ProfielController {
     }
 
     async fetchRooms() {
-        const exampleResponse = this.gebruikersProfielView.find(".gebruikersProfiel");
+        const exampleResponse = this.gebruikersProfielView.find("#username");
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
             // const roomData = await this.registerRepository.get();
