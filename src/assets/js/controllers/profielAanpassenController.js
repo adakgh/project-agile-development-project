@@ -30,6 +30,10 @@ class ProfielAanpassenController {
 
         console.log(` ${username} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
 
+        //checken of belangrijke velden niet zijn leeggelaten
+        if (username.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0 ) {
+            alert("Gelieve uw gebruikersnaam, naam, email, leeftijd en geslacht in te vullen.");
+        } else {
             try {
                 //versturen naar repository
                 await this.ProfielRepository.create(naam,email, stad, telefoonnr, leeftijd, geslacht);
@@ -46,6 +50,7 @@ class ProfielAanpassenController {
                     console.log(e);
                 }
             }
+        }
 
 
         //versturen naar repository
