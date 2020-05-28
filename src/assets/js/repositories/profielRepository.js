@@ -22,24 +22,32 @@ class ProfielRepository{
         this.getEvents();
     }
 
-    async getAll(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) {
+    async getAll(username, naam, email, stad, telefoon_nummer, leeftijd, geslacht) {
         return await networkManager
             .doRequest(`${this.route}/getAll`, {
                 naam: name,
-                achternaam: achternaam,
                 email: email,
-                leeftijd: leeftijd,
                 stad: stad,
                 telefoon_nummer: telefoonnr,
+                leeftijd: leeftijd,
                 geslacht: geslacht
             });
     }
 
-    async create() {
-
+    async create( name, email, stad, telefoonnr, leeftijd, geslacht) {
+        return await networkManager
+            .doRequest(this.route, {
+                naam: name,
+                email: email,
+                stad: stad,
+                telefoon_nummer: telefoonnr,
+                leeftijd: leeftijd,
+                geslacht: geslacht
+            })
     }
 
-    async get() {
+    async get(username) {
+        return await networkManager.doRequest(this.route, {username : username});
     }
 
 

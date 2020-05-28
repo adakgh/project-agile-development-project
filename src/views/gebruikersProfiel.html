@@ -1,5 +1,5 @@
 <title>Mijn profiel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="../src/assets/css/profiel.css" type="text/css">
 
 <br>
@@ -13,119 +13,137 @@
 <!--        <span class="text-sm-right pl-5">Erik Jan</span>-->
 
 <!--    </div>-->
-<div class="container">
+<div class="container"><form>
 
-<div class="wrapper">
-    <div class="main">
+    <div class="wrapper">
+        <div class="main">
 
+            <button type="button" class="button" id="add-button"><i class="material-icons">add</i>
+                Wijzig
+            </button>
 
-        <button type="button" class="button" id="add-button"><i class="material-icons">add</i>
-            Wijzig
-        </button>
-
-
-
-        <!--naam-->
-    <div class="form-row pt-4">
-        <div class="form-group col-md-4">
-            <label><strong>Naam</strong></label>
-            <input type="naam" class="form-control" id="name" placeholder="Voer uw naam in" required>
-        </div>
-
-        <!--achternaam-->
-<!--        <div class="form-group col-md-4">-->
-<!--            <label><strong>Achternaam</strong></label>-->
-<!--            <input type="achternaam" class="form-control" id="lastname" placeholder="Voer uw achternaam in" required>-->
-<!--        </div>-->
-
-        <!--email-->
-        <div class="form-group col-md-4">
-            <label><strong>Email</strong></label>
-            <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in" required>
-        </div>
-
-
-        <!--stad-->
-        <div class="form-group col-md-4">
-            <label><strong>Woonplaats</strong></label>
-            <input type="text" class="form-control" id="city" placeholder="Voer uw woonplaats in" >
-        </div>
-
-        <!--telefoon-->
-        <div class="form-group col-md-4">
-            <label><strong>Telefoonnummer</strong></label>
-            <input type="tel" class="form-control" id="telcode" pattern="[0-9]{2}-[0-9]{8}" placeholder="12-23456789">
-        </div>
-
-        <!--Leeftijd-->
-        <div class="form-group ">
-            <label><strong>Leeftijd</strong></label>
-            <input type="number" class="form-control" id="leeftijd"  placeholder="nr." maxlength="3" min="18" max="100"  required>
-        </div>
-
-        <!--geslacht-->
-        <div class="form-group col-md-4">
-            <div class="form-row">
-                <div class="col-md-3 offset-lg-0">
-                    <div class="form-group">
-                        <label for="geslachtOpties">
-                            <strong>Geslacht</strong>
-                        </label>
-                        <select class="custom-select mr-sm-2" id="geslachtOpties" required>
-                            <option value="">Geslacht</option>
-                            <option value="Man">Man</option>
-                            <option value="Vrouw">Vrouw</option>
-                            <option value="Anders">Anders</option>
-                        </select>
-                    </div>
+<!--            <label><strong>Gebruikersnaam</strong></label>-->
+            <div class="form-row pt-4">
+                <div class="form-group col-md-2">
+            <label><strong>Gebruikersnaam</strong></label>
+            <div  class="form-control" id="username"></div>
                 </div>
             </div>
+
+
+
+
+            <!--        naam-->
+            <div class="form-row pt-4">
+                <div class="form-group col-md-4">
+                    <label><strong>Naam</strong></label>
+                    <div  class="form-control" id="name"></div>
+                </div>
+
+                <!--        email-->
+                <div class="form-group col-md-4">
+                    <label><strong>Email</strong></label>
+                    <div class="form-control" id="email"></div>
+                </div>
+
+
+                <!--        stad-->
+                <div class="form-group col-md-4">
+                    <label><strong>Woonplaats</strong></label>
+                    <div class="form-control" id="stad"></div>
+                </div>
+
+                <!--        telefoon-->
+                <div class="form-group col-md-4">
+                    <label><strong>Telefoonnummer</strong></label>
+                    <div class="form-control" id="telefoonnr"></div>
+                </div>
+
+                <!--        Leeftijd-->
+                <div class="form-group ">
+                    <label><strong>Leeftijd</strong></label>
+                    <div class="form-control" id="leeftijd"></div>
+                </div>
+
+                <!--        geslacht-->
+                <div class="form-group col-md-4">
+                    <div class="form-row">
+                        <div class="col-md-3 offset-lg-0">
+                            <div class="form-group">
+                                <label for="geslachtOpties">
+                                    <strong>Geslacht</strong>
+                                </label>
+                                <div class="form-control" id="geslachtOpties" >
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--naam-->
+                <!--    <div class="form-row pt-4">-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <label><strong>Naam</strong></label>-->
+                <!--            <input type="naam" class="form-control" id="name" placeholder="Voer uw naam in" required>-->
+                <!--        </div>-->
+
+                <!--achternaam-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <label><strong>Achternaam</strong></label>-->
+                <!--            <input type="achternaam" class="form-control" id="lastname" placeholder="Voer uw achternaam in" required>-->
+                <!--        </div>-->
+
+                <!--email-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <label><strong>Email</strong></label>-->
+                <!--            <input type="email" class="form-control" id="email" placeholder="Voer uw e-mailadres in" required>-->
+                <!--        </div>-->
+
+
+                <!--stad-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <label><strong>Woonplaats</strong></label>-->
+                <!--            <input type="text" class="form-control" id="city" placeholder="Voer uw woonplaats in" >-->
+                <!--        </div>-->
+
+                <!--telefoon-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <label><strong>Telefoonnummer</strong></label>-->
+                <!--            <input type="tel" class="form-control" id="telcode" pattern="[0-9]{2}-[0-9]{8}" placeholder="12-23456789">-->
+                <!--        </div>-->
+
+                <!--Leeftijd-->
+                <!--        <div class="form-group ">-->
+                <!--            <label><strong>Leeftijd</strong></label>-->
+                <!--            <input type="number" class="form-control" id="leeftijd"  placeholder="nr." maxlength="3" min="18" max="100"  required>-->
+                <!--        </div>-->
+
+                <!--geslacht-->
+                <!--        <div class="form-group col-md-4">-->
+                <!--            <div class="form-row">-->
+                <!--                <div class="col-md-3 offset-lg-0">-->
+                <!--                    <div class="form-group">-->
+                <!--                        <label for="geslachtOpties">-->
+                <!--                            <strong>Geslacht</strong>-->
+                <!--                        </label>-->
+                <!--                        <select class="custom-select mr-sm-2" id="geslachtOpties" required>-->
+                <!--                            <option value="">Geslacht</option>-->
+                <!--                            <option value="Man">Man</option>-->
+                <!--                            <option value="Vrouw">Vrouw</option>-->
+                <!--                            <option value="Anders">Anders</option>-->
+                <!--                        </select>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            </div>-->
+                <!--        </div>-->
+
+
+            </div>
+
+            <!--    <button type="opslaan" class="btn btn-primary btn-block">Opslaan</button>-->
         </div>
-
-
-
-
-
-<!--        <div class="form-group col-md-4">-->
-<!--            <label><strong>Leeftijd</strong></label>-->
-<!--            <input type="leeftijd" class="form-control" id="age" placeholder="Voer uw leeftijd in" required>-->
-<!--        </div>-->
-<!--        <div class="form-group col-md-4">-->
-<!--            <label><strong>Woonplaats</strong></label>-->
-<!--            <input type="woonplaats" class="form-control" id="city" placeholder="Voer uw woonplaats in" required>-->
-<!--        </div>-->
-<!--        <div class="form-group col-md-4">-->
-<!--            <label><strong>Postcode</strong></label>-->
-<!--            <input type="postcode" class="form-control" id="postalcode" placeholder="Voer uw postcode in" required>-->
-<!--        </div>-->
-<!--        <div class="form-group col-md-4">-->
-<!--            <label><strong>Telefoonnummer</strong></label>-->
-<!--            <input type="tel" class="form-control" id="telcode" pattern="[0-9]{2}-[0-9]{8}" placeholder="Voer uw telefoonnummer in" required>-->
-<!--        </div>-->
-<!--        <div class="form-group col-md-6">-->
-<!--        <div class="form-row">-->
-<!--            <div class="col-md-3 offset-lg-0">-->
-<!--                <div class="form-group">-->
-<!--                    <label for="geslachtOpties">-->
-<!--                        <strong>Geslacht</strong>-->
-<!--                    </label>-->
-<!--                    <select-->
-<!--                            class="custom-select mr-sm-2"-->
-<!--                            id="geslachtOpties"-->
-<!--                            required-->
-<!--                    >-->
-<!--                        <option value="">Geslacht...</option>-->
-<!--                        <option value="Man">Man</option>-->
-<!--                        <option value="Vrouw">Vrouw</option>-->
-<!--                        <option value="Anders">Anders</option>-->
-<!--                    </select>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
     </div>
-
-<!--    <button type="opslaan" class="btn btn-primary btn-block">Opslaan</button>-->
-    </div>
-</div>
+</form>
 </div>

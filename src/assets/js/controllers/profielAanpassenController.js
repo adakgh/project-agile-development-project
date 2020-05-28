@@ -1,6 +1,6 @@
 class ProfielAanpassenController {
     constructor() {
-        this.profielAanpassenRepository = new ProfielAanpassenRepository();
+        this.ProfielRepository = new ProfielRepository();
 
         $.get("views/gebruikersProfielAanpassen.html")
             .done((htmlData) => this.setup(htmlData))
@@ -12,32 +12,63 @@ class ProfielAanpassenController {
 
         $(".content").empty().append(this.gebruikersProfielAanpassenView);
 
-        this.gebruikersProfielAanpassenView.find(".btn").on("click", (event) => this.onAddEvent(event));
+        this.gebruikersProfielAanpassenView.find(".btn-primary").on("click", (event) => this.onAddEvent(event));
+        this.gebruikersProfielAanpassenView.find(".btn-default").on("click", () => this.cancelPost());
     }
 
     async onAddEvent(event) {
         event.preventDefault();
 
-        //verzamelen van form gegevens
+        //verzamelen van gegevens
+        const username = sessionManager.get("username");
         const naam = this.gebruikersProfielAanpassenView.find("#name").val();
-        const achternaam = this.gebruikersProfielAanpassenView.find("#lastname").val();
         const email = this.gebruikersProfielAanpassenView.find("#email").val();
-        const leeftijd = this.gebruikersProfielAanpassenView.find("#age").val();
-        const stad = this.gebruikersProfielAanpassenView.find("#city").val();
-        const telefoonnr = this.gebruikersProfielAanpassenView.find("#telcode").val();
+        const stad = this.gebruikersProfielAanpassenView.find("#stad").val();
+        const telefoonnr = this.gebruikersProfielAanpassenView.find("#telefoonnr").val();
+        const leeftijd = this.gebruikersProfielAanpassenView.find("#leeftijd").val();
         const geslacht = this.gebruikersProfielAanpassenView.find("#geslachtOpties").val();
 
-        console.log(` ${naam} - ${achternaam} - ${email} - ${leeftijd} - ${stad} - ${telefoonnr} - ${geslacht}`);
+        console.log(` ${username} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
+
+            try {
+                //versturen naar repository
+                await this.ProfielRepository.create(username, name, email, stad, telefoonnr, leeftijd, geslacht);
+
+                //doorsturen naar profiel.html
+                alert("Uw gegevens zijn aangepast!");
+                app.loadController(CONTROLLER_PROFIEL);
+            } catch (e) {
+                if (e.code === 401) {
+                    this.gebruikersProfielAanpassenView
+                        .find(".error")
+                        .html(e.reason);
+                } else {
+                    console.log(e);
+                }
+            }
+
 
         //versturen naar repository
-        try {
+        // try {
+        //     const eventId = await this.profielAanpassenRepository.create(username, naam, email, stad, telefoonnr, leeftijd, geslacht);
+        //     console.log(eventId);
+        //     app.loadController(CONTROLLER_PROFIEL);
+        // } catch (e) {
+        //     console.log(e);
+        // }
 
-            const eventId = await this.profielAanpassenRepository.create(naam, achternaam, email, leeftijd, stad, telefoonnr, geslacht);
-            console.log(eventId);
-            app.loadController(CONTROLLER_PROFIEL);
-        } catch (e) {
-            console.log(e);
+    }
+
+    //annuleren-knop
+    cancelPost() {
+        //als er op "ok" en "annuleren" wordt gedrukt
+        if (confirm("Weet u zeker dat u de wijzigingen wilt annuleren? Alle gegevens gaan dan verloren.")) {
+            new ProfielController();
+        } else {
         }
+    }
 
+    error() {
+        $(".content").html("Failed to load content")
     }
 }
