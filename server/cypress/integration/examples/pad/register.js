@@ -104,6 +104,7 @@ describe("Register", function () {
         cy.url().should("contain", "#welcome");
     });
 
+    //TODO
     //Test: Failed register
     it("Failed register", function () {
         //Start a fake server
