@@ -21,7 +21,7 @@ class ProfielAanpassenController {
 
         //verzamelen van gegevens
         const username = sessionManager.get("username");
-        const naam = this.gebruikersProfielAanpassenView.find("#name").val();
+        const naam = this.gebruikersProfielAanpassenView.find("#naam").val();
         const email = this.gebruikersProfielAanpassenView.find("#email").val();
         const stad = this.gebruikersProfielAanpassenView.find("#stad").val();
         const telefoonnr = this.gebruikersProfielAanpassenView.find("#telefoonnr").val();
@@ -30,9 +30,13 @@ class ProfielAanpassenController {
 
         console.log(` ${username} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
 
+        //checken of belangrijke velden niet zijn leeggelaten
+        if (username.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0 ) {
+            alert("Gelieve uw gebruikersnaam, naam, email, leeftijd en geslacht in te vullen.");
+        } else {
             try {
                 //versturen naar repository
-                await this.ProfielRepository.create(username, name, email, stad, telefoonnr, leeftijd, geslacht);
+                await this.ProfielRepository.create(naam,email, stad, telefoonnr, leeftijd, geslacht);
 
                 //doorsturen naar profiel.html
                 alert("Uw gegevens zijn aangepast!");
@@ -46,6 +50,7 @@ class ProfielAanpassenController {
                     console.log(e);
                 }
             }
+        }
 
 
         //versturen naar repository

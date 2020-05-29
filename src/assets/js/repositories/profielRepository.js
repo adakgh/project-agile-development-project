@@ -25,7 +25,7 @@ class ProfielRepository{
     async getAll(username, naam, email, stad, telefoon_nummer, leeftijd, geslacht) {
         return await networkManager
             .doRequest(`${this.route}/getAll`, {
-                naam: name,
+                naam: naam,
                 email: email,
                 stad: stad,
                 telefoon_nummer: telefoonnr,
@@ -34,10 +34,10 @@ class ProfielRepository{
             });
     }
 
-    async create( name, email, stad, telefoonnr, leeftijd, geslacht) {
+    async create( naam, email, stad, telefoonnr, leeftijd, geslacht) {
         return await networkManager
             .doRequest(this.route, {
-                naam: name,
+                naam: naam,
                 email: email,
                 stad: stad,
                 telefoon_nummer: telefoonnr,
@@ -50,17 +50,28 @@ class ProfielRepository{
         return await networkManager.doRequest(this.route, {username : username});
     }
 
+    async get(naam) {
+        return await networkManager.doRequest(this.route, {naam: naam});
+    }
 
-    async update(username, naam, achternaam, email, leeftijd, stad, telefoon_nummer, geslacht) {
+    async get(email) {
+        return await networkManager.doRequest(this.route, {email: email});
+    }
+
+    async get(stad) {
+        return await networkManager.doRequest(this.route, {stad: stad});
+    }
+
+
+    async update(username, naam, email, stad, telefoonnr, leeftijd, geslacht) {
         return await networkManager
             .doRequest("/profiel", {
-                username: gebruikersnaam,
-                naam: name,
-                achternaam: achternaam,
+                username: username,
+                naam: naam,
                 email: email,
-                leeftijd: leeftijd,
                 stad: stad,
                 telefoon_nummer: telefoonnr,
+                leeftijd: leeftijd,
                 geslacht: geslacht});
     }
 
@@ -68,7 +79,7 @@ class ProfielRepository{
     //     return await networkManager
     //         .doRequest("/profiel", {
     //             username: gebruikersnaam,
-    //             naam: name,
+    //             naam: naam,
     //             achternaam: achternaam,
     //             email: email,
     //             leeftijd: leeftijd,

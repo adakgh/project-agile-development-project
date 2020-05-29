@@ -3,10 +3,10 @@ class ProfielAanpassenRepository {
         this.route = "/profiel";
     }
 
-    async create( name, email, stad, telefoonnr, leeftijd, geslacht) {
+    async create( naam, email, stad, telefoonnr, leeftijd, geslacht) {
         return await networkManager
             .doRequest(this.route, {
-                naam: name,
+                naam: naam,
                 email: email,
                 stad: stad,
                 telefoon_nummer: telefoonnr,
