@@ -9,7 +9,7 @@ class RegisterRepository {
 
     async create(username, name, email, password, gender, age, newsletter) {
         return await networkManager
-            .doRequest(this.route, {
+            .doRequest(`${this.route}/register`, {
                 username: username,
                 naam: name,
                 password: password,

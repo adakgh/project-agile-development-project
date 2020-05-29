@@ -83,7 +83,7 @@ app.post("/post", (req, res) => {
 });
 
 //registreren
-app.post("/user", (req, res) => {
+app.post("/user/register", (req, res) => {
     // res.send({username: req.body.username, password: req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht });
 
     db.handleQuery(connectionPool, {
