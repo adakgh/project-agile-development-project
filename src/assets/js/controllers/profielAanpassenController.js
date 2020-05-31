@@ -53,6 +53,8 @@ class ProfielAanpassenController {
                     this.gebruikersProfielAanpassenView
                         .find(".error")
                         .html(e.reason);
+                } else if (e.code === 400) {
+                    alert("Deze gebruikersnaam is al in gebruik!");
                 } else {
                     console.log(e);
                 }
