@@ -58,18 +58,17 @@ class RegisterController {
                 sessionManager.set("username", user.username);
 
                 //doorsturen naar welcome.html
-                new WelcomeController();
+                app.loadController(CONTROLLER_WELCOME);
 
                 //refresht welcome pagina voor sessie
                 window.location.reload(true);
-
             } catch (e) {
                 if (e.code === 401) {
                     this.registerView
                         .find(".error")
                         .html(e.reason);
-                }else if (e.code === 400){
-                    alert("Deze gebruikersnaam is al in gebruik!");
+                } else if (e.code === 400) {
+                    alert("Deze gebruikersnaam of emailadres is al in gebruik!");
                 } else {
                     console.log(e);
                 }

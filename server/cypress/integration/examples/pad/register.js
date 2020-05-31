@@ -47,13 +47,13 @@ describe("Register", function () {
         cy.route("POST", "/user/register").as("register");
 
         //Find the field for the username and type the text "Hans1".
-        cy.get("#exampleUserName").type("Hans1");
+        cy.get("#exampleUserName").type("Hans123");
 
         //Find the field for the full name and type the text "Hans de Groot".
         cy.get("#exampleFullName").type("Hans de Groot");
 
         //Find the field for the email and type the text "hans123@live.nl".
-        cy.get("#exampleInputEmail").type("hans123@live.nl");
+        cy.get("#exampleInputEmail").type("hans1234@live.nl");
 
         //Find the field for the password and and type the text "Hans123".
         cy.get("#exampleInputPassword").type("Hans123");
@@ -79,13 +79,13 @@ describe("Register", function () {
         //The @register-stub is called, check the contents of the incoming request.
         cy.get("@register").should((xhr) => {
             //The username should match what we typed earlier
-            expect(xhr.request.body.username).equals("Hans1");
+            expect(xhr.request.body.username).equals("Hans123");
 
             //The full name should match what we typed earlier
             expect(xhr.request.body.naam).equals("Hans de Groot");
 
             //The email should match what we typed earlier
-            expect(xhr.request.body.email).equals("hans123@live.nl");
+            expect(xhr.request.body.email).equals("hans1234@live.nl");
 
             //The password should match what we typed earlier
             expect(xhr.request.body.password).equals("Hans123");
@@ -104,7 +104,6 @@ describe("Register", function () {
         cy.url().should("contain", "#welcome");
     });
 
-    //TODO
     //Test: Failed register
     it("Failed register", function () {
         //Start a fake server
@@ -119,14 +118,32 @@ describe("Register", function () {
             response: {
                 reason: "ERROR"
             },
-            status: 400
+            status: 401
         }).as("register");
 
         //Find the field for the username and type the text "Hans1".
-        cy.get("#exampleUserName").type("Hans1");
+        cy.get("#exampleUserName").type("Hans123");
 
         //Find the field for the full name and type the text "Hans de Groot".
         cy.get("#exampleFullName").type("Hans de Groot");
+
+        //Find the field for the email and type the text "hans123@live.nl".
+        cy.get("#exampleInputEmail").type("hans1234@live.nl");
+
+        //Find the field for the password and and type the text "Hans123".
+        cy.get("#exampleInputPassword").type("Hans123");
+
+        //Find the field for the password validation and type the text "Hans123".
+        cy.get("#exampleRepeatPassword").type("Hans123");
+
+        //Find the field for the gender and select "Man".
+        cy.get("#exampleGender").select("Man");
+
+        //Find the field for the age and select "60".
+        cy.get("#exampleAge").select('60');
+
+        //Find the field for the newsletter and check it.
+        cy.get("#defaultRegisterFormNewsletter").check({force: true});
 
         //Find the button to register and click it.
         cy.get(".btn").click();

@@ -4,6 +4,24 @@
     border-radius: 4px;
 }
 
+.btn{
+    color: white;
+    background: #47536e;
+}
+
+.btn:hover {
+    color: white;
+    background: #5777ba;
+}
+
+.form-control, .custom-select, .btn, label {
+    font-size: 19px;
+}
+
+ .form-check-label{
+    font-size: 17px;
+}
+
 /*.img-fluid{*/
 /*        margin-top: -72.3%;*/
 /*        margin-bottom: -22%;*/

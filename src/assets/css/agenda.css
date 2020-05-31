@@ -1,3 +1,8 @@
+/*agenda is nu active in de navbar*/
+#agenda {
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 4px;
+}
 .events {
     width: 96%;
     padding: 20px;

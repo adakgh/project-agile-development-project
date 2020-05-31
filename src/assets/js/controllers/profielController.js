@@ -41,6 +41,9 @@ class ProfielController {
         const exampleEmail = this.gebruikersProfielView.find("#email");
         const exampleLeeftijd = this.gebruikersProfielView.find("#leeftijd");
         const exampleGeslacht = this.gebruikersProfielView.find("#geslachtOpties");
+        const exampleWoonplaats = this.gebruikersProfielView.find("#stad");
+        const exampleTelefoonnr = this.gebruikersProfielView.find("#telefoonnr");
+
         try {
             //await keyword 'stops' code until data is returned - can only be used in async function
             // const roomData = await this.registerRepository.get();
@@ -60,6 +63,8 @@ class ProfielController {
             exampleEmail.text(this.currentUser.email)
             exampleLeeftijd.text(this.currentUser.leeftijd)
             exampleGeslacht.text(this.currentUser.geslacht)
+            exampleWoonplaats.text(this.currentUser.stad)
+            exampleTelefoonnr.text(this.currentUser.telefoon_nummer)
         }catch (i) {
             console.log("error while fetching rooms", i);
 

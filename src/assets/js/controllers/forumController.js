@@ -232,7 +232,7 @@ async function item(id) {
         }
 
         //Als er op de rapporteren knop wordt gedrukt
-        $('.answerCountContainer').on("click", (event) => {
+        $('.be-comment-time').on("click", (event) => {
             event.preventDefault();
 
             console.log(event.currentTarget.dataset.articleid);
@@ -317,6 +317,7 @@ async function createReply(id) {
 function newsetup(htmlData) {
     this.forumView = $(htmlData);
 
+    window.scrollTo(0,document.body.scrollTop);
     $(".content").empty().append(this.forumView);
 }
 

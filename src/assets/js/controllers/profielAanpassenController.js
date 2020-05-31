@@ -1,6 +1,7 @@
 class ProfielAanpassenController {
     constructor() {
         this.ProfielRepository = new ProfielRepository();
+        this.UserRepository = new UserRepository();
 
         $.get("views/gebruikersProfielAanpassen.html")
             .done((htmlData) => this.setup(htmlData))
@@ -20,7 +21,10 @@ class ProfielAanpassenController {
         event.preventDefault();
 
         //verzamelen van gegevens
-        const username = sessionManager.get("username");
+        const user = await this.UserRepository.get(sessionManager.get("username"));
+        const id = `${user[0].id}`;
+
+        const usernameveld = this.gebruikersProfielAanpassenView.find("#username").val();
         const naam = this.gebruikersProfielAanpassenView.find("#naam").val();
         const email = this.gebruikersProfielAanpassenView.find("#email").val();
         const stad = this.gebruikersProfielAanpassenView.find("#stad").val();
@@ -28,19 +32,18 @@ class ProfielAanpassenController {
         const leeftijd = this.gebruikersProfielAanpassenView.find("#leeftijd").val();
         const geslacht = this.gebruikersProfielAanpassenView.find("#geslachtOpties").val();
 
-        console.log(` ${username} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
+        console.log(` ${user} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
 
-        //controleert of belangrijke velden niet zijn leeggelaten
-        if (username.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0 ) {
+        //checken of belangrijke velden niet zijn leeggelaten
+        if (usernameveld.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0) {
             alert("Gelieve uw gebruikersnaam, naam, email, leeftijd en geslacht in te vullen.");
         } else {
             try {
                 //versturen naar repository
-                const aanpassing = await this.ProfielRepository.create(stad, telefoonnr);
-                console.log(aanpassing);
+                await this.ProfielRepository.update(id, usernameveld, naam, email, geslacht, leeftijd, stad, telefoonnr);
 
-                // const aanpassing = await this.ProfielRepository.create(naam,email, stad, telefoonnr, leeftijd, geslacht);
-                // console.log(aanpassing);
+                //sessie zetten op (nieuwe) username
+                sessionManager.set("username", usernameveld);
 
                 //doorsturen naar profiel.html
                 alert("Uw gegevens zijn aangepast!");

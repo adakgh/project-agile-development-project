@@ -68,20 +68,6 @@ app.post("/room_example", (req, res) => {
 
 });
 
-//------- END ROUTES -------
-
-app.post("/post", (req, res) => {
-    res.send({person_amount: req.body.person_amount, date: req.body.date});
-
-    db.handleQuery(connectionPool, {
-            query: "INSERT INTO post(person_amount, date) VALUE (?,?)",
-            values: [req.body.person_amount, req.body.date]
-        }, (data) => {
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
 //registreren
 app.post("/user/register", (req, res) => {
     // res.send({username: req.body.username, password: req.body.password, req.body.email, req.body.naam, req.body.leeftijd, req.body.geslacht });
@@ -111,7 +97,6 @@ app.post("/forum/create", (req, res) => {
         }
     );
 });
-
 
 //forum artikelen
 app.post("/forum/getAll", (req, res) => {
@@ -174,7 +159,6 @@ app.post("/participate/getAgenda", (req, res) => {
     );
 });
 
-
 //bepaalde forum artikel bekijken
 app.post("/forum/get", (req, res) => {
     db.handleQuery(connectionPool, {
@@ -216,7 +200,7 @@ app.post("/event", (req, res) => {
 //gebruiker ophalen bij username
 app.post("/user/get", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "SELECT id, naam, email, leeftijd, geslacht FROM user WHERE username = ?",
+            query: "SELECT id, naam, email, leeftijd, geslacht, username, stad, telefoon_nummer FROM user WHERE username = ?",
             values: [req.body.username]
         }, (data) => {
             //just give all data back as json
@@ -294,34 +278,17 @@ app.post("/event/delete", (req, res) => {
     );
 });
 
-
-
-//profiel gegevens ophalen
-app.post("/user/getAll", (req, res) => {
-    db.handleQuery(connectionPool, {
-            query: "SELECT username, naam, email, stad, telefoon_nummer, leeftijd, geslacht FROM user WHERE id = ?",
-        }, (data) => {
-            //just give all data back as json
-            res.status(httpOkCode).json(data);
-        }, (err) => res.status(badRequestCode).json({reason: err})
-    );
-});
-
-
-
 //profiel gegevens update
-
 app.post("/user/update", (req, res) => {
     db.handleQuery(connectionPool, {
-            query: "UPDATE user SET username = ?, naam = ?, email = ? , stad = ?, telefoon_nummer = ?, leeftijd = ?, geslacht = ? WHERE id = ?",
-            values: [req.body.username, req.body.naam, req.body.email, req.body.stad, req.body.telefoon_nummer, req.body.leeftijd, req.body.geslacht]
+            query: "UPDATE user SET username = ?, naam = ?, email = ?, leeftijd = ?, geslacht = ?, stad = ?, telefoon_nummer = ? WHERE id = ?",
+            values: [req.body.username, req.body.naam, req.body.email, req.body.leeftijd, req.body.geslacht, req.body.stad, req.body.telefoon_nummer, req.body.id]
         }, (data) => {
             //just give all data back as json
             res.status(httpOkCode).json(data);
         }, (err) => res.status(badRequestCode).json({reason: err})
     );
 });
-
 
 
 //profiel gegevens stad en telefoon nummer toevoegen
@@ -349,9 +316,7 @@ app.post("/user/update", (req, res) => {
 //     );
 // });
 
-
-
-
+//chat
 function listen(port, callback) {
     const server = app.listen(port, callback);
 
@@ -421,26 +386,23 @@ function initializeSocketIO(server) {
             }
         });
     });
+
+    const users = {}
+
+    io.on('connection', socket => {
+        socket.on('new-user', name => {
+            users[socket.id] = name
+            socket.broadcast.emit('user-connected', name)
+        });
+        socket.on('send-chat-message', message => {
+            socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
+        });
+        socket.on('disconnect', () => {
+            socket.broadcast.emit('user-disconnected', users[socket.id]);
+            delete users[socket.id]
+        })
+    })
 }
-
-// Chat
-//
-// const users = {}
-//
-// io.on('connection', socket => {
-//     socket.on('new-user', name => {
-//         users[socket.id] = name
-//         socket.broadcast.emit('user-connected', name)
-//     })
-//     socket.on('send-chat-message', message => {
-//         socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
-//     })
-//     socket.on('disconnect', () => {
-//         socket.broadcast.emit('user-disconnected', users[socket.id])
-//         delete users[socket.id]
-//     })
-// })
-
 //------- END ROUTES -------
 
 module.exports = {

@@ -3,7 +3,7 @@ describe("Login", function () {
     //Run before each test in this context
     beforeEach(() => {
         //Go to the specified URL
-        cy.visit("http://localhost:8080");
+        cy.visit("http://localhost:8080#login");
     });
 
     //Test: Validate login form
@@ -15,7 +15,7 @@ describe("Login", function () {
         cy.get("#exampleInputPassword").should("exist");
 
         //Find the button to login, check if it exists.
-        cy.get(".login-form button").should("exist");
+        cy.get(".btn").should("exist");
     });
 
     //Test: Successful login
@@ -77,7 +77,7 @@ describe("Login", function () {
         cy.get("#exampleInputPassword").type("test");
 
         //Find the button to login and click it.
-        cy.get(".login-form button").click();
+        cy.get(".btn").click();
 
         //Wait for the @login-stub to be called by the click-event.
         cy.wait("@login");

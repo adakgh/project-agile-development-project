@@ -75,7 +75,8 @@ class AdminController {
             nextUser += `<td>${userData[i].email}</td>`;
             nextUser += `<td>${userData[i].geslacht}</td>`;
             nextUser += `<td>${userData[i].leeftijd}</td>`;
-            nextUser += `<td>${userData[i].bio}</td>`;
+            nextUser += `<td>${userData[i].stad}</td>`;
+            nextUser += `<td>${userData[i].telefoon_nummer}</td>`;
 
             nextUser += `<td><button type="button" class="btn btn-danger userDelete" data-userid = "${userData[i].id}">Verwijderen</button></td>`;
 
