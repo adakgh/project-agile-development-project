@@ -35,7 +35,7 @@ class ProfielAanpassenController {
         console.log(` ${user} - ${naam} -  ${email} - ${stad} - ${telefoonnr} - ${leeftijd} - ${geslacht}`);
 
         //checken of belangrijke velden niet zijn leeggelaten
-        if (usernameveld.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0) {
+       if (usernameveld.length === 0 || naam.length === 0 || email.length === 0 || leeftijd.length === 0 || geslacht.length === 0) {
             alert("Gelieve uw gebruikersnaam, naam, email, leeftijd en geslacht in te vullen.");
         } else {
             try {
@@ -57,6 +57,11 @@ class ProfielAanpassenController {
                     console.log(e);
                 }
             }
+        }
+
+        // check of telefoonnummer wel 10 cijfers is
+        if (telefoonnr.length !== 10){
+            alert("Uw telefoon nummer moet 10 cijfers zijn!");
         }
 
 
