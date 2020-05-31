@@ -8,6 +8,7 @@ class WelcomeController {
     constructor() {
         // this.roomExampleRepository = new RoomExampleRepository();
         this.registerRepository = new RegisterRepository();
+        this.userRepository = new UserRepository();
         this.eventRepository = new activiteitenRepository();
 
         //als ingelogd als admin laat admin pagina zien
@@ -60,7 +61,9 @@ class WelcomeController {
     }
 
     async getEvents() {
-        const eventData = await this.eventRepository.getAll();
+        const user = await this.userRepository.get(sessionManager.get("username"));
+        const id = `${user[0].id}`;
+        const eventData = await this.eventRepository.getAgenda(id);
         const eventTable = $(".events__list");
 
         for (let i = 0; i < 4; i++) {
@@ -71,19 +74,19 @@ class WelcomeController {
                                 <span class="events__day">${eventData[i].date.slice(8, -14)}</span>`;
 
             //maand omzetten in tekst
-            if(eventData[i].date.slice(5, -17) === "06"){
+            if (eventData[i].date.slice(5, -17) === "06") {
                 nextEvent += `<div class="events__month">juni</div>
                     </div>`;
-            } else if (eventData[i].date.slice(5, -17) === "07"){
+            } else if (eventData[i].date.slice(5, -17) === "07") {
                 nextEvent += `<div class="events__month">juli</div>
                     </div>`;
-            }else if (eventData[i].date.slice(5, -17) === "08"){
+            } else if (eventData[i].date.slice(5, -17) === "08") {
                 nextEvent += `<div class="events__month">aug</div>
                     </div>`;
-            }else if (eventData[i].date.slice(5, -17) === "09"){
+            } else if (eventData[i].date.slice(5, -17) === "09") {
                 nextEvent += `<div class="events__month">sep</div>
                     </div>`;
-            }else if (eventData[i].date.slice(5, -17) === "10"){
+            } else if (eventData[i].date.slice(5, -17) === "10") {
                 nextEvent += `<div class="events__month">okt</div>
                     </div>`;
             } else if (eventData[i].date.slice(5, -17) === "11") {
@@ -114,6 +117,10 @@ class WelcomeController {
             nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
 
             eventTable.append(nextEvent);
+        }
+
+        if (eventData.length === 0) {
+            eventTable.append(`<div class=\"h4 text\">Uw agenda is leeg, neem deel aan activiteiten op de activiteitenpagina.</div>`)
         }
     }
 
