@@ -44,7 +44,7 @@ class PostActiviteitenController {
         } else if (eventBeginTime > eventEndTime) {
             alert("De eindtijd moet hoger zijn dan de begintijd!")
         } else if (eventDate < todayDate) {
-            alert("JDe datum van het activiteit mag niet in het verleden zijn!")
+            alert("Je datum van het activiteit mag niet in het verleden zijn!")
         } else {
 
             //versturen naar repository
