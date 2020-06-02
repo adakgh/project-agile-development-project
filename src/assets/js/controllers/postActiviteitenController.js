@@ -18,6 +18,9 @@ class PostActiviteitenController {
     async onAddEvent(event) {
         event.preventDefault();
 
+        //datum van vandaag
+        const todayDate = new Date().toISOString().slice(0, 10);
+
         //verzamelen van form gegevens
         const name = this.eventsView.find("#inputName").val();
         const personAmount = this.eventsView.find("#inputPersonAmount").val();
@@ -36,12 +39,13 @@ class PostActiviteitenController {
             alert("Aantal deelnemers mag niet kleiner zijn dan 2!")
         } else if (personAmount > 50) {
             alert("Aantal deelnemers mag niet groter zijn dan 50!")
-        } else if (eventBeginTime === eventEndTime){
+        } else if (eventBeginTime === eventEndTime) {
             alert("De begintijd mag niet gelijk zijn aan de eindtijd!")
-        } else if (eventBeginTime > eventEndTime){
-            alert("De eindtijd moet hoger zijn dan de begintijd! ")
-        }
-        else {
+        } else if (eventBeginTime > eventEndTime) {
+            alert("De eindtijd moet hoger zijn dan de begintijd!")
+        } else if (eventDate < todayDate) {
+            alert("JDe datum van het activiteit mag niet in het verleden zijn!")
+        } else {
 
             //versturen naar repository
             try {

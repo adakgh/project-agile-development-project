@@ -26,22 +26,26 @@ class EventsController {
     async loadEvents() {
         const eventData = await this.activiteitenRepository.getAll();
         const eventTable = $("#eventTable");
+        const todayDate = new Date().toISOString().slice(0, 10);
 
         for (let i = 0; i < eventData.length; i++) {
-            let nextEvent = "<tr>";
+            if (`${eventData[i].date}` > todayDate) {
 
-            nextEvent += `<td>${eventData[i].name}</td>`;
-            nextEvent += `<td>${eventData[i].person_amount}</td>`;
-            nextEvent += `<td>${eventData[i].date.slice(0, -14)}</td>`;
-            nextEvent += `<td>${eventData[i].status}</td>`;
-            nextEvent += `<td>${eventData[i].place}</td>`;
-            nextEvent += `<td>${eventData[i].begin_time}</td>`;
-            nextEvent += `<td>${eventData[i].end_time}</td>`;
+                let nextEvent = "<tr>";
 
-            nextEvent += `<td><button type="button" class="btn btn-success eventAccept" data-eventid = "${eventData[i].id}">Deelnemen</button></td>`;
-            nextEvent += `<td><button type="button" class="btn btn-danger eventReject" data-eventid = "${eventData[i].id}">Weigeren</button></td>`;
+                nextEvent += `<td>${eventData[i].name}</td>`;
+                nextEvent += `<td>${eventData[i].person_amount}</td>`;
+                nextEvent += `<td>${eventData[i].date.slice(0, -14)}</td>`;
+                nextEvent += `<td>${eventData[i].status}</td>`;
+                nextEvent += `<td>${eventData[i].place}</td>`;
+                nextEvent += `<td>${eventData[i].begin_time}</td>`;
+                nextEvent += `<td>${eventData[i].end_time}</td>`;
 
-            eventTable.append(nextEvent)
+                nextEvent += `<td><button type="button" class="btn btn-success eventAccept" data-eventid = "${eventData[i].id}">Deelnemen</button></td>`;
+                nextEvent += `<td><button type="button" class="btn btn-danger eventReject" data-eventid = "${eventData[i].id}">Weigeren</button></td>`;
+
+                eventTable.append(nextEvent)
+            }
         }
 
         //userid ophalen van de deelnemer
