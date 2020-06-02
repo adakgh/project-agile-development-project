@@ -83,9 +83,13 @@ class AgendaController {
             }
         }
 
+        if (eventData.length === 0) {
+            eventTable.append(`<div class=\"h4 text\">Uw agenda is leeg, neem deel aan activiteiten op de activiteitenpagina.</div>`)
+        }
+    }
+
         error()
         {
             $(".content").html("Failed to load content")
         }
-    }
 }
