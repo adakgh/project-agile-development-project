@@ -65,6 +65,8 @@ class WelcomeController {
         const eventData = await this.eventRepository.getAgenda(id);
         const eventTable = $(".events__list");
 
+        const moreButton = $(".hidden");
+
         const todayDate = new Date().toISOString().slice(0, 10);
 
         if (eventData.length > 0) {
@@ -115,17 +117,12 @@ class WelcomeController {
                     </div>`;
                     }
 
-                nextEvent += `<p class="events__desc h4">${eventData[i].name}<br>`;
+                    nextEvent += `<p class="events__desc h4">${eventData[i].name}<br>`;
 
-                nextEvent += `<span class="events__desc h5">${eventData[i].place}</span>`;
-
-                nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>
- 
-                <button class="btn meer float-right mt-3 agenda" onclick="app.loadController(new AgendaController())">
-                        Meer...
-                    </button>`;
+                    nextEvent += `<span class="font-weight-bold">${eventData[i].place}<br>${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
 
                     eventTable.append(nextEvent);
+                    moreButton.show();
                 }
             }
         } else {

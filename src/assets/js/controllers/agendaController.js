@@ -75,9 +75,7 @@ class AgendaController {
 
                 nextEvent += `<p class="events__desc h4">${eventData[i].name}<br>`;
 
-                nextEvent += `<span class="events__desc h5">${eventData[i].place}</span>`;
-
-                nextEvent += `<br> <span class="font-weight-bold">${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
+                nextEvent += `<span class="font-weight-bold">${eventData[i].place} <br> ${eventData[i].begin_time} - ${eventData[i].end_time}</span></p></li> <br>`;
 
                 eventTable.append(nextEvent);
             }
