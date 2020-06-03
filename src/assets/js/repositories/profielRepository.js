@@ -3,6 +3,26 @@ class ProfielRepository{
         this.route = "/user";
     }
 
+
+    async get(username) {
+        return await networkManager.doRequest(this.route, {username : username});
+    }
+
+
+    async update(id, username, naam, email, geslacht, leeftijd, stad, telefoon_nummer) {
+        return await networkManager
+            .doRequest(`${this.route}/update`, {
+                id: id,
+                username: username,
+                naam: naam,
+                email: email,
+                leeftijd: leeftijd,
+                geslacht: geslacht,
+                stad: stad,
+                telefoon_nummer: telefoon_nummer
+            })
+    }
+
     // async getAll(username) {
     //     return await networkManager
     //         .doRequest(this.route, {username : username});
@@ -34,26 +54,6 @@ class ProfielRepository{
     //         });
     // }
 
-
-
-    async get(username) {
-        return await networkManager.doRequest(this.route, {username : username});
-    }
-
-
-    async update(id, username, naam, email, geslacht, leeftijd, stad, telefoon_nummer) {
-        return await networkManager
-            .doRequest(`${this.route}/update`, {
-                id: id,
-                username: username,
-                naam: naam,
-                email: email,
-                leeftijd: leeftijd,
-                geslacht: geslacht,
-                stad: stad,
-                telefoon_nummer: telefoon_nummer
-            })
-    }
 }
 
 
