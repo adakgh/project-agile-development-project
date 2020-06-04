@@ -1,3 +1,5 @@
-{ "integrationFolder": "cypress/integration/examples/pad",
-  "video": false
+{
+  "integrationFolder": "cypress/integration/examples/pad",
+  "video": false,
+  "projectId": "2y1e5t"
 }
