@@ -38,8 +38,4 @@ class ForumRepository {
             });
     }
 
-    async update(id, values = {}) {
-
-    }
-
 }

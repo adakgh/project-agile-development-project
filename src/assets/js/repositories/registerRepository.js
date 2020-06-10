@@ -3,10 +3,6 @@ class RegisterRepository {
         this.route = "/user"
     }
 
-    async getAll() {
-
-    }
-
     async create(username, name, email, password, gender, age, newsletter) {
         return await networkManager
             .doRequest(`${this.route}/register`, {
@@ -18,13 +14,5 @@ class RegisterRepository {
                 geslacht: gender,
                 newsletter: newsletter
             })
-    }
-
-    async delete() {
-
-    }
-
-    async update(id, values = {}) {
-
     }
 }

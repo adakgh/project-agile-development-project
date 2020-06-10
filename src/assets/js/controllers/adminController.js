@@ -87,7 +87,6 @@ class AdminController {
         $('.userDelete').on("click", (event) => {
             event.preventDefault();
 
-            console.log(event.currentTarget.dataset.userid);
             const userid = event.currentTarget.dataset.userid;
             this.userdelete(userid);
         });
@@ -114,7 +113,6 @@ class AdminController {
         $('.forumDelete').on("click", (event) => {
             event.preventDefault();
 
-            console.log(event.currentTarget.dataset.forumid);
             const forumid = event.currentTarget.dataset.forumid;
             this.forumdelete(forumid);
         });
@@ -144,13 +142,12 @@ class AdminController {
         $('.eventDelete').on("click", (event) => {
             event.preventDefault();
 
-            console.log(event.currentTarget.dataset.eventid);
             const eventid = event.currentTarget.dataset.eventid;
             this.eventdelete(eventid);
         });
     }
 
-    async loadReports(){
+    async loadReports() {
         const reportData = await this.reportRepository.getAll();
         const reportTable = $("#reportTable");
 

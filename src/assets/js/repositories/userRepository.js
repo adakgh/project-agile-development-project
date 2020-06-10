@@ -47,12 +47,4 @@ class UserRepository {
                 username: username
             });
     }
-
-    async register(username, password) {
-
-    }
-
-    async update(id, values = {}) {
-
-    }
 }

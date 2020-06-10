@@ -86,8 +86,7 @@ class AgendaController {
         }
     }
 
-        error()
-        {
-            $(".content").html("Failed to load content")
-        }
+    error() {
+        $(".content").html("Failed to load content")
+    }
 }

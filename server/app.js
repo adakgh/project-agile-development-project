@@ -78,7 +78,7 @@ app.post("/user/register", (req, res) => {
         }, (data) => {
             res.status(httpOkCode).json(data);
         }, (err) => {
-            res.status(badRequestCode).json({reason: err})
+            res.status(badRequestCode).json({reason: "Registren is mislukt, probeer het alstublieft opnieuw"})
         }
     );
 });

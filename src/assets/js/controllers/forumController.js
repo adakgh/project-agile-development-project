@@ -19,15 +19,6 @@ class ForumController {
 
         $(".content").empty().append(this.forumView);
 
-        //als gebruiker niet is ingelogd kan hij/zij geen artikel plaatsen
-        if (sessionManager.get("username")) {
-            $("#add-button").show();
-        } else {
-            $(".text-nowrap").empty().append("U kunt hier artikelen <br> bekijken die gepost zijn <br> door andere gebruikers. <br>" +
-                "Log in of registreer om <br>zelf een artikel te posten.");
-            $("#add-button").hide();
-        }
-
         //wanneer er op de forum artikel aanmaken knop wordt gedrukt
         this.forumView.find(".button").on("click", () => this.onAddPost());
 
@@ -235,7 +226,6 @@ async function item(id) {
         $('.be-comment-time').on("click", (event) => {
             event.preventDefault();
 
-            console.log(event.currentTarget.dataset.articleid);
             const articleid = event.currentTarget.dataset.articleid;
             this.report(articleid);
         });
@@ -317,7 +307,7 @@ async function createReply(id) {
 function newsetup(htmlData) {
     this.forumView = $(htmlData);
 
-    window.scrollTo(0,document.body.scrollTop);
+    window.scrollTo(0, document.body.scrollTop);
     $(".content").empty().append(this.forumView);
 }
 

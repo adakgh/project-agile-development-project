@@ -14,7 +14,7 @@ class ProfielAanpassenController {
         $(".content").empty().append(this.gebruikersProfielAanpassenView);
 
         this.gebruikersProfielAanpassenView.find(".btn-primary").on("click", (event) => this.onAddEvent(event));
-        this.gebruikersProfielAanpassenView.find(".btn-default").on("click", () => this.cancelPost());
+        this.gebruikersProfielAanpassenView.find(".btn-danger").on("click", () => this.cancelPost());
     }
 
     async onAddEvent(event) {
